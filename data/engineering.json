@@ -1,0 +1,52 @@
+{
+  "sessions": [
+    {
+      "id": "propulsion",
+      "label": "Arquitetura de propulsão",
+      "question": "Qual risco carregaremos para reduzir os anos de trânsito?",
+      "briefing": "Diretor, não existe motor ideal. Podemos comprar maturidade, desempenho ou eficiência — mas não os três dentro da mesma janela.",
+      "constraint": "A propulsão define delta-v, demanda elétrica, rejeição térmica e duração da exposição da tripulação.",
+      "options": [
+        {"componentId":"nuclear","days":168,"influence":-4,"trust":3,"morale":0,"risk":"Licenciamento nuclear e massa elevada","supporter":{"name":"Eng. Rafael Costa","avatar":"rafael-costa","text":"É a arquitetura que eu assinaria hoje. Pesada, mas conhecida e reiniciável."},"dissenter":{"name":"Dra. Asha Rao","avatar":"asha-rao","text":"O reator reduz o tempo de viagem, mas aproxima uma fonte radiológica do habitat."}},
+        {"componentId":"fusion","days":294,"influence":-12,"trust":-3,"morale":5,"risk":"Maturidade tecnológica e carga térmica","supporter":{"name":"Dra. Imani Okafor","avatar":"imani-okafor","text":"É a única opção que muda radicalmente o horizonte da missão."},"dissenter":{"name":"Comandante Amara Diallo","avatar":"amara-diallo","text":"Não levarei cento e vinte pessoas num motor que ainda depende de uma descoberta durante o cronograma."}},
+        {"componentId":"ion","days":224,"influence":-2,"trust":1,"morale":-2,"risk":"Baixo empuxo e dependência energética","supporter":{"name":"Eng. Elias Brandt","avatar":"elias-brandt","text":"Menos partes violentas, mais redundância e excelente eficiência em cruzeiro."},"dissenter":{"name":"Piloto Jun Park","avatar":"jun-park","text":"A margem de manobra é pequena. Se perdermos a janela, não recuperamos tempo com potência bruta."}}
+      ]
+    },
+    {
+      "id": "habitat",
+      "label": "Arquitetura habitável",
+      "question": "Quantas pessoas podemos salvar sem transformar a nave em um risco psicológico?",
+      "briefing": "A cabine não é apenas volume pressurizado. Privacidade, gravidade e isolamento de falhas decidirão quem chegará funcional.",
+      "constraint": "Mais capacidade aumenta massa, energia, calor, suprimentos e complexidade de evacuação.",
+      "options": [
+        {"componentId":"compact","days":92,"influence":4,"trust":-5,"morale":-7,"risk":"Confinamento e baixa privacidade","supporter":{"name":"Eng. Rafael Costa","avatar":"rafael-costa","text":"É leve, simples e deixa margem para blindagem e testes."},"dissenter":{"name":"Dra. Samira Haddad","avatar":"samira-haddad","text":"O desenho economiza metal usando a saúde mental como margem de engenharia."}},
+        {"componentId":"ring","days":238,"influence":-5,"trust":7,"morale":9,"risk":"Rolamentos, acoplamento e massa estrutural","supporter":{"name":"Dra. Asha Rao","avatar":"asha-rao","text":"Gravidade parcial protege ossos, circulação e autonomia da tripulação."},"dissenter":{"name":"Eng. Elias Brandt","avatar":"elias-brandt","text":"Cada junta rotativa é uma falha que teremos de reparar longe da Terra."}},
+        {"componentId":"dual","days":164,"influence":-1,"trust":4,"morale":3,"risk":"Duplicação de sistemas e vedação","supporter":{"name":"Comandante Amara Diallo","avatar":"amara-diallo","text":"Dois volumes permitem quarentena e sobrevivência após uma perda de pressão."},"dissenter":{"name":"Dra. Imani Okafor","avatar":"imani-okafor","text":"A redundância consome massa que a propulsão precisará acelerar por anos."}}
+      ]
+    },
+    {
+      "id": "power",
+      "label": "Geração e distribuição",
+      "question": "Qual fonte continuará viva quando a Terra for apenas uma estrela?",
+      "briefing": "Energia é a moeda física da nave. Sem margem elétrica, suporte de vida e propulsão competirão pela mesma sobrevivência.",
+      "constraint": "A escolha precisa sustentar a carga de base e ainda reservar margem para uma falha de barramento.",
+      "options": [
+        {"componentId":"fission","days":138,"influence":-6,"trust":2,"morale":0,"risk":"Rejeição térmica e oposição política","supporter":{"name":"Eng. Rafael Costa","avatar":"rafael-costa","text":"Potência estável, combustível calculável e manutenção conhecida."},"dissenter":{"name":"Dra. Samira Haddad","avatar":"samira-haddad","text":"Outro reator amplia a percepção de que a missão transfere riscos para a tripulação."}},
+        {"componentId":"solar","days":84,"influence":7,"trust":-2,"morale":2,"risk":"Produção decrescente e área vulnerável","supporter":{"name":"Mateo Vega","avatar":"mateo-vega","text":"É a opção que o conselho consegue defender publicamente e financiar agora."},"dissenter":{"name":"Eng. Elias Brandt","avatar":"elias-brandt","text":"Longe da estrela, um painel danificado vira uma sentença de racionamento."}},
+        {"componentId":"hybrid","days":196,"influence":-3,"trust":6,"morale":3,"risk":"Custo, massa e software de distribuição","supporter":{"name":"Eng. Elias Brandt","avatar":"elias-brandt","text":"Duas fontes independentes compram tempo quando qualquer uma delas falhar."},"dissenter":{"name":"Mateo Vega","avatar":"mateo-vega","text":"O custo ameaça a campanha de testes e exigirá nova negociação internacional."}}
+      ]
+    },
+    {
+      "id": "shield",
+      "label": "Blindagem e sobrevivência",
+      "question": "Quanto desempenho estamos dispostos a sacrificar para sobreviver ao desconhecido?",
+      "briefing": "Toda proteção ocupa massa que não poderá ser usada por pessoas, combustível ou laboratórios.",
+      "constraint": "A blindagem precisa equilibrar partículas, radiação, micrometeoros e capacidade de manobra.",
+      "options": [
+        {"componentId":"light","days":66,"influence":5,"trust":-6,"morale":-4,"risk":"Exposição radiológica e baixa redundância","supporter":{"name":"Dra. Imani Okafor","avatar":"imani-okafor","text":"A massa economizada devolve controle e delta-v à nave."},"dissenter":{"name":"Dra. Asha Rao","avatar":"asha-rao","text":"Essa margem será paga em dose acumulada, câncer e horas dentro do abrigo."}},
+        {"componentId":"water","days":112,"influence":1,"trust":4,"morale":3,"risk":"Perfuração e redistribuição de reservas","supporter":{"name":"Dra. Asha Rao","avatar":"asha-rao","text":"A mesma água protege, sustenta e pode ser redistribuída após um impacto."},"dissenter":{"name":"Piloto Jun Park","avatar":"jun-park","text":"Consumir água altera o centro de massa durante toda a missão."}},
+        {"componentId":"heavy","days":188,"influence":-8,"trust":7,"morale":5,"risk":"Massa extrema e montagem prolongada","supporter":{"name":"Comandante Amara Diallo","avatar":"amara-diallo","text":"Se a nave for nosso único mundo, proteção máxima não é luxo."},"dissenter":{"name":"Eng. Rafael Costa","avatar":"rafael-costa","text":"É excelente blindagem numa configuração que talvez nunca consiga deixar a órbita."}}
+      ]
+    }
+  ]
+}

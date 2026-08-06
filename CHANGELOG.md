@@ -1,5 +1,28 @@
 # Changelog
 
+## 4.8.0 — 2026-08-06
+
+- Seleção livre de seis retratos substituída por seis estações operacionais obrigatórias.
+- Oito candidatos concorrem por comando, voo, engenharia, medicina, ciência e operações.
+- Entrevistas guiadas revelam resposta sob pressão, força, risco humano e valores.
+- Uma pessoa não pode ocupar duas estações; transferências reabrem automaticamente a vaga anterior.
+- Relações positivas e tensões entre pares alteram a coesão calculada da equipe.
+- Três simulações obrigatórias consomem orçamento e prazo antes da certificação.
+- Fadiga individual cresce por função durante o cruzeiro e aumenta o risco de lançamento e manutenção.
+- Rotação de descanso reduz fadiga em troca de quatorze dias e progresso de rota.
+- Saves anteriores são migrados para estações equivalentes e permanecem certificados quando já haviam concluído a etapa.
+
+## 4.7.0 — 2026-08-06
+
+- A antiga grade de componentes foi substituída por uma Sala de Engenharia em tela ampla.
+- Quatro decisões sequenciais são apresentadas pelo Eng. Rafael Costa, com objetivo e restrição explícitos.
+- Cada sistema oferece três propostas, custo, prazo, influência, confiança e risco dominante.
+- Especialistas defendem e contestam cada proposta por meio de avatares cinematográficos.
+- Massa, energia, térmica e delta-v são recalculados antes da assinatura.
+- Contratos comprometidos consomem recursos, avançam turnos e podem ser reabertos com penalidade sem reembolso.
+- Revisão final bloqueia configurações fisicamente inválidas ou sem reserva mínima para ensaios.
+- Migração de saves atualizada para a versão 5 e cache offline renovado.
+
 ## 4.6.0 — 2026-08-06
 
 - Vídeo oficial `Into LAST HORIZON` integrado à abertura da campanha.

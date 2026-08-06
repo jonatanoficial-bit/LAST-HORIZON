@@ -1,4 +1,4 @@
-# Relatório de qualidade — release 4.6.0
+# Relatório de qualidade — release 4.8.0
 
 Data: 6 de agosto de 2026
 
@@ -11,11 +11,28 @@ Data: 6 de agosto de 2026
 
 ## Verificações automatizadas
 
-- 11/11 testes aprovados: seed determinística, integração, economia de testes, ciência por confiança, recursos finitos, final, checksum, migração, cobertura narrativa, integridade visual e ligação dos vídeos.
+- 20/20 testes aprovados: seed determinística, integração, economia de testes, ciência por confiança, recursos finitos, final, checksum, migração, cobertura narrativa, integridade visual, vídeos, engenharia, designação por vaga, certificação coletiva, fadiga operacional e efeito da equipe no risco de lançamento.
 - 59 entidades de jogo validadas, sem IDs duplicados.
 - 11 etapas jogáveis e 3 idiomas-base presentes.
 - 9 referências do shell resolvidas.
 - Sintaxe de `app.js` e `service-worker.js` aprovada pelo Node.js.
+
+## Sala de Engenharia 4.7
+
+- Quatro revisões e doze propostas validadas contra os componentes existentes.
+- Todo especialista citado possui retrato WebP e PNG disponível.
+- Compromissos descontam custo, prazo e influência, atualizam confiança e impedem assinatura duplicada.
+- Revisões removem o componente, preservam o custo anterior e aplicam nova penalidade.
+- A rota nuclear/compacto/fissão/leve foi exercitada integralmente e mantém validade física e 14 bi ou mais para os ensaios.
+- Foram encontradas 35 combinações certificáveis dentro da reserva mínima de testes.
+
+## Tripulação operacional 4.8
+
+- Seis estações, oito candidatos, doze candidaturas possíveis e três treinamentos validados.
+- Designação bloqueada antes da entrevista e exclusividade de estação testada.
+- Uma composição completa foi entrevistada, designada e certificada pelos três módulos.
+- Migração de saves antigos mantém uma campanha já certificada em estado jogável.
+- Fadiga por função foi exercitada no cruzeiro; rotação de descanso reduziu a carga individual.
 
 ## Percurso real no navegador
 

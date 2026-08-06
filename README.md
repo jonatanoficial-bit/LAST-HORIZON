@@ -1,6 +1,6 @@
 # LAST HORIZON — Global Space Agency Simulator
 
-Versão 4.6.0: campanha narrativa, tutorial guiado por especialistas e simulador espacial offline inspirado na Bíblia Oficial do PROJECT HAVEN. Você assume a direção da GSEA, conquista apoio público, integra a ARK-01, certifica sua tripulação, conduz lançamento e cruzeiro, analisa mundos e funda uma colônia cujo futuro depende das suas decisões.
+Versão 4.8.0: campanha narrativa, tutorial guiado por especialistas e simulador espacial offline inspirado na Bíblia Oficial do PROJECT HAVEN. Você assume a direção da GSEA, conquista apoio público, integra a ARK-01, certifica sua tripulação, conduz lançamento e cruzeiro, analisa mundos e funda uma colônia cujo futuro depende das suas decisões.
 
 ## Como jogar no Windows
 
@@ -14,6 +14,14 @@ O jogo abre em `http://localhost:8765/`. Também pode ser publicado no GitHub Pa
 ## O que há nesta versão
 
 - Vídeo oficial `Into LAST HORIZON` integrado antes do prólogo interativo.
+- Sala de Engenharia cinematográfica com quatro revisões técnicas guiadas pelo Eng. Rafael Costa.
+- Três propostas por sistema, pareceres conflitantes da equipe e projeção física antes da assinatura.
+- Orçamento, influência, confiança e cronograma afetados por cada contrato; revisão tem custo e não devolve o investimento anterior.
+- Centro de Seleção com seis estações operacionais e dois candidatos possíveis por função.
+- Entrevistas cinematográficas com respostas, forças, riscos humanos e valores de cada candidato.
+- Relações de sinergia e conflito recalculam a coesão da equipe.
+- Três exercícios obrigatórios certificam a tripulação e afetam orçamento, prazo, confiança e fadiga.
+- Fadiga individual cresce durante o cruzeiro, altera risco operacional e pode ser reduzida com rotação de descanso.
 - Onze atos guiados, com objetivo visível e explicações da equipe a cada etapa.
 - Mensagens de consequência em formato de turno antes da progressão.
 - Onze retratos cinematográficos e seis ambientes originais.
