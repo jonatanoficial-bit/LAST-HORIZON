@@ -1,0 +1,12 @@
+{
+  "name": "LAST HORIZON — Global Space Agency Simulator",
+  "short_name": "LAST HORIZON",
+  "description": "Conduza a GSEA da crise terrestre à fundação de uma colônia interestelar.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "landscape",
+  "background_color": "#03070b",
+  "theme_color": "#071018",
+  "icons": [{"src":"./assets/icons/icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}

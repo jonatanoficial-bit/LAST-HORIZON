@@ -1,0 +1,1254 @@
+{
+  "backgrounds": [
+    {
+      "code": "IMG-BRAND-001",
+      "filename": "brand-cover-last-horizon.webp",
+      "group": "Marca",
+      "use": "Capa e divulgação",
+      "size": "2560x1440",
+      "prompt": "Earth seen from high orbit at night with widespread climate disasters and city blackouts, colossal interstellar ark under construction in orbital drydock, hopeful distant star, centered cinematic composition, clean lower-left safe area, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-BRAND-002",
+      "filename": "splash-last-horizon.webp",
+      "group": "Marca",
+      "use": "Splash PWA vertical",
+      "size": "1290x2796",
+      "prompt": "vertical composition, luminous Earth fading into darkness below, gigantic ark spacecraft rising toward a distant habitable world, dramatic negative space in upper third for logo, elegant premium mobile splash, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-BRAND-003",
+      "filename": "og-last-horizon.webp",
+      "group": "Marca",
+      "use": "Prévia social",
+      "size": "1200x630",
+      "prompt": "wide mission control silhouettes facing panoramic windows, ark spacecraft leaving Earth, focal center and clean right-side title safe area, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-BRAND-004",
+      "filename": "app-icon-background.webp",
+      "group": "Marca",
+      "use": "Base do ícone",
+      "size": "1024x1024",
+      "prompt": "simple iconic circular orbital horizon around a small ark silhouette, luminous cyan arc over deep navy, bold readable shape at small scale, no text, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-BRAND-005",
+      "filename": "bg-main-menu-earth-orbit.webp",
+      "group": "Marca",
+      "use": "Menu principal",
+      "size": "2560x1440",
+      "prompt": "view from observation window toward damaged Earth and orbital construction docks, quiet solemn atmosphere, left side darker for vertical menu, no cockpit instruments, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-BRAND-006",
+      "filename": "bg-loading-stellar-route.webp",
+      "group": "Marca",
+      "use": "Carregamento",
+      "size": "2560x1440",
+      "prompt": "deep space navigation corridor, subtle star trails converging toward a distant blue planet, restrained minimal composition, center clear for loading indicator, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-CAM-001",
+      "filename": "bg-campaign-earth-collapse.webp",
+      "group": "Campanha",
+      "use": "Terra em colapso",
+      "size": "2560x1440",
+      "prompt": "Earth from space with huge weather systems, continental fires and partial city blackouts, realistic restrained catastrophe, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-CAM-002",
+      "filename": "bg-campaign-emergency-summit.webp",
+      "group": "Campanha",
+      "use": "Cúpula global",
+      "size": "2560x1440",
+      "prompt": "international crisis chamber, empty circular table, abstract climate projections without text, urgent atmosphere, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-CAM-003",
+      "filename": "bg-campaign-director-appointment.webp",
+      "group": "Campanha",
+      "use": "Nomeação",
+      "size": "2560x1440",
+      "prompt": "government aerospace auditorium, empty podium, press lights, central safe area for character overlay, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-CAM-004",
+      "filename": "bg-campaign-public-address.webp",
+      "group": "Campanha",
+      "use": "Pronunciamento",
+      "size": "2560x1440",
+      "prompt": "global broadcast studio, cameras and practical lighting, clean background for director avatar overlay, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-CAM-005",
+      "filename": "bg-campaign-city-shortages.webp",
+      "group": "Campanha",
+      "use": "Escassez urbana",
+      "size": "2560x1440",
+      "prompt": "near-future coastal megacity under rationing and infrastructure stress viewed from distance, non-graphic, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-CAM-006",
+      "filename": "bg-campaign-launch-protests.webp",
+      "group": "Campanha",
+      "use": "Protestos",
+      "size": "2560x1440",
+      "prompt": "road outside space center with distant crowd, barriers, emergency lights and launch pad far behind, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-CAM-007",
+      "filename": "bg-campaign-memorial-hall.webp",
+      "group": "Campanha",
+      "use": "Memorial",
+      "size": "2560x1440",
+      "prompt": "solemn space memorial with wall of lights without readable names, astronaut helmet on pedestal, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-CAM-008",
+      "filename": "bg-campaign-earth-recovery.webp",
+      "group": "Campanha",
+      "use": "Recuperação da Terra",
+      "size": "2560x1440",
+      "prompt": "Earth from orbit showing recovering oceans and green regions after years, hopeful sunrise, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-AGY-001",
+      "filename": "bg-agency-mission-control.webp",
+      "group": "Agência",
+      "use": "Controle da missão",
+      "size": "2560x1440",
+      "prompt": "large near-future mission control, curved workstations, panoramic abstract telemetry lights, empty seats, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-AGY-002",
+      "filename": "bg-agency-director-office.webp",
+      "group": "Agência",
+      "use": "Escritório do diretor",
+      "size": "2560x1440",
+      "prompt": "space agency director office, Earth model, mission photos without logos, window toward launch complex, dark right side, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-AGY-003",
+      "filename": "bg-agency-engineering-review.webp",
+      "group": "Agência",
+      "use": "Revisão de engenharia",
+      "size": "2560x1440",
+      "prompt": "systems engineering review room with physical spacecraft model, blank wall panels, chairs for character overlays, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-AGY-004",
+      "filename": "bg-agency-propulsion-lab.webp",
+      "group": "Agência",
+      "use": "Laboratório de propulsão",
+      "size": "2560x1440",
+      "prompt": "advanced rocket propulsion laboratory, engine section on stand, pipes and diagnostics, no flame, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-AGY-005",
+      "filename": "bg-agency-structures-lab.webp",
+      "group": "Agência",
+      "use": "Laboratório estrutural",
+      "size": "2560x1440",
+      "prompt": "spacecraft structural lab, composite pressure shell, robotic inspection arms, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-AGY-006",
+      "filename": "bg-agency-life-support-lab.webp",
+      "group": "Agência",
+      "use": "Laboratório de suporte de vida",
+      "size": "2560x1440",
+      "prompt": "closed-loop life support lab with water recycling prototypes, plant chambers and air processors, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-AGY-007",
+      "filename": "bg-agency-medical-center.webp",
+      "group": "Agência",
+      "use": "Centro médico",
+      "size": "2560x1440",
+      "prompt": "astronaut medical and human performance center, scanner, treadmill enclosure, clinical lighting, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-AGY-008",
+      "filename": "bg-agency-training-simulator.webp",
+      "group": "Agência",
+      "use": "Simulador de treinamento",
+      "size": "2560x1440",
+      "prompt": "full-motion spacecraft simulator hall, capsule mockup and observation booth, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-AGY-009",
+      "filename": "bg-agency-procurement-room.webp",
+      "group": "Agência",
+      "use": "Sala de contratos",
+      "size": "2560x1440",
+      "prompt": "supplier negotiation room with component samples and sealed proposals, aerospace corporate atmosphere, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-AGY-010",
+      "filename": "bg-agency-data-center.webp",
+      "group": "Agência",
+      "use": "Data center",
+      "size": "2560x1440",
+      "prompt": "secure aerospace data center with redundant servers and cooling corridors, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-AGY-011",
+      "filename": "bg-agency-hangar.webp",
+      "group": "Agência",
+      "use": "Hangar de montagem",
+      "size": "2560x1440",
+      "prompt": "immense spacecraft assembly hangar, ARK-01 central spine under construction, tiny workers for scale, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-AGY-012",
+      "filename": "bg-agency-launch-complex.webp",
+      "group": "Agência",
+      "use": "Complexo de lançamento",
+      "size": "2560x1440",
+      "prompt": "near-future launch complex at dawn, giant heavy launch vehicle, service towers and vapor, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-MFG-001",
+      "filename": "bg-mfg-blueprint-bay.webp",
+      "group": "Fabricação e testes",
+      "use": "Sala de projeto",
+      "size": "2560x1440",
+      "prompt": "dark engineering visualization bay with physically plausible projected wireframe ark, no labels, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-MFG-002",
+      "filename": "bg-mfg-engine-test-stand.webp",
+      "group": "Fabricação e testes",
+      "use": "Bancada antes do teste",
+      "size": "2560x1440",
+      "prompt": "remote rocket engine test stand at night before ignition, vapor and safety lights, foreground for controls, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-MFG-003",
+      "filename": "bg-mfg-engine-firing.webp",
+      "group": "Fabricação e testes",
+      "use": "Teste de motor",
+      "size": "2560x1440",
+      "prompt": "rocket engine static fire on reinforced test stand, intense realistic plume and shock diamonds, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-MFG-004",
+      "filename": "bg-mfg-tank-assembly.webp",
+      "group": "Fabricação e testes",
+      "use": "Fabricação de tanques",
+      "size": "2560x1440",
+      "prompt": "cryogenic tank production line, huge cylindrical tanks, welding rigs and platforms, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-MFG-005",
+      "filename": "bg-mfg-vibration-test.webp",
+      "group": "Fabricação e testes",
+      "use": "Teste de vibração",
+      "size": "2560x1440",
+      "prompt": "spacecraft module on giant vibration table, cables and sensors without labels, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-MFG-006",
+      "filename": "bg-mfg-thermal-vacuum.webp",
+      "group": "Fabricação e testes",
+      "use": "Teste térmico-vácuo",
+      "size": "2560x1440",
+      "prompt": "open thermal vacuum chamber with spacecraft module, black walls and industrial lighting, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-MFG-007",
+      "filename": "bg-mfg-pressure-test.webp",
+      "group": "Fabricação e testes",
+      "use": "Teste de pressão",
+      "size": "2560x1440",
+      "prompt": "sealed habitat pressure test bay, reinforced windows, diagnostic lighting, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-MFG-008",
+      "filename": "bg-mfg-clean-room.webp",
+      "group": "Fabricação e testes",
+      "use": "Sala limpa",
+      "size": "2560x1440",
+      "prompt": "spacecraft avionics clean room, distant technicians, flight computer racks, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-MFG-009",
+      "filename": "bg-mfg-final-integration.webp",
+      "group": "Fabricação e testes",
+      "use": "Integração final",
+      "size": "2560x1440",
+      "prompt": "final spacecraft integration hall, modules joining along central spine, complex cranes, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-MFG-010",
+      "filename": "bg-mfg-rollout.webp",
+      "group": "Fabricação e testes",
+      "use": "Transporte ao lançamento",
+      "size": "2560x1440",
+      "prompt": "massive launch vehicle rolling toward pad at sunrise, cinematic low angle, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-INT-001",
+      "filename": "bg-interior-flight-deck.webp",
+      "group": "Interior ARK-01",
+      "use": "Cabine de comando",
+      "size": "2560x1440",
+      "prompt": "ARK-01 command flight deck, forward panoramic windows, empty instrument bezels and blank dark screen surfaces reserved for coded UI, symmetrical, no gauges, no labeled buttons, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": "Não aceitar instrumentos prontos. Medidores, botões, textos e luzes de estado serão sobrepostos por código."
+    },
+    {
+      "code": "IMG-INT-002",
+      "filename": "bg-interior-navigation.webp",
+      "group": "Interior ARK-01",
+      "use": "Navegação",
+      "size": "2560x1440",
+      "prompt": "navigation room with central star map table switched off, blank display walls, seats and handrails, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": "Não aceitar instrumentos prontos. Medidores, botões, textos e luzes de estado serão sobrepostos por código."
+    },
+    {
+      "code": "IMG-INT-003",
+      "filename": "bg-interior-engineering-control.webp",
+      "group": "Interior ARK-01",
+      "use": "Controle de engenharia",
+      "size": "2560x1440",
+      "prompt": "engineering control room, rows of blank dark panels and unlabeled switch housings, reactor access behind glass, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": "Não aceitar instrumentos prontos. Medidores, botões, textos e luzes de estado serão sobrepostos por código."
+    },
+    {
+      "code": "IMG-INT-004",
+      "filename": "bg-interior-reactor.webp",
+      "group": "Interior ARK-01",
+      "use": "Reator",
+      "size": "2560x1440",
+      "prompt": "compact advanced fission or fusion reactor chamber, shielded core housing, coolant pipes, service catwalks, no fantasy energy, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": "Não aceitar instrumentos prontos. Medidores, botões, textos e luzes de estado serão sobrepostos por código."
+    },
+    {
+      "code": "IMG-INT-005",
+      "filename": "bg-interior-propulsion-service.webp",
+      "group": "Interior ARK-01",
+      "use": "Serviço de propulsão",
+      "size": "2560x1440",
+      "prompt": "spacecraft propulsion service bay, engine feed lines, valves, access platforms and maintenance lighting, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": "Não aceitar instrumentos prontos. Medidores, botões, textos e luzes de estado serão sobrepostos por código."
+    },
+    {
+      "code": "IMG-INT-006",
+      "filename": "bg-interior-life-support.webp",
+      "group": "Interior ARK-01",
+      "use": "Suporte de vida",
+      "size": "2560x1440",
+      "prompt": "life support room with air scrubbers, water reclamation columns, filter racks and blank panels, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": "Não aceitar instrumentos prontos. Medidores, botões, textos e luzes de estado serão sobrepostos por código."
+    },
+    {
+      "code": "IMG-INT-007",
+      "filename": "bg-interior-hydroponics.webp",
+      "group": "Interior ARK-01",
+      "use": "Hidroponia",
+      "size": "2560x1440",
+      "prompt": "spacecraft hydroponics greenhouse, modular crops under efficient grow lights, water channels and central aisle, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": "Não aceitar instrumentos prontos. Medidores, botões, textos e luzes de estado serão sobrepostos por código."
+    },
+    {
+      "code": "IMG-INT-008",
+      "filename": "bg-interior-medbay.webp",
+      "group": "Interior ARK-01",
+      "use": "Enfermaria",
+      "size": "2560x1440",
+      "prompt": "spacecraft medical bay with two treatment beds, diagnostic arch, medicine lockers and neutral lighting, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": "Não aceitar instrumentos prontos. Medidores, botões, textos e luzes de estado serão sobrepostos por código."
+    },
+    {
+      "code": "IMG-INT-009",
+      "filename": "bg-interior-crew-quarters.webp",
+      "group": "Interior ARK-01",
+      "use": "Alojamentos",
+      "size": "2560x1440",
+      "prompt": "compact long-duration crew quarters, private bunks, personal storage, soft lighting, orderly lived-in feel, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": "Não aceitar instrumentos prontos. Medidores, botões, textos e luzes de estado serão sobrepostos por código."
+    },
+    {
+      "code": "IMG-INT-010",
+      "filename": "bg-interior-galley.webp",
+      "group": "Interior ARK-01",
+      "use": "Refeitório",
+      "size": "2560x1440",
+      "prompt": "spacecraft galley and communal table, compact appliances, room for crew overlays, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": "Não aceitar instrumentos prontos. Medidores, botões, textos e luzes de estado serão sobrepostos por código."
+    },
+    {
+      "code": "IMG-INT-011",
+      "filename": "bg-interior-science-lab.webp",
+      "group": "Interior ARK-01",
+      "use": "Laboratório científico",
+      "size": "2560x1440",
+      "prompt": "multidisciplinary spacecraft laboratory with sealed sample cabinets, analyzers and blank screens, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": "Não aceitar instrumentos prontos. Medidores, botões, textos e luzes de estado serão sobrepostos por código."
+    },
+    {
+      "code": "IMG-INT-012",
+      "filename": "bg-interior-observation-dome.webp",
+      "group": "Interior ARK-01",
+      "use": "Cúpula de observação",
+      "size": "2560x1440",
+      "prompt": "observation dome with wide space view, minimal seating and structural ribs, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": "Não aceitar instrumentos prontos. Medidores, botões, textos e luzes de estado serão sobrepostos por código."
+    },
+    {
+      "code": "IMG-INT-013",
+      "filename": "bg-interior-airlock.webp",
+      "group": "Interior ARK-01",
+      "use": "Câmara de ar",
+      "size": "2560x1440",
+      "prompt": "dual-door spacecraft airlock, EVA suit mounts, tool lockers, warning light housings without text, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": "Não aceitar instrumentos prontos. Medidores, botões, textos e luzes de estado serão sobrepostos por código."
+    },
+    {
+      "code": "IMG-INT-014",
+      "filename": "bg-interior-cargo-bay.webp",
+      "group": "Interior ARK-01",
+      "use": "Carga",
+      "size": "2560x1440",
+      "prompt": "organized cargo bay with modular containers, robotic rail system and central aisle, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": "Não aceitar instrumentos prontos. Medidores, botões, textos e luzes de estado serão sobrepostos por código."
+    },
+    {
+      "code": "IMG-INT-015",
+      "filename": "bg-interior-comms.webp",
+      "group": "Interior ARK-01",
+      "use": "Comunicação",
+      "size": "2560x1440",
+      "prompt": "deep-space communications room with antenna hardware, blank screens and isolated operator station, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": "Não aceitar instrumentos prontos. Medidores, botões, textos e luzes de estado serão sobrepostos por código."
+    },
+    {
+      "code": "IMG-INT-016",
+      "filename": "bg-interior-maintenance-tunnel.webp",
+      "group": "Interior ARK-01",
+      "use": "Túnel de manutenção",
+      "size": "2560x1440",
+      "prompt": "narrow spacecraft service tunnel with pipes, cables, access panels and utility lights, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": "Não aceitar instrumentos prontos. Medidores, botões, textos e luzes de estado serão sobrepostos por código."
+    },
+    {
+      "code": "IMG-INT-017",
+      "filename": "bg-interior-escape-module.webp",
+      "group": "Interior ARK-01",
+      "use": "Módulo de fuga",
+      "size": "2560x1440",
+      "prompt": "emergency lifeboat compartment with compact seats, sealed hatches and equipment racks, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": "Não aceitar instrumentos prontos. Medidores, botões, textos e luzes de estado serão sobrepostos por código."
+    },
+    {
+      "code": "IMG-INT-018",
+      "filename": "bg-interior-fabrication.webp",
+      "group": "Interior ARK-01",
+      "use": "Oficina de fabricação",
+      "size": "2560x1440",
+      "prompt": "onboard workshop with metal and polymer printers, milling unit, spare racks and workbench, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": "Não aceitar instrumentos prontos. Medidores, botões, textos e luzes de estado serão sobrepostos por código."
+    },
+    {
+      "code": "IMG-INT-019",
+      "filename": "bg-interior-centrifuge.webp",
+      "group": "Interior ARK-01",
+      "use": "Anel de gravidade",
+      "size": "2560x1440",
+      "prompt": "interior corridor of rotating gravity ring, curved floor, handrails, realistic centrifugal architecture, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": "Não aceitar instrumentos prontos. Medidores, botões, textos e luzes de estado serão sobrepostos por código."
+    },
+    {
+      "code": "IMG-INT-020",
+      "filename": "bg-interior-quarantine.webp",
+      "group": "Interior ARK-01",
+      "use": "Quarentena",
+      "size": "2560x1440",
+      "prompt": "sealed biosafety quarantine room, observation glass, decontamination equipment, blank status panels, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": "Não aceitar instrumentos prontos. Medidores, botões, textos e luzes de estado serão sobrepostos por código."
+    },
+    {
+      "code": "IMG-MSN-001",
+      "filename": "bg-mission-countdown-pad.webp",
+      "group": "Missão",
+      "use": "Contagem",
+      "size": "2560x1440",
+      "prompt": "heavy interstellar launch vehicle on pad at night, vapor, service tower, distant storm clouds, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-MSN-002",
+      "filename": "bg-mission-liftoff.webp",
+      "group": "Missão",
+      "use": "Decolagem",
+      "size": "2560x1440",
+      "prompt": "colossal launch vehicle lifting off, realistic exhaust and sound suppression, safe camera distance, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-MSN-003",
+      "filename": "bg-mission-ascent.webp",
+      "group": "Missão",
+      "use": "Ascensão",
+      "size": "2560x1440",
+      "prompt": "vehicle climbing through upper atmosphere over cloud deck, Earth curvature beginning, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-MSN-004",
+      "filename": "bg-mission-stage-separation.webp",
+      "group": "Missão",
+      "use": "Separação",
+      "size": "2560x1440",
+      "prompt": "clean stage separation in near space, spent booster drifting, precise mechanical detail, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-MSN-005",
+      "filename": "bg-mission-earth-orbit.webp",
+      "group": "Missão",
+      "use": "Órbita terrestre",
+      "size": "2560x1440",
+      "prompt": "ARK-01 assembled in Earth orbit, planet filling background, radiators deployed, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-MSN-006",
+      "filename": "bg-mission-departure-burn.webp",
+      "group": "Missão",
+      "use": "Queima de partida",
+      "size": "2560x1440",
+      "prompt": "ARK-01 performing long departure burn away from Earth, restrained plume, Moon and Earth behind, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-MSN-007",
+      "filename": "bg-mission-deep-cruise.webp",
+      "group": "Missão",
+      "use": "Cruzeiro profundo",
+      "size": "2560x1440",
+      "prompt": "ARK-01 in deep interstellar cruise, dark star field, faint radiator glow, immense loneliness, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-MSN-008",
+      "filename": "bg-mission-solar-flare.webp",
+      "group": "Missão",
+      "use": "Erupção estelar",
+      "size": "2560x1440",
+      "prompt": "spacecraft near violent stellar flare at safe distance, energetic particles interacting with shielding subtly, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-MSN-009",
+      "filename": "bg-mission-micrometeor-storm.webp",
+      "group": "Missão",
+      "use": "Micrometeoros",
+      "size": "2560x1440",
+      "prompt": "ARK-01 crossing micrometeor stream, small impacts and defensive orientation, restrained realism, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-MSN-010",
+      "filename": "bg-mission-eva-repair.webp",
+      "group": "Missão",
+      "use": "Reparo EVA",
+      "size": "2560x1440",
+      "prompt": "two astronauts repairing external hull with tethers, damaged radiator and distant star, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-MSN-011",
+      "filename": "bg-mission-unknown-signal.webp",
+      "group": "Missão",
+      "use": "Sinal desconhecido",
+      "size": "2560x1440",
+      "prompt": "deep space with distant ambiguous artificial-looking object and geometric radio source, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-MSN-012",
+      "filename": "bg-mission-arrival-system.webp",
+      "group": "Missão",
+      "use": "Chegada",
+      "size": "2560x1440",
+      "prompt": "ARK-01 entering a new star system with several planets and dramatic depth, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-MSN-013",
+      "filename": "bg-mission-orbital-insertion.webp",
+      "group": "Missão",
+      "use": "Inserção orbital",
+      "size": "2560x1440",
+      "prompt": "ARK-01 braking above large blue-green planet, atmospheric limb and engine plume, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-MSN-014",
+      "filename": "bg-mission-atmospheric-entry.webp",
+      "group": "Missão",
+      "use": "Entrada",
+      "size": "2560x1440",
+      "prompt": "landing craft entering alien atmosphere with plasma sheath, realistic orientation, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-MSN-015",
+      "filename": "bg-mission-landing-descent.webp",
+      "group": "Missão",
+      "use": "Descida",
+      "size": "2560x1440",
+      "prompt": "landing craft descending over rugged alien valley, dust and safe site visible, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-MSN-016",
+      "filename": "bg-mission-emergency-landing.webp",
+      "group": "Missão",
+      "use": "Pouso de emergência",
+      "size": "2560x1440",
+      "prompt": "damaged landing craft approaching rough terrain in storm, asymmetric plume, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-MSN-017",
+      "filename": "bg-mission-loss-of-contact.webp",
+      "group": "Missão",
+      "use": "Perda de contato",
+      "size": "2560x1440",
+      "prompt": "empty mission control under emergency red lighting, one central screen area dark, no text, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-MSN-018",
+      "filename": "bg-mission-ark-damaged.webp",
+      "group": "Missão",
+      "use": "Nave avariada",
+      "size": "2560x1440",
+      "prompt": "ARK-01 drifting with localized hull damage, venting gas and dark module, no total destruction, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-PLN-001",
+      "filename": "bg-planet-aurelia-orbit.webp",
+      "group": "Planetas",
+      "use": "Aurelia em órbita",
+      "size": "2560x1440",
+      "prompt": "orbital view of Aurelia, temperate blue-green exoplanet, continents, oceans, clouds and thin aurora, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-PLN-002",
+      "filename": "bg-planet-aurelia-surface.webp",
+      "group": "Planetas",
+      "use": "Aurelia superfície",
+      "size": "2560x1440",
+      "prompt": "broad river valley, dark green alien vegetation with plausible ecology, twin moons faintly visible, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-PLN-003",
+      "filename": "bg-planet-nereid-orbit.webp",
+      "group": "Planetas",
+      "use": "Nereid em órbita",
+      "size": "2560x1440",
+      "prompt": "global ocean exoplanet with powerful storms and volcanic island chains, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-PLN-004",
+      "filename": "bg-planet-nereid-surface.webp",
+      "group": "Planetas",
+      "use": "Nereid superfície",
+      "size": "2560x1440",
+      "prompt": "ocean beside black volcanic island, heavy waves, possible landing platform, dramatic weather, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-PLN-005",
+      "filename": "bg-planet-cinder-orbit.webp",
+      "group": "Planetas",
+      "use": "Cinder em órbita",
+      "size": "2560x1440",
+      "prompt": "hot arid planet, iron deserts, canyons, dusty atmosphere and polar ice remnants, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-PLN-006",
+      "filename": "bg-planet-cinder-surface.webp",
+      "group": "Planetas",
+      "use": "Cinder superfície",
+      "size": "2560x1440",
+      "prompt": "red-brown canyon basin, high winds, mineral deposits and harsh sunlight, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-PLN-007",
+      "filename": "bg-planet-umbra-orbit.webp",
+      "group": "Planetas",
+      "use": "Umbra em órbita",
+      "size": "2560x1440",
+      "prompt": "frozen exoplanet with cracked ice shell, dark ocean fractures and faint atmosphere, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-PLN-008",
+      "filename": "bg-planet-umbra-surface.webp",
+      "group": "Planetas",
+      "use": "Umbra superfície",
+      "size": "2560x1440",
+      "prompt": "glacial plains, ice ridges, distant geysers and low blue light, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-PLN-009",
+      "filename": "bg-planet-verdant-orbit.webp",
+      "group": "Planetas",
+      "use": "Verdant em órbita",
+      "size": "2560x1440",
+      "prompt": "cloud-covered super-earth with vast forests and uncertain atmospheric chemistry, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-PLN-010",
+      "filename": "bg-planet-verdant-surface.webp",
+      "group": "Planetas",
+      "use": "Verdant superfície",
+      "size": "2560x1440",
+      "prompt": "towering alien forest, mist and bioluminescent microorganisms, beautiful but potentially toxic, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-PLN-011",
+      "filename": "bg-planet-barren-orbit.webp",
+      "group": "Planetas",
+      "use": "Barren em órbita",
+      "size": "2560x1440",
+      "prompt": "sterile airless mineral world, cratered surface and valuable metals, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-PLN-012",
+      "filename": "bg-planet-barren-surface.webp",
+      "group": "Planetas",
+      "use": "Barren superfície",
+      "size": "2560x1440",
+      "prompt": "airless mineral plain with sharp shadows, rover tracks and distant ringed planet, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-PLN-013",
+      "filename": "bg-planet-gas-giant.webp",
+      "group": "Planetas",
+      "use": "Gigante gasoso",
+      "size": "2560x1440",
+      "prompt": "majestic gas giant with turbulent bands, rings and multiple moons, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-PLN-014",
+      "filename": "bg-planet-anomaly.webp",
+      "group": "Planetas",
+      "use": "Anomalia",
+      "size": "2560x1440",
+      "prompt": "dark rogue world with geometric subsurface lights barely visible through fractures, ambiguous artificial origin, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-PLN-015",
+      "filename": "bg-planet-orbit-map-neutral.webp",
+      "group": "Planetas",
+      "use": "Mapa orbital neutro",
+      "size": "2560x1440",
+      "prompt": "clean top-down scientific visualization of a fictional star system on dark space, planets without labels, empty areas for coded orbit lines, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-PLN-016",
+      "filename": "bg-planet-cave-habitat.webp",
+      "group": "Planetas",
+      "use": "Caverna habitável",
+      "size": "2560x1440",
+      "prompt": "vast lava tube on alien planet, ice deposits, stable shelter potential, expedition lights, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-COL-001",
+      "filename": "bg-colony-first-step.webp",
+      "group": "Colônia",
+      "use": "Primeiro passo",
+      "size": "2560x1440",
+      "prompt": "first landing site on Aurelia, crew descending ramp, modular cargo and untouched valley, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-COL-002",
+      "filename": "bg-colony-habitat-deployment.webp",
+      "group": "Colônia",
+      "use": "Implantação de habitat",
+      "size": "2560x1440",
+      "prompt": "inflatable and rigid modules deployed by robots, realistic construction sequence, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-COL-003",
+      "filename": "bg-colony-solar-farm.webp",
+      "group": "Colônia",
+      "use": "Fazenda solar",
+      "size": "2560x1440",
+      "prompt": "solar and battery field beside early colony, maintenance rovers, changing weather, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-COL-004",
+      "filename": "bg-colony-reactor-site.webp",
+      "group": "Colônia",
+      "use": "Reator da colônia",
+      "size": "2560x1440",
+      "prompt": "compact shielded surface reactor separated from habitat, cooling equipment and perimeter, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-COL-005",
+      "filename": "bg-colony-water-extraction.webp",
+      "group": "Colônia",
+      "use": "Extração de água",
+      "size": "2560x1440",
+      "prompt": "ice or groundwater extraction facility with pipes toward settlement, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-COL-006",
+      "filename": "bg-colony-greenhouse.webp",
+      "group": "Colônia",
+      "use": "Estufa",
+      "size": "2560x1440",
+      "prompt": "pressurized greenhouse interior on alien planet, abundant crops and condensation, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-COL-007",
+      "filename": "bg-colony-medical-crisis.webp",
+      "group": "Colônia",
+      "use": "Crise médica",
+      "size": "2560x1440",
+      "prompt": "colony clinic prepared for emergency, empty beds and alarm lighting, no patients, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-COL-008",
+      "filename": "bg-colony-dust-storm.webp",
+      "group": "Colônia",
+      "use": "Tempestade",
+      "size": "2560x1440",
+      "prompt": "early colony under severe dust storm, structures sealed and emergency lights, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-COL-009",
+      "filename": "bg-colony-night.webp",
+      "group": "Colônia",
+      "use": "Noite da colônia",
+      "size": "2560x1440",
+      "prompt": "colony beneath unfamiliar stars and moons, warm habitat lights and quiet optimism, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-COL-010",
+      "filename": "bg-colony-expanded.webp",
+      "group": "Colônia",
+      "use": "Colônia expandida",
+      "size": "2560x1440",
+      "prompt": "mature plausible settlement with habitats, research, agriculture, transit and landing zone, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-COL-011",
+      "filename": "bg-colony-council.webp",
+      "group": "Colônia",
+      "use": "Conselho",
+      "size": "2560x1440",
+      "prompt": "modular colony council chamber, circular table and windows toward settlement, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-COL-012",
+      "filename": "bg-colony-final-sunrise.webp",
+      "group": "Colônia",
+      "use": "Amanhecer final",
+      "size": "2560x1440",
+      "prompt": "sunrise over thriving colony with distant ARK-01 in sky, emotional final, clean sky area, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-COL-013",
+      "filename": "bg-colony-cemetery.webp",
+      "group": "Colônia",
+      "use": "Memorial da colônia",
+      "size": "2560x1440",
+      "prompt": "small dignified memorial field beneath alien sky, simple markers without names, non-funereal hope, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-COL-014",
+      "filename": "bg-colony-school.webp",
+      "group": "Colônia",
+      "use": "Escola da colônia",
+      "size": "2560x1440",
+      "prompt": "bright modular classroom and science learning area for first generation, no children visible, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-UI-001",
+      "filename": "texture-panel-titanium.webp",
+      "group": "UI e texturas",
+      "use": "Textura titânio",
+      "size": "2048x2048",
+      "prompt": "seamless brushed dark titanium panel texture, subtle scratches, uniform lighting, tileable, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-UI-002",
+      "filename": "texture-panel-carbon.webp",
+      "group": "UI e texturas",
+      "use": "Textura compósito",
+      "size": "2048x2048",
+      "prompt": "seamless dark aerospace composite texture, restrained and tileable, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-UI-003",
+      "filename": "texture-glass-noise.webp",
+      "group": "UI e texturas",
+      "use": "Ruído de vidro",
+      "size": "2048x2048",
+      "prompt": "subtle dark glass grain and fine dust pattern on black, uniform, tileable, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-UI-004",
+      "filename": "bg-modal-engineering.webp",
+      "group": "UI e texturas",
+      "use": "Modal de engenharia",
+      "size": "2560x1440",
+      "prompt": "abstract dark spacecraft blueprint grid with faint lines and no labels, low contrast, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-UI-005",
+      "filename": "bg-modal-emergency.webp",
+      "group": "UI e texturas",
+      "use": "Modal de emergência",
+      "size": "2560x1440",
+      "prompt": "dark red emergency-lit spacecraft wall texture, smoke haze, no signs, low detail center, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-UI-006",
+      "filename": "bg-save-slots.webp",
+      "group": "UI e texturas",
+      "use": "Gerenciador de partidas",
+      "size": "2560x1440",
+      "prompt": "archive room with illuminated mission data cores, symmetrical shelves and empty center, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-UI-007",
+      "filename": "bg-credits.webp",
+      "group": "UI e texturas",
+      "use": "Créditos",
+      "size": "2560x1440",
+      "prompt": "quiet view of ARK-01 crossing a star field, minimal composition with large dark text-safe area, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    },
+    {
+      "code": "IMG-UI-008",
+      "filename": "bg-accessibility.webp",
+      "group": "UI e texturas",
+      "use": "Acessibilidade",
+      "size": "2560x1440",
+      "prompt": "neutral dark futuristic control room with soft even lighting and no focal clutter, ultra-realistic cinematic near-future space engineering, premium AAA game background, physically plausible architecture and materials, dark navy and graphite palette, brushed titanium, subtle cyan and amber practical lighting, controlled contrast, volumetric atmosphere, extremely detailed, credible scale, no readable text, no logos, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD",
+      "notes": ""
+    }
+  ],
+  "avatars": [
+    {
+      "code": "AVT-DIR-001",
+      "filename": "avatar-director-neutral-01.webp",
+      "role": "Diretor opção 1",
+      "size": "1024x1024",
+      "prompt": "Brazilian male aerospace program director, age 35 to 45, calm authoritative expression, ultra-realistic professional near-future aerospace portrait, neutral dark studio background, chest-up, centered, consistent uniform without logos, soft cinematic light, no text, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD"
+    },
+    {
+      "code": "AVT-DIR-002",
+      "filename": "avatar-director-neutral-02.webp",
+      "role": "Diretora opção 2",
+      "size": "1024x1024",
+      "prompt": "Black Brazilian female aerospace program director, age 35 to 45, calm authoritative expression, ultra-realistic professional near-future aerospace portrait, neutral dark studio background, chest-up, centered, consistent uniform without logos, soft cinematic light, no text, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD"
+    },
+    {
+      "code": "AVT-DIR-003",
+      "filename": "avatar-director-neutral-03.webp",
+      "role": "Diretor opção 3",
+      "size": "1024x1024",
+      "prompt": "East Asian male aerospace program director, age 40 to 50, thoughtful expression, ultra-realistic professional near-future aerospace portrait, neutral dark studio background, chest-up, centered, consistent uniform without logos, soft cinematic light, no text, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD"
+    },
+    {
+      "code": "AVT-DIR-004",
+      "filename": "avatar-director-neutral-04.webp",
+      "role": "Diretora opção 4",
+      "size": "1024x1024",
+      "prompt": "South Asian female aerospace program director, age 30 to 40, focused expression, ultra-realistic professional near-future aerospace portrait, neutral dark studio background, chest-up, centered, consistent uniform without logos, soft cinematic light, no text, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD"
+    },
+    {
+      "code": "AVT-DIR-005",
+      "filename": "avatar-director-neutral-05.webp",
+      "role": "Diretor opção 5",
+      "size": "1024x1024",
+      "prompt": "Latino male aerospace program director, age 50 to 60, experienced expression, ultra-realistic professional near-future aerospace portrait, neutral dark studio background, chest-up, centered, consistent uniform without logos, soft cinematic light, no text, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD"
+    },
+    {
+      "code": "AVT-DIR-006",
+      "filename": "avatar-director-neutral-06.webp",
+      "role": "Diretora opção 6",
+      "size": "1024x1024",
+      "prompt": "Middle Eastern female aerospace program director, age 40 to 50, resilient expression, ultra-realistic professional near-future aerospace portrait, neutral dark studio background, chest-up, centered, consistent uniform without logos, soft cinematic light, no text, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD"
+    },
+    {
+      "code": "AVT-ENG-001",
+      "filename": "avatar-chief-engineer.webp",
+      "role": "Engenheira-chefe",
+      "size": "1024x1024",
+      "prompt": "Black female chief systems engineer, age 45, intelligent, direct and composed, ultra-realistic professional near-future aerospace portrait, neutral dark studio background, chest-up, centered, consistent uniform without logos, soft cinematic light, no text, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD"
+    },
+    {
+      "code": "AVT-FLT-001",
+      "filename": "avatar-flight-director.webp",
+      "role": "Diretor de voo",
+      "size": "1024x1024",
+      "prompt": "Latino male flight director, age 50, disciplined and analytical, ultra-realistic professional near-future aerospace portrait, neutral dark studio background, chest-up, centered, consistent uniform without logos, soft cinematic light, no text, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD"
+    },
+    {
+      "code": "AVT-CMD-001",
+      "filename": "avatar-ship-commander.webp",
+      "role": "Comandante",
+      "size": "1024x1024",
+      "prompt": "female spacecraft commander, age 42, mixed heritage, calm under pressure, ultra-realistic professional near-future aerospace portrait, neutral dark studio background, chest-up, centered, consistent uniform without logos, soft cinematic light, no text, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD"
+    },
+    {
+      "code": "AVT-PIL-001",
+      "filename": "avatar-pilot.webp",
+      "role": "Piloto",
+      "size": "1024x1024",
+      "prompt": "East Asian male pilot navigator, age 34, alert and precise, ultra-realistic professional near-future aerospace portrait, neutral dark studio background, chest-up, centered, consistent uniform without logos, soft cinematic light, no text, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD"
+    },
+    {
+      "code": "AVT-ENG-002",
+      "filename": "avatar-flight-engineer.webp",
+      "role": "Engenheiro de bordo",
+      "size": "1024x1024",
+      "prompt": "White male flight engineer, age 38, practical and tired but reliable, ultra-realistic professional near-future aerospace portrait, neutral dark studio background, chest-up, centered, consistent uniform without logos, soft cinematic light, no text, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD"
+    },
+    {
+      "code": "AVT-MED-001",
+      "filename": "avatar-medical-officer.webp",
+      "role": "Médica",
+      "size": "1024x1024",
+      "prompt": "South Asian female medical officer, age 37, empathetic and decisive, ultra-realistic professional near-future aerospace portrait, neutral dark studio background, chest-up, centered, consistent uniform without logos, soft cinematic light, no text, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD"
+    },
+    {
+      "code": "AVT-BIO-001",
+      "filename": "avatar-astrobiologist.webp",
+      "role": "Astrobiólogo",
+      "size": "1024x1024",
+      "prompt": "Black male astrobiologist, age 32, curious and cautious, ultra-realistic professional near-future aerospace portrait, neutral dark studio background, chest-up, centered, consistent uniform without logos, soft cinematic light, no text, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD"
+    },
+    {
+      "code": "AVT-GEO-001",
+      "filename": "avatar-planetologist.webp",
+      "role": "Planetóloga",
+      "size": "1024x1024",
+      "prompt": "Indigenous Latin American female planetologist, age 40, observant and grounded, ultra-realistic professional near-future aerospace portrait, neutral dark studio background, chest-up, centered, consistent uniform without logos, soft cinematic light, no text, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD"
+    },
+    {
+      "code": "AVT-PSY-001",
+      "filename": "avatar-mission-psychologist.webp",
+      "role": "Psicólogo",
+      "size": "1024x1024",
+      "prompt": "Middle Eastern male mission psychologist, age 48, calm and attentive, ultra-realistic professional near-future aerospace portrait, neutral dark studio background, chest-up, centered, consistent uniform without logos, soft cinematic light, no text, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD"
+    },
+    {
+      "code": "AVT-TEC-001",
+      "filename": "avatar-fabrication-technician.webp",
+      "role": "Técnica",
+      "size": "1024x1024",
+      "prompt": "White female fabrication technician, age 29, energetic and resourceful, ultra-realistic professional near-future aerospace portrait, neutral dark studio background, chest-up, centered, consistent uniform without logos, soft cinematic light, no text, no watermark",
+      "negative": "cartoon, anime, fantasy magic, retro pulp, low resolution, blurry, distorted geometry, duplicated objects, readable text, brand logos, NASA insignia, watermark, UI overlay, game HUD"
+    }
+  ]
+}

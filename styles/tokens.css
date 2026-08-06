@@ -1,0 +1,8 @@
+:root {
+  --ink:#03070b; --navy:#071018; --panel:#0b1720e8; --panel-solid:#0b1720;
+  --line:#244353; --line-hot:#4e8398; --cyan:#7ce8ff; --cyan-2:#25a7c7;
+  --amber:#ffb85a; --red:#ff6b6b; --green:#72e6a0; --text:#eef8fb; --muted:#93aab4;
+  --shadow:0 16px 48px #0009; --radius:12px; --radius-sm:7px;
+  --font:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono:"Cascadia Mono", "SFMono-Regular", Consolas, monospace;
+}

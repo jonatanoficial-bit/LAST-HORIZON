@@ -1,0 +1,87 @@
+{
+  "acts": [
+    {"id":"agency","n":"I","title":"Agência em Cinzas","subtitle":"Reconstrua a GSEA e recupere a confiança do mundo.","aura":"A transparência aumenta apoio, mas expõe fragilidades. Financiamento rápido encurta o prazo e amplia risco de auditoria."},
+    {"id":"design","n":"II","title":"A Nave Impossível","subtitle":"Integre propulsão, habitat, energia, blindagem e carga sem violar margens.","aura":"A massa não é um número isolado: ela altera delta-v, prazo, custo e exigência estrutural."},
+    {"id":"testing","n":"III","title":"O Preço da Pressa","subtitle":"Compre evidência antes que o calendário feche a janela.","aura":"Testes não tornam um sistema perfeito. Eles reduzem incerteza e revelam modos de falha antes do voo."},
+    {"id":"crew","n":"III-B","title":"A Tripulação","subtitle":"Selecione, treine e proteja as pessoas que carregarão a missão.","aura":"Competência cobre procedimentos; confiança sustenta decisões quando os procedimentos terminam."},
+    {"id":"countdown","n":"IV","title":"Contagem Regressiva","subtitle":"Assuma a autoridade final de go/no-go.","aura":"Um lançamento adiado custa capital político. Um lançamento ruim pode custar a missão inteira."},
+    {"id":"flight","n":"V","title":"Além da Terra","subtitle":"Conduza ascensão, órbita, montagem e queima de partida.","aura":"Telemetria nominal não significa ausência de risco; significa que os sensores disponíveis concordam."},
+    {"id":"cruise","n":"VI","title":"Anos no Escuro","subtitle":"Gerencie recursos, manutenção e humanidade durante o trânsito.","aura":"Acelerar o tempo nunca ignora alertas críticos. O isolamento é um sistema tão real quanto o reator."},
+    {"id":"science","n":"VII","title":"Mundos Promissores","subtitle":"Colete evidências e escolha um risco, não uma certeza.","aura":"Habitabilidade é ponderada pela confiança dos dados. Um belo espectro pode esconder uma biosfera hostil."},
+    {"id":"landing","n":"VIII","title":"A Descida","subtitle":"Escolha local, carga e margem para a manobra sem retorno.","aura":"Vale Boreal oferece água; Delta Meridiano oferece terreno. Clima e combustível decidem qual vantagem sobrevive."},
+    {"id":"colony","n":"IX","title":"Primeiro Lar","subtitle":"Feche os ciclos de ar, água, energia e alimento.","aura":"Toda construção depende de energia e mão de obra. Redundância ocupa massa, mas compra futuro."},
+    {"id":"governance","n":"X","title":"O Preço da Sobrevivência","subtitle":"Defina governo, ciência e a relação da colônia com a Terra.","aura":"Não existe escolha neutra. O legado será calculado por sobrevivência, ética, ciência, perdas e autonomia."}
+  ],
+  "departments": [
+    {"id":"DEP-PRO","name":"Propulsão","lead":"Dra. Imani Okafor","skill":86},
+    {"id":"DEP-STR","name":"Estruturas","lead":"Eng. Tomás Vega","skill":82},
+    {"id":"DEP-LSS","name":"Suporte de Vida","lead":"Dra. Asha Rao","skill":91},
+    {"id":"DEP-PWR","name":"Energia e Térmica","lead":"Dr. Kenji Mori","skill":84},
+    {"id":"DEP-OPS","name":"Operações","lead":"Marta Silveira","skill":88},
+    {"id":"DEP-SCI","name":"Ciência Planetária","lead":"Dra. Nayara Quispe","skill":89}
+  ],
+  "components": {
+    "propulsion": [
+      {"id":"nuclear","name":"Vetor NTR-9","desc":"Térmico nuclear maduro, reiniciável e pesado.","mass":5400,"cost":22,"power":-120,"thermal":-8,"deltaV":2100,"reliability":7},
+      {"id":"fusion","name":"Helios Pulsado","desc":"Impulso alto, grande calor e maturidade limitada.","mass":4600,"cost":32,"power":-410,"thermal":-22,"deltaV":3500,"reliability":-3},
+      {"id":"ion","name":"Matriz Íon Atlas","desc":"Eficiente em cruzeiro, lenta e exigente em energia.","mass":2900,"cost":18,"power":-520,"thermal":-10,"deltaV":2800,"reliability":3}
+    ],
+    "habitat": [
+      {"id":"compact","name":"Habitat Compacto","desc":"80 colonos, pouca privacidade, baixa massa.","mass":6200,"cost":15,"power":-90,"thermal":-7,"capacity":80,"morale":-7},
+      {"id":"ring","name":"Anel Centrífugo","desc":"120 colonos, gravidade parcial e alta complexidade.","mass":10400,"cost":28,"power":-180,"thermal":-12,"capacity":120,"morale":8},
+      {"id":"dual","name":"Habitat Duplo","desc":"100 colonos e redundância por isolamento.","mass":8900,"cost":23,"power":-140,"thermal":-10,"capacity":100,"morale":3}
+    ],
+    "power": [
+      {"id":"fission","name":"Reator Polaris","desc":"Geração estável, peças pesadas e calor previsível.","mass":4200,"cost":18,"power":940,"thermal":-18,"reliability":7},
+      {"id":"solar","name":"Velas Fotovoltaicas","desc":"Sem combustível, vulneráveis e fracas longe da estrela.","mass":2800,"cost":14,"power":680,"thermal":-5,"reliability":1},
+      {"id":"hybrid","name":"Matriz Híbrida","desc":"Reator compacto com painéis e baterias redundantes.","mass":5100,"cost":25,"power":1120,"thermal":-21,"reliability":10}
+    ],
+    "shield": [
+      {"id":"light","name":"Whipple Leve","desc":"Proteção básica e maior margem de carga.","mass":2100,"cost":9,"thermal":0,"reliability":-2,"radiation":35},
+      {"id":"water","name":"Cinturão de Água","desc":"Reservas posicionadas como blindagem multifunção.","mass":4700,"cost":13,"thermal":-2,"reliability":5,"radiation":68},
+      {"id":"heavy","name":"Escudo Regolítico","desc":"Proteção máxima, montagem longa e massa extrema.","mass":7200,"cost":21,"thermal":-4,"reliability":9,"radiation":86}
+    ]
+  },
+  "tests": [
+    {"id":"bench","name":"Bancada de propulsão","cost":4,"days":18,"gain":4,"risk":"Turbobomba / ignição"},
+    {"id":"vibration","name":"Vibração estrutural","cost":3,"days":12,"gain":3,"risk":"Ressonância / fadiga"},
+    {"id":"vacuum","name":"Térmico-vácuo","cost":4,"days":16,"gain":4,"risk":"Radiadores / vedação"},
+    {"id":"pressure","name":"Pressão integrada","cost":3,"days":10,"gain":3,"risk":"Habitat / O₂"},
+    {"id":"software","name":"Software e votação","cost":2,"days":9,"gain":2,"risk":"Sensores / aviônicos"},
+    {"id":"abort","name":"Abortagem completa","cost":5,"days":20,"gain":5,"risk":"Escape / autoridade"}
+  ],
+  "crew": [
+    {"id":"amara","name":"Amara Diallo","role":"Comandante","skill":92,"health":88,"trait":"liderança calma"},
+    {"id":"jun","name":"Jun Park","role":"Piloto","skill":94,"health":84,"trait":"precisão"},
+    {"id":"elias","name":"Elias Brandt","role":"Eng. de bordo","skill":89,"health":81,"trait":"improvisação"},
+    {"id":"asha","name":"Asha Rao","role":"Médica","skill":91,"health":86,"trait":"empatia decisiva"},
+    {"id":"malik","name":"Malik Okoye","role":"Astrobiólogo","skill":87,"health":90,"trait":"cautela científica"},
+    {"id":"nayara","name":"Nayara Quispe","role":"Planetóloga","skill":90,"health":82,"trait":"leitura de terreno"},
+    {"id":"samira","name":"Samira Haddad","role":"Psicóloga","skill":88,"health":85,"trait":"coesão"},
+    {"id":"lena","name":"Lena Volkov","role":"Fabricadora","skill":86,"health":93,"trait":"reparo rápido"}
+  ],
+  "planets": [
+    {"id":"aurelia","name":"Aurelia","desc":"Mundo temperado de vales fluviais e química orgânica complexa.","water":88,"temp":82,"gravity":78,"radiation":72,"biology":48,"risk":"biosfera desconhecida"},
+    {"id":"nereid","name":"Nereid","desc":"Oceano global, tempestades violentas e ilhas vulcânicas.","water":98,"temp":64,"gravity":84,"radiation":81,"biology":58,"risk":"clima extremo"},
+    {"id":"cinder","name":"Cinder","desc":"Desertos minerais, gelo polar e atmosfera fina previsível.","water":42,"temp":39,"gravity":69,"radiation":44,"biology":12,"risk":"radiação e escassez"}
+  ],
+  "buildings": [
+    {"id":"surface-hab","name":"Habitat pressurizado","cost":18,"power":-35,"labor":18,"effect":"Abrigo e ar para 120 pessoas"},
+    {"id":"surface-reactor","name":"Reator de superfície","cost":16,"power":260,"labor":14,"effect":"Energia-base redundante"},
+    {"id":"water-extractor","name":"Extração de água","cost":12,"power":-42,"labor":11,"effect":"Fecha 72% do ciclo de água"},
+    {"id":"colony-greenhouse","name":"Estufa modular","cost":14,"power":-55,"labor":15,"effect":"Alimento e recuperação moral"},
+    {"id":"clinic","name":"Clínica e quarentena","cost":10,"power":-22,"labor":9,"effect":"Saúde e biossegurança"},
+    {"id":"fab","name":"Oficina de fabricação","cost":13,"power":-48,"labor":12,"effect":"Peças e autonomia industrial"}
+  ],
+  "research": [
+    {"id":"closed-loop","name":"Ciclo fechado","cost":18,"requires":[],"effect":"Consumo anual -18%"},
+    {"id":"biofilter","name":"Biofiltro alienígena","cost":22,"requires":["closed-loop"],"effect":"Biossegurança +12"},
+    {"id":"autofab","name":"Autofabricação","cost":20,"requires":[],"effect":"Construção +20%"},
+    {"id":"quantum-comms","name":"Enlace de alta coerência","cost":28,"requires":["autofab"],"effect":"Confiança da Terra +10"}
+  ],
+  "events": [
+    {"id":"flare","title":"Erupção estelar","body":"A frente de partículas alcançará a ARK-01 em onze horas.","choices":[{"label":"Recolher todos ao abrigo","morale":-2,"integrity":0,"science":0},{"label":"Manter observatório ativo","morale":-4,"integrity":-5,"science":9}]},
+    {"id":"meteor","title":"Nuvem de micrometeoros","body":"AURA detecta impactos possíveis no radiador secundário.","choices":[{"label":"Girar a nave e perder prazo","schedule":18,"integrity":-1},{"label":"Manter rota e reforçar equipes","morale":-3,"integrity":-7}]},
+    {"id":"signal","title":"Sinal coerente","body":"Uma sequência não natural se repete além do alvo primário.","choices":[{"label":"Reservar largura de banda","science":10,"trust":3},{"label":"Priorizar telemetria humana","science":-2,"trust":5}]}
+  ]
+}

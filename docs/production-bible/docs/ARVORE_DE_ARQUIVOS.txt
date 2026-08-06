@@ -1,0 +1,32 @@
+LAST-HORIZON/
+├─ index.html
+├─ 404.html
+├─ manifest.webmanifest
+├─ service-worker.js
+├─ version.json
+├─ CHANGELOG.md
+├─ README.md
+├─ LICENSES.md
+├─ assets/
+│  ├─ images/{brand,campaign,agency,manufacturing,interiors,mission,planets,colony,ui,avatars}/
+│  ├─ icons/
+│  ├─ audio/{music,ambience,alarms,sfx}/
+│  └─ fonts/
+├─ data/{campaign,narrative,components,suppliers,staff,crew,failures,events,checklists,planets,research,locales}/
+├─ src/
+│  ├─ app.js
+│  ├─ config/
+│  ├─ core/{store,events,selectors,clock,rng,validation}.js
+│  ├─ data/{db,save-manager,migrations,checksum}.js
+│  ├─ sim/{economy,reliability,failure-engine,ship-integration,propulsion,power,thermal,life-support,avionics,sensors,comms,flight,orbit,trajectory,crew-health,morale,habitability,landing,colony}.js
+│  ├─ narrative/
+│  ├─ instruments/
+│  ├─ audio/
+│  ├─ i18n/
+│  ├─ accessibility/
+│  ├─ ui/
+│  └─ features/{profile,agency,departments,procurement,designer,requirements,testing,crew,aura,mission-plan,countdown,launch,flight-deck,ship-map,cruise,star-system,science,probes,landing,surface,colony,research,investigation,expedition}/
+├─ styles/{tokens,base,layout,components,screens,accessibility}.css
+├─ scripts/{validate-data,audit-links,audit-assets,audit-saves,build-release}.mjs
+├─ tests/{unit,integration,fixtures,manual-checklists}/
+└─ docs/{architecture,state-schema,simulation-rules,narrative-map,asset-manifest,release-checklist}.md

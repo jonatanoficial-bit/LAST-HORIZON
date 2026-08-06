@@ -1,0 +1,5 @@
+body.high-contrast{--ink:#000;--navy:#000;--panel:#000;--panel-solid:#000;--line:#fff;--line-hot:#fff;--cyan:#00ffff;--amber:#ffd700;--text:#fff;--muted:#ddd}
+body.large-text{font-size:clamp(15px,1.25vw,19px)} body.large-text .workarea{grid-template-columns:220px minmax(0,1fr) 320px}
+body.colorblind{--cyan:#6ec5ff;--green:#f4d35e;--red:#ff8c42;--amber:#ee6caa}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.001ms!important}}
+body.reduce-motion *,body.reduce-motion *::before,body.reduce-motion *::after{animation:none!important;transition:none!important}

@@ -1,0 +1,696 @@
+[
+  {
+    "code": "F00",
+    "version": "v0.0.1",
+    "title": "Contrato técnico e inventário",
+    "objective": "Criar documentação, árvore de arquivos, convenções, versionamento e critérios de aceite antes de qualquer feature.",
+    "files": [
+      "README.md",
+      "CHANGELOG.md",
+      "version.json",
+      "docs/architecture.md",
+      "docs/state-schema.md"
+    ],
+    "acceptance": [
+      "Projeto abre sem erros",
+      "Nenhuma dependência paga",
+      "Rotas e nomes oficiais definidos",
+      "Checklist anti-quebra registrado"
+    ]
+  },
+  {
+    "code": "F01",
+    "version": "v0.1.0",
+    "title": "Base PWA offline",
+    "objective": "Criar index, manifest, service worker, cache seguro, atualização e tela de inicialização.",
+    "files": [
+      "index.html",
+      "manifest.webmanifest",
+      "service-worker.js",
+      "src/app.js",
+      "styles/base.css"
+    ],
+    "acceptance": [
+      "Instala como PWA",
+      "Funciona offline após primeiro carregamento",
+      "Atualização não apaga saves"
+    ]
+  },
+  {
+    "code": "F02",
+    "version": "v0.2.0",
+    "title": "Shell mobile horizontal",
+    "objective": "Implementar viewport, aviso de rotação, safe areas, escala 16:9 e navegação por toque/teclado.",
+    "files": [
+      "styles/layout.css",
+      "src/ui/rotation-guard.js",
+      "src/ui/router.js"
+    ],
+    "acceptance": [
+      "Retrato bloqueado com mensagem",
+      "Sem corte em 640x360",
+      "Desktop com área central controlada"
+    ]
+  },
+  {
+    "code": "F03",
+    "version": "v0.3.0",
+    "title": "Design system",
+    "objective": "Criar tokens, componentes, modais, cards, botões, alertas, tooltips, tabelas e foco.",
+    "files": [
+      "styles/tokens.css",
+      "styles/components.css",
+      "src/ui/components/"
+    ],
+    "acceptance": [
+      "Contraste legível",
+      "Alvos de toque >=44px",
+      "Estados hover/focus/disabled"
+    ]
+  },
+  {
+    "code": "F04",
+    "version": "v0.4.0",
+    "title": "Núcleo de estado",
+    "objective": "Criar store, eventos, selectors, relógio, seed determinística, validação e logs.",
+    "files": [
+      "src/core/store.js",
+      "src/core/events.js",
+      "src/core/clock.js",
+      "src/core/rng.js",
+      "src/core/validation.js"
+    ],
+    "acceptance": [
+      "Mesma seed reproduz resultados",
+      "Pausa congela simulação",
+      "Logs registram causa e origem"
+    ]
+  },
+  {
+    "code": "F05",
+    "version": "v0.5.0",
+    "title": "Save, migração e recuperação",
+    "objective": "Usar IndexedDB com slots, autosave, exportação JSON, importação, checksum e migrações.",
+    "files": [
+      "src/data/db.js",
+      "src/data/save-manager.js",
+      "src/data/migrations.js",
+      "src/data/checksum.js"
+    ],
+    "acceptance": [
+      "Save corrompido não quebra jogo",
+      "Versões antigas migram",
+      "Exportar/importar offline"
+    ]
+  },
+  {
+    "code": "F06",
+    "version": "v0.6.0",
+    "title": "Motor narrativo",
+    "objective": "Criar cenas, diálogos, escolhas, condições, flags, prazos, consequências e histórico.",
+    "files": [
+      "src/narrative/engine.js",
+      "data/narrative/"
+    ],
+    "acceptance": [
+      "Escolhas condicionais",
+      "Decisões com prazo",
+      "Histórico consultável"
+    ]
+  },
+  {
+    "code": "F07",
+    "version": "v0.7.0",
+    "title": "Perfil e prólogo",
+    "objective": "Implementar diretor, avatar, dificuldade, acessibilidade e prólogo completo.",
+    "files": [
+      "src/features/profile/",
+      "data/campaign/prologue.json"
+    ],
+    "acceptance": [
+      "Nova campanha completa",
+      "Pular cenas opcional",
+      "Nome não quebra layout"
+    ]
+  },
+  {
+    "code": "F08",
+    "version": "v0.8.0",
+    "title": "Painel da agência",
+    "objective": "Criar dashboard com recursos, risco, Terra, mensagens e departamentos.",
+    "files": [
+      "src/features/agency/"
+    ],
+    "acceptance": [
+      "Dados vêm do store",
+      "Alertas abrem origem",
+      "Sem números decorativos"
+    ]
+  },
+  {
+    "code": "F09",
+    "version": "v0.9.0",
+    "title": "Economia e contratos",
+    "objective": "Implementar orçamento, compromissos, custos recorrentes, multas, financiamento e fluxo.",
+    "files": [
+      "src/sim/economy.js",
+      "src/features/procurement/",
+      "data/suppliers/"
+    ],
+    "acceptance": [
+      "Previsão financeira",
+      "Contratos têm risco/prazo",
+      "Gasto extra exige confirmação"
+    ]
+  },
+  {
+    "code": "F10",
+    "version": "v1.0.0",
+    "title": "Departamentos e equipe terrestre",
+    "objective": "Implementar capacidade, líderes, especialistas, carga, confiança e pareceres.",
+    "files": [
+      "src/features/departments/",
+      "src/sim/staff.js",
+      "data/staff/"
+    ],
+    "acceptance": [
+      "Parecer depende de competência",
+      "Sobrecarga aumenta erro",
+      "Contratar/demitir persiste"
+    ]
+  },
+  {
+    "code": "F11",
+    "version": "v1.1.0",
+    "title": "Catálogo de componentes",
+    "objective": "Criar componentes, variantes, fornecedores, maturidade e compatibilidades.",
+    "files": [
+      "data/components/",
+      "src/features/catalog/"
+    ],
+    "acceptance": [
+      "Atributos completos",
+      "Comparação lado a lado",
+      "Filtros e incompatibilidades"
+    ]
+  },
+  {
+    "code": "F12",
+    "version": "v1.2.0",
+    "title": "Projetista da ARK-01",
+    "objective": "Montar módulos e calcular massa, volume, energia, térmica, delta-v, custo e conflitos.",
+    "files": [
+      "src/features/designer/",
+      "src/sim/ship-integration.js"
+    ],
+    "acceptance": [
+      "Atualização em tempo real",
+      "Configuração inválida bloqueada",
+      "Conflitos explicados"
+    ]
+  },
+  {
+    "code": "F13",
+    "version": "v1.3.0",
+    "title": "Engenharia de requisitos",
+    "objective": "Criar requisitos e rastreabilidade entre objetivo, componente, teste e risco.",
+    "files": [
+      "src/features/requirements/",
+      "data/requirements.json"
+    ],
+    "acceptance": [
+      "Cada requisito tem status",
+      "Mudança propaga impactos",
+      "Requisito órfão alertado"
+    ]
+  },
+  {
+    "code": "F14",
+    "version": "v1.4.0",
+    "title": "Confiabilidade e registro de riscos",
+    "objective": "Implementar confiabilidade por componente, integração, ambiente, desgaste e incerteza.",
+    "files": [
+      "src/sim/reliability.js",
+      "src/sim/risk-register.js"
+    ],
+    "acceptance": [
+      "Risco por sistema",
+      "Evidências alteram confiança",
+      "Seed reproduz falhas"
+    ]
+  },
+  {
+    "code": "F15",
+    "version": "v1.5.0",
+    "title": "FMEA e cadeias de falha",
+    "objective": "Criar modos, causas, sintomas, propagação, detecção, mitigação e investigação.",
+    "files": [
+      "data/failures/",
+      "src/sim/failure-engine.js",
+      "src/features/investigation/"
+    ],
+    "acceptance": [
+      "Toda falha tem causa",
+      "Cascata interrompível",
+      "Relatório rastreável"
+    ]
+  },
+  {
+    "code": "F16",
+    "version": "v1.6.0",
+    "title": "Programa de testes",
+    "objective": "Implementar bancada, vibração, térmico-vácuo, pressão, software, abortagem e integrado.",
+    "files": [
+      "src/features/testing/",
+      "src/sim/tests.js"
+    ],
+    "acceptance": [
+      "Teste custa prazo/dinheiro",
+      "Revela incerteza",
+      "Resultados alimentam risco"
+    ]
+  },
+  {
+    "code": "F17",
+    "version": "v1.7.0",
+    "title": "Planejamento de missão",
+    "objective": "Criar alvo, rota, janela, reservas, perfil e cenários de aborto.",
+    "files": [
+      "src/features/mission-plan/",
+      "src/sim/trajectory.js"
+    ],
+    "acceptance": [
+      "Plano inviável explicado",
+      "Reservas configuráveis",
+      "Carga recalcula rota"
+    ]
+  },
+  {
+    "code": "F18",
+    "version": "v1.8.0",
+    "title": "Seleção da tripulação",
+    "objective": "Implementar candidatos, funções, habilidades, saúde, salário e relações.",
+    "files": [
+      "src/features/crew/recruitment.js",
+      "data/crew/"
+    ],
+    "acceptance": [
+      "Cobertura de funções",
+      "Compatibilidade importa",
+      "Sem estereótipos"
+    ]
+  },
+  {
+    "code": "F19",
+    "version": "v1.9.0",
+    "title": "Treinamento e certificação",
+    "objective": "Criar simulações, certificações, fadiga, aprendizagem e confiança.",
+    "files": [
+      "src/features/crew/training.js",
+      "src/sim/skills.js"
+    ],
+    "acceptance": [
+      "Treino consome prazo",
+      "Falhas ensinam",
+      "Certificação afeta operação"
+    ]
+  },
+  {
+    "code": "F20",
+    "version": "v2.0.0",
+    "title": "AURA",
+    "objective": "Criar assistente contextual que mostra opções, evidências, incerteza e consequências sem decidir.",
+    "files": [
+      "src/features/aura/",
+      "data/aura-rules.json"
+    ],
+    "acceptance": [
+      "Nunca inventa dado",
+      "Mostra confiança",
+      "Pode errar por sensor ruim"
+    ]
+  },
+  {
+    "code": "F21",
+    "version": "v2.1.0",
+    "title": "Mapa interno e compartimentos",
+    "objective": "Implementar módulos, transições, hotspots, portas, energia local e estados.",
+    "files": [
+      "src/features/ship-map/",
+      "data/ship-rooms.json"
+    ],
+    "acceptance": [
+      "Todos os módulos acessíveis",
+      "Estado altera overlays",
+      "Toque e teclado"
+    ]
+  },
+  {
+    "code": "F22",
+    "version": "v2.2.0",
+    "title": "Instrumentação funcional",
+    "objective": "Construir agulhas SVG, telas, luzes, tendências, alarmes e binding ao store.",
+    "files": [
+      "src/instruments/",
+      "src/features/flight-deck/"
+    ],
+    "acceptance": [
+      "Nada incorporado ao fundo",
+      "Unidades corretas",
+      "Animação suave e limitada"
+    ]
+  },
+  {
+    "code": "F23",
+    "version": "v2.3.0",
+    "title": "Suporte de vida",
+    "objective": "Simular pressão, O2, CO2, água, umidade, temperatura, alimento, resíduos e redundância.",
+    "files": [
+      "src/sim/life-support.js"
+    ],
+    "acceptance": [
+      "Balanço coerente",
+      "Tripulação altera consumo",
+      "Sintomas graduais"
+    ]
+  },
+  {
+    "code": "F24",
+    "version": "v2.4.0",
+    "title": "Energia e térmica",
+    "objective": "Simular geração, baterias, barramentos, prioridades, calor, radiadores e loops.",
+    "files": [
+      "src/sim/power.js",
+      "src/sim/thermal.js"
+    ],
+    "acceptance": [
+      "Conservação aproximada",
+      "Shed de carga",
+      "Cascatas térmicas"
+    ]
+  },
+  {
+    "code": "F25",
+    "version": "v2.5.0",
+    "title": "Propulsão e combustível",
+    "objective": "Simular empuxo, consumo, pressão, temperatura, ignição, RCS, delta-v e desgaste.",
+    "files": [
+      "src/sim/propulsion.js",
+      "src/sim/flight.js"
+    ],
+    "acceptance": [
+      "TWR/delta-v coerentes",
+      "Comando move instrumento",
+      "Falha depende do estado"
+    ]
+  },
+  {
+    "code": "F26",
+    "version": "v2.6.0",
+    "title": "Aviônicos, sensores e comunicação",
+    "objective": "Criar sensores com erro, votação, navegação, latência e perda de enlace.",
+    "files": [
+      "src/sim/avionics.js",
+      "src/sim/sensors.js",
+      "src/sim/comms.js"
+    ],
+    "acceptance": [
+      "Sensores divergem",
+      "AURA cita fonte",
+      "Latência por distância"
+    ]
+  },
+  {
+    "code": "F27",
+    "version": "v2.7.0",
+    "title": "Saúde, moral e relações",
+    "objective": "Simular sono, fadiga, radiação, doença, estresse, conflito, liderança e luto.",
+    "files": [
+      "src/sim/crew-health.js",
+      "src/sim/morale.js",
+      "src/features/crew/relationships.js"
+    ],
+    "acceptance": [
+      "Efeitos graduais",
+      "Decisões humanas importam",
+      "Sem aconselhamento médico real"
+    ]
+  },
+  {
+    "code": "F28",
+    "version": "v2.8.0",
+    "title": "Contagem regressiva",
+    "objective": "Implementar go/no-go, clima, falhas tardias, autoridade e sequência procedural.",
+    "files": [
+      "src/features/countdown/",
+      "data/checklists/launch.json"
+    ],
+    "acceptance": [
+      "Pode pausar e consultar",
+      "Abortar tem efeito",
+      "Lançar com vermelho confirma"
+    ]
+  },
+  {
+    "code": "F29",
+    "version": "v2.9.0",
+    "title": "Lançamento e ascensão",
+    "objective": "Criar voo por fases, telemetria, staging, abortos e resultado causal.",
+    "files": [
+      "src/features/launch/",
+      "src/sim/ascent.js"
+    ],
+    "acceptance": [
+      "Telemetria sistêmica",
+      "Falha reflete projeto/teste",
+      "Seed reproduz"
+    ]
+  },
+  {
+    "code": "F30",
+    "version": "v3.0.0",
+    "title": "Órbita e partida",
+    "objective": "Implementar operações orbitais, montagem, checagem, queima e janela de saída.",
+    "files": [
+      "src/features/orbit/",
+      "src/sim/orbit.js"
+    ],
+    "acceptance": [
+      "Combustível real",
+      "Queima incompleta muda rota",
+      "Retorno quando possível"
+    ]
+  },
+  {
+    "code": "F31",
+    "version": "v3.1.0",
+    "title": "Cruzeiro interestelar",
+    "objective": "Criar tempo acelerado, turnos, manutenção, consumo e decisões de longo prazo.",
+    "files": [
+      "src/features/cruise/",
+      "src/sim/maintenance.js"
+    ],
+    "acceptance": [
+      "Aceleração segura",
+      "Autosave antes de crise",
+      "Alertas fatais não pulados"
+    ]
+  },
+  {
+    "code": "F32",
+    "version": "v3.2.0",
+    "title": "Diretor de eventos",
+    "objective": "Implementar radiação, micrometeoros, doenças, sinais, conflitos e oportunidades.",
+    "files": [
+      "data/events/space/",
+      "src/narrative/event-director.js"
+    ],
+    "acceptance": [
+      "Contexto respeitado",
+      "Cooldown",
+      "Sem arbitrariedade"
+    ]
+  },
+  {
+    "code": "F33",
+    "version": "v3.3.0",
+    "title": "Sistema estelar e planetas",
+    "objective": "Criar mapa, corpos, órbitas visuais, combustível, sensores e alvos.",
+    "files": [
+      "src/features/star-system/",
+      "src/sim/planet-generator.js"
+    ],
+    "acceptance": [
+      "Campanha fixa",
+      "Expedição por seed",
+      "Sem habitabilidade automática"
+    ]
+  },
+  {
+    "code": "F34",
+    "version": "v3.4.0",
+    "title": "Ciência e habitabilidade",
+    "objective": "Implementar instrumentos, confiança, sondas, amostras e índice de habitabilidade.",
+    "files": [
+      "src/features/science/",
+      "src/sim/habitability.js"
+    ],
+    "acceptance": [
+      "Resultado muda com dados",
+      "Vida exige múltiplos testes",
+      "Incerteza exibida"
+    ]
+  },
+  {
+    "code": "F35",
+    "version": "v3.5.0",
+    "title": "Sondas e rovers",
+    "objective": "Criar montagem, lançamento, autonomia, telemetria, falhas e ciência.",
+    "files": [
+      "src/features/probes/",
+      "src/sim/probes.js"
+    ],
+    "acceptance": [
+      "Consome recurso real",
+      "Risco ambiental",
+      "Dados persistem"
+    ]
+  },
+  {
+    "code": "F36",
+    "version": "v3.6.0",
+    "title": "Entrada, descida e pouso",
+    "objective": "Implementar escudo, trajetória, clima, terreno, combustível, abortos e danos.",
+    "files": [
+      "src/features/landing/",
+      "src/sim/landing.js"
+    ],
+    "acceptance": [
+      "Janelas de decisão",
+      "Combustível limitado",
+      "Local importa"
+    ]
+  },
+  {
+    "code": "F37",
+    "version": "v3.7.0",
+    "title": "Exploração de superfície",
+    "objective": "Criar setores, EVA, rover, amostras, clima, radiação, retorno e resgate.",
+    "files": [
+      "src/features/surface/",
+      "src/sim/eva.js"
+    ],
+    "acceptance": [
+      "Planejamento EVA",
+      "Reserva de O2",
+      "Resgate condicionado"
+    ]
+  },
+  {
+    "code": "F38",
+    "version": "v3.8.0",
+    "title": "Fundação da colônia",
+    "objective": "Implementar habitat, energia, ar, água, alimento, estoque, saúde e mão de obra.",
+    "files": [
+      "src/features/colony/",
+      "src/sim/colony.js"
+    ],
+    "acceptance": [
+      "Dependências de construção",
+      "Falhas locais",
+      "Sem recursos infinitos"
+    ]
+  },
+  {
+    "code": "F39",
+    "version": "v3.9.0",
+    "title": "Expansão e governança",
+    "objective": "Criar população, funções, regras, conflitos, educação, reprodução e liderança.",
+    "files": [
+      "src/features/colony/governance.js",
+      "src/sim/population.js"
+    ],
+    "acceptance": [
+      "Escolhas éticas ramificam",
+      "Governança afeta produtividade",
+      "Sem discriminação"
+    ]
+  },
+  {
+    "code": "F40",
+    "version": "v4.0.0",
+    "title": "Pesquisa e tecnologia",
+    "objective": "Implementar árvore, evidências, protótipos, fabricação e riscos.",
+    "files": [
+      "src/features/research/",
+      "data/tech-tree.json"
+    ],
+    "acceptance": [
+      "Pré-requisitos",
+      "Protótipo não é confiável",
+      "Pesquisa usa tempo/equipe"
+    ]
+  },
+  {
+    "code": "F41",
+    "version": "v4.1.0",
+    "title": "Campanha completa e finais",
+    "objective": "Integrar atos, personagens, decisões globais, condições de finais e epílogos.",
+    "files": [
+      "data/campaign/",
+      "src/narrative/endings.js"
+    ],
+    "acceptance": [
+      "Todos os atos alcançáveis",
+      "Sem becos não intencionais",
+      "Final explica fatores"
+    ]
+  },
+  {
+    "code": "F42",
+    "version": "v4.2.0",
+    "title": "Expedição infinita",
+    "objective": "Criar seed, cenário procedural, mutadores, pontuação e compartilhamento.",
+    "files": [
+      "src/features/expedition/",
+      "src/sim/scenario-generator.js"
+    ],
+    "acceptance": [
+      "Seeds compartilháveis",
+      "Variedade coerente",
+      "Pontuação local"
+    ]
+  },
+  {
+    "code": "F43",
+    "version": "v4.3.0",
+    "title": "Áudio, VFX, acessibilidade e idiomas",
+    "objective": "Adicionar áudio, alarmes, efeitos, legendas, redução de movimento, daltonismo e PT/EN/ES.",
+    "files": [
+      "src/audio/",
+      "src/i18n/",
+      "src/accessibility/"
+    ],
+    "acceptance": [
+      "Jogável sem som",
+      "Sem flashes perigosos",
+      "Strings fora do código"
+    ]
+  },
+  {
+    "code": "F44",
+    "version": "v4.4.0",
+    "title": "Auditoria final e publicação",
+    "objective": "Executar auditoria de desempenho, saves, offline, responsividade, limpeza e release.",
+    "files": [
+      "scripts/",
+      "release/",
+      "version.json"
+    ],
+    "acceptance": [
+      "Sem textos internos na interface",
+      "Console limpo",
+      "Release vendável e documentada"
+    ]
+  }
+]

@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "saveVersion": "string",
+    "build": "string",
+    "seed": "string",
+    "createdAt": "ISO date",
+    "lastSavedAt": "ISO date"
+  },
+  "profile": {
+    "directorName": "string",
+    "avatarId": "string",
+    "difficulty": "story|standard|simulation|hardcore",
+    "accessibility": "object"
+  },
+  "campaign": {
+    "act": "number",
+    "sceneId": "string",
+    "flags": "object",
+    "decisions": "array",
+    "endingScore": "object"
+  },
+  "time": {
+    "earthDate": "number",
+    "missionHours": "number",
+    "speed": "0|1|5|25|100",
+    "paused": "boolean"
+  },
+  "economy": {
+    "available": "number",
+    "committed": "number",
+    "contingency": "number",
+    "contracts": "array",
+    "cashFlow": "array"
+  },
+  "agency": {
+    "support": "number",
+    "politicalCapital": "number",
+    "departments": "object",
+    "staff": "array",
+    "inbox": "array"
+  },
+  "ship": {
+    "design": "object",
+    "mass": "object",
+    "requirements": "object",
+    "risks": "array",
+    "rooms": "object",
+    "integrity": "number"
+  },
+  "systems": {
+    "propulsion": "object",
+    "power": "object",
+    "thermal": "object",
+    "lifeSupport": "object",
+    "avionics": "object",
+    "comms": "object"
+  },
+  "crew": {
+    "members": "array",
+    "morale": "number",
+    "trust": "number",
+    "health": "object",
+    "relationships": "array"
+  },
+  "mission": {
+    "phase": "string",
+    "route": "object",
+    "checklists": "object",
+    "telemetry": "array",
+    "alerts": "array"
+  },
+  "science": {
+    "targets": "array",
+    "observations": "array",
+    "samples": "array",
+    "confidence": "object"
+  },
+  "colony": {
+    "founded": "boolean",
+    "resources": "object",
+    "buildings": "array",
+    "population": "object",
+    "governance": "object"
+  },
+  "logs": {
+    "events": "array",
+    "failures": "array",
+    "investigations": "array",
+    "memorial": "array"
+  }
+}
