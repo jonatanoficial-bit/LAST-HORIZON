@@ -1,6 +1,6 @@
 # LAST HORIZON — Global Space Agency Simulator
 
-Versão 4.5.0: campanha narrativa, tutorial guiado por especialistas e simulador espacial offline inspirado na Bíblia Oficial do PROJECT HAVEN. Você assume a direção da GSEA, conquista apoio público, integra a ARK-01, certifica sua tripulação, conduz lançamento e cruzeiro, analisa mundos e funda uma colônia cujo futuro depende das suas decisões.
+Versão 4.6.0: campanha narrativa, tutorial guiado por especialistas e simulador espacial offline inspirado na Bíblia Oficial do PROJECT HAVEN. Você assume a direção da GSEA, conquista apoio público, integra a ARK-01, certifica sua tripulação, conduz lançamento e cruzeiro, analisa mundos e funda uma colônia cujo futuro depende das suas decisões.
 
 ## Como jogar no Windows
 
@@ -13,11 +13,14 @@ O jogo abre em `http://localhost:8765/`. Também pode ser publicado no GitHub Pa
 
 ## O que há nesta versão
 
-- Prólogo cinematográfico em quatro cenas e slot pronto para o vídeo oficial.
+- Vídeo oficial `Into LAST HORIZON` integrado antes do prólogo interativo.
 - Onze atos guiados, com objetivo visível e explicações da equipe a cada etapa.
 - Mensagens de consequência em formato de turno antes da progressão.
 - Onze retratos cinematográficos e seis ambientes originais.
-- Cabine com trajetória animada, instrumentos funcionais, fases e controle de potência.
+- Cabine física redesenhada com para-brisa dinâmico, vibração, telemetria contínua e instrumentos analógicos/digitais.
+- Câmeras de cabine, externa e trajetória, além de modo tela cheia.
+- Cinco fases de voo com altitude, velocidade, aceleração, empuxo, atitude e combustível calculados em tempo real.
+- Encaixes prontos para vídeos de ignição, Max-Q, separação, órbita, partida e falha catastrófica.
 - Universo procedural por seed local, sem depender de API, conta ou conexão.
 - Construção da ARK-01, testes, falhas causais, tripulação e treinamento.
 - Lançamento, cruzeiro, eventos, ciência, sondas, pouso, colônia e epílogo calculado.
@@ -25,9 +28,9 @@ O jogo abre em `http://localhost:8765/`. Também pode ser publicado no GitHub Pa
 - Autosave, slots, exportação/importação, checksum e migração de saves.
 - Interface horizontal responsiva, teclado, contraste, texto ampliado e movimento reduzido.
 
-## Adicionar o vídeo do prólogo
+## Vídeos cinematográficos
 
-As instruções estão em `assets/video/README.md`. Em resumo, coloque o arquivo em `assets/video/prologo.mp4`, adicione opcionalmente `prologo.vtt` e habilite o vídeo em `video-manifest.json`. Se não houver vídeo, o prólogo ilustrado funciona normalmente.
+As instruções estão em `assets/video/README.md`. Os prompts completos para gerar os seis vídeos curtos no Grok estão em `docs/VIDEOS_CURTOS_GROK.md`. Basta usar os nomes indicados e habilitar cada item em `flight-manifest.json`.
 
 ## Validação técnica
 

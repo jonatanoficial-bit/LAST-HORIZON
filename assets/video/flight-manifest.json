@@ -1,0 +1,10 @@
+{
+  "phases": [
+    {"id":"ignition","enabled":false,"src":"launch-ignition.mp4"},
+    {"id":"maxq","enabled":false,"src":"launch-maxq.mp4"},
+    {"id":"separation","enabled":false,"src":"stage-separation.mp4"},
+    {"id":"orbit","enabled":false,"src":"orbit-insertion.mp4"},
+    {"id":"departure","enabled":false,"src":"departure-burn.mp4"}
+  ],
+  "failure":{"enabled":false,"src":"explosion-game-over.mp4"}
+}

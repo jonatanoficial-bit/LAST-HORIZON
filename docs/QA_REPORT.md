@@ -1,4 +1,4 @@
-# Relatório de qualidade — release 4.5.0
+# Relatório de qualidade — release 4.6.0
 
 Data: 6 de agosto de 2026
 
@@ -11,7 +11,7 @@ Data: 6 de agosto de 2026
 
 ## Verificações automatizadas
 
-- 10/10 testes aprovados: seed determinística, integração, economia de testes, ciência por confiança, recursos finitos, final, checksum, migração, cobertura narrativa e integridade dos retratos/cenários.
+- 11/11 testes aprovados: seed determinística, integração, economia de testes, ciência por confiança, recursos finitos, final, checksum, migração, cobertura narrativa, integridade visual e ligação dos vídeos.
 - 59 entidades de jogo validadas, sem IDs duplicados.
 - 11 etapas jogáveis e 3 idiomas-base presentes.
 - 9 referências do shell resolvidas.
@@ -19,10 +19,10 @@ Data: 6 de agosto de 2026
 
 ## Percurso real no navegador
 
-O novo fluxo foi verificado do menu à campanha, incluindo criação de perfil, as quatro cenas do prólogo, orientação do especialista, primeira decisão, relatório de consequência e entrada na cabine. Prólogo, retratos, cenários, instrumentos, canvas e progressão carregaram sem erro de console. O percurso sistêmico completo até o epílogo permanece coberto pela validação da versão anterior e pelos testes automatizados.
+O novo fluxo foi verificado do menu à campanha, incluindo criação de perfil, vídeo introdutório, prólogo, orientação do especialista, primeira decisão, relatório de consequência e entrada na cabine. O MP4 de 115 segundos atingiu estado de reprodução completo sem erro. Na cabine, quatro ponteiros, dois canvas, três câmeras e o fundo físico carregaram; altitude e velocidade avançaram continuamente durante a fase, e o comando permaneceu bloqueado até o término da telemetria.
 
 - Desktop: composição principal, estados e navegação verificados visualmente.
-- 640×360: menu integral visível, controles mantêm pelo menos 44 px.
+- 640×360: a cabine ocupa a largura útil, painéis laterais são recolhidos e controles visíveis mantêm pelo menos 44 px.
 - Retrato 360×640: bloqueio de orientação e instrução de rotação visíveis.
 - Teclado: elementos usam controles nativos e foco visível.
 - Console: zero erros no percurso limpo final.
@@ -38,3 +38,5 @@ Esta é uma vertical slice integral, não o volume final AAA. O caminho de campa
 ## Arte cinematográfica
 
 Gerada com o fluxo integrado de imagem em modo nativo. Os retratos foram orientados como personagens cinematográficos AAA de ficção científica plausível, enquadramento de busto, uniforme grafite/navy e iluminação ciano/âmbar, sem marcas ou texto. Os cenários foram orientados como sala de missão, hangar de integração, cabine, plataforma, cruzeiro profundo e colônia em Aurelia, sem HUD ou logotipos incorporados. A entrega inclui WebP otimizado e PNG de fallback.
+
+A cabine 4.6 foi gerada separadamente como placa fotorealista 16:9: perspectiva do assento do piloto, para-brisa amplo, ferragens aeroespaciais, três telas apagadas para composição e iluminação pré-lançamento. O exterior, os instrumentos e a telemetria são renderizados em tempo real sobre essa estrutura.

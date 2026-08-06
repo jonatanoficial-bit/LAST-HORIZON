@@ -1,5 +1,16 @@
 # Changelog
 
+## 4.6.0 — 2026-08-06
+
+- Vídeo oficial `Into LAST HORIZON` integrado à abertura da campanha.
+- Nova cabine física fotorealista criada especificamente para instrumentação dinâmica.
+- Altitude, velocidade, aceleração, empuxo, atitude, propelente e MET atualizados continuamente.
+- Instrumentos analógicos com ponteiros reais e leitura digital sincronizada.
+- Para-brisa procedural com atmosfera, horizonte terrestre, órbita e espaço profundo em movimento.
+- Três câmeras: cabine, externa e trajetória; modo tela cheia incluído.
+- Fases de voo temporizadas, confirmação por etapa e vibração proporcional ao regime de motor.
+- Manifesto e prompts para cinco vídeos de voo e um vídeo de explosão/game over.
+
 ## 4.5.0 — 2026-08-06
 
 - Prólogo cinematográfico ilustrado em quatro cenas e encaixe configurável para vídeo.

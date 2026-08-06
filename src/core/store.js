@@ -3,7 +3,7 @@ import { hashSeed } from "./rng.js";
 export function createInitialState(seed = "HAVEN-2047", mode = "campaign") {
   const now = new Date().toISOString();
   return {
-    meta:{saveVersion:4,build:"2026.08.06-cinematic",seed,createdAt:now,lastSavedAt:now,rngState:hashSeed(seed)},
+    meta:{saveVersion:4,build:"2026.08.06-flightdeck",seed,createdAt:now,lastSavedAt:now,rngState:hashSeed(seed)},
     profile:{directorName:"Diretor(a)",avatarId:"AVT-DIR-001",difficulty:"standard",language:"pt-BR",accessibility:{reduceMotion:false,highContrast:false,largeText:false,colorblind:false},audio:true},
     campaign:{mode,act:0,turn:1,prologueStep:0,visited:[],sceneId:"prologue",flags:{briefing:false,publicPolicy:null,launched:false,arrived:false,landed:false},decisions:[],endingScore:{}},
     time:{earthDate:0,missionHours:0,speed:1,paused:false},
