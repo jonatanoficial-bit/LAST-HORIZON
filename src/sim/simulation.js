@@ -4,15 +4,16 @@ const clamp = (n,min=0,max=100)=>Math.max(min,Math.min(max,n));
 export { clamp };
 
 export function recalculate(state, data) {
+  state.engineering ||= {active:0,drafts:{},locked:[],consulted:[],history:[],revisionCount:0};
   const chosen = Object.entries(state.ship.design).map(([category,id]) => data.components[category]?.find(c=>c.id===id)).filter(Boolean);
   const baseMass = 18400;
   state.ship.mass.total = Math.round(baseMass + chosen.reduce((sum,c)=>sum+(c.mass||0),0));
   const generation = chosen.reduce((sum,c)=>sum+Math.max(0,c.power||0),0);
-  const loads = 440 + chosen.reduce((sum,c)=>sum+Math.abs(Math.min(0,c.power||0)),0);
+  const loads = 320 + chosen.reduce((sum,c)=>sum+Math.abs(Math.min(0,c.power||0)),0);
   state.systems.power.generationKw = generation;
   state.systems.power.loadKw = loads;
   state.ship.powerMargin = generation-loads;
-  state.ship.thermalMargin = 38 + chosen.reduce((sum,c)=>sum+(c.thermal||0),0);
+  state.ship.thermalMargin = 60 + chosen.reduce((sum,c)=>sum+(c.thermal||0),0);
   state.systems.thermal.radiatorMargin = state.ship.thermalMargin;
   state.ship.deltaV = chosen.reduce((sum,c)=>sum+(c.deltaV||0),0);
   state.ship.capacity = chosen.reduce((n,c)=>Math.max(n,c.capacity||0),0);
@@ -32,6 +33,39 @@ export function recalculate(state, data) {
   state.science.points = Math.max(0,state.science.points);
   state.colony.resources.power = Math.round(50 + state.colony.buildings.reduce((n,id)=>n+(data.buildings.find(b=>b.id===id)?.power||0),0));
   return state;
+}
+
+export function commitEngineeringDecision(state,data,session,option){
+  state.engineering ||= {active:0,drafts:{},locked:[],consulted:[],history:[],revisionCount:0};
+  if(state.engineering.locked.includes(session.id))return {ok:false,reason:"Esta decisão já foi comprometida."};
+  const component=data.components[session.id]?.find(item=>item.id===option.componentId);
+  if(!component)return {ok:false,reason:"Proposta de engenharia inválida."};
+  if(state.economy.available<component.cost)return {ok:false,reason:"Orçamento insuficiente para comprometer esta proposta."};
+  if(state.agency.politicalCapital+(option.influence||0)<0)return {ok:false,reason:"Capital político insuficiente para obter autorização."};
+  state.economy.available-=component.cost;
+  state.economy.committed+=component.cost;
+  state.time.earthDate+=option.days||0;
+  state.agency.politicalCapital+=option.influence||0;
+  state.crew.trust+=option.trust||0;
+  state.crew.morale+=option.morale||0;
+  state.ship.design[session.id]=component.id;
+  state.engineering.drafts[session.id]=component.id;
+  state.engineering.locked.push(session.id);
+  state.engineering.history.push({category:session.id,componentId:component.id,cost:component.cost,days:option.days||0,influence:option.influence||0,turn:state.campaign.turn||1});
+  state.campaign.decisions.push({title:session.label,detail:`${component.name}; ${component.cost} bi; ${option.days||0} dias; influência ${option.influence>=0?"+":""}${option.influence||0}`});
+  return {ok:true,component};
+}
+
+export function reopenEngineeringDecision(state,category){
+  state.engineering ||= {active:0,drafts:{},locked:[],consulted:[],history:[],revisionCount:0};
+  if(!state.engineering.locked.includes(category))return {ok:false,reason:"Este sistema ainda não foi comprometido."};
+  const cost=3,days=18,influence=2;
+  if(state.economy.available<cost)return {ok:false,reason:"Orçamento insuficiente para abrir uma revisão."};
+  if(state.agency.politicalCapital<influence)return {ok:false,reason:"Influência insuficiente para reabrir o contrato."};
+  state.economy.available-=cost;state.economy.committed+=cost;state.time.earthDate+=days;state.agency.politicalCapital-=influence;state.crew.trust-=2;
+  state.ship.design[category]=null;delete state.engineering.drafts[category];state.engineering.locked=state.engineering.locked.filter(id=>id!==category);state.engineering.revisionCount++;
+  state.engineering.history.push({category,revision:true,cost,days,influence:-influence,turn:state.campaign.turn||1});
+  return {ok:true,cost,days};
 }
 
 export function completeTest(state, test) {

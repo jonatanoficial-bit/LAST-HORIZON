@@ -1,5 +1,16 @@
 # Changelog
 
+## 4.7.0 — 2026-08-06
+
+- A antiga grade de componentes foi substituída por uma Sala de Engenharia em tela ampla.
+- Quatro decisões sequenciais são apresentadas pelo Eng. Rafael Costa, com objetivo e restrição explícitos.
+- Cada sistema oferece três propostas, custo, prazo, influência, confiança e risco dominante.
+- Especialistas defendem e contestam cada proposta por meio de avatares cinematográficos.
+- Massa, energia, térmica e delta-v são recalculados antes da assinatura.
+- Contratos comprometidos consomem recursos, avançam turnos e podem ser reabertos com penalidade sem reembolso.
+- Revisão final bloqueia configurações fisicamente inválidas ou sem reserva mínima para ensaios.
+- Migração de saves atualizada para a versão 5 e cache offline renovado.
+
 ## 4.6.0 — 2026-08-06
 
 - Vídeo oficial `Into LAST HORIZON` integrado à abertura da campanha.
