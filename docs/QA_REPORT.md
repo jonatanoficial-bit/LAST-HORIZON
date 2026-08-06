@@ -1,4 +1,4 @@
-# Relatório de qualidade — release 4.4.0
+# Relatório de qualidade — release 4.5.0
 
 Data: 6 de agosto de 2026
 
@@ -11,7 +11,7 @@ Data: 6 de agosto de 2026
 
 ## Verificações automatizadas
 
-- 8/8 testes aprovados: seed determinística, integração, economia de testes, ciência por confiança, recursos finitos, final, checksum e migração.
+- 10/10 testes aprovados: seed determinística, integração, economia de testes, ciência por confiança, recursos finitos, final, checksum, migração, cobertura narrativa e integridade dos retratos/cenários.
 - 59 entidades de jogo validadas, sem IDs duplicados.
 - 11 etapas jogáveis e 3 idiomas-base presentes.
 - 9 referências do shell resolvidas.
@@ -19,7 +19,7 @@ Data: 6 de agosto de 2026
 
 ## Percurso real no navegador
 
-Uma campanha foi percorrida do menu ao epílogo: perfil, política pública, quatro componentes, quatro testes, seis tripulantes, treinamento, lançamento, ascensão, quatro ciclos de cruzeiro, eventos, duas sondas, destino, pouso, quatro construções, governo e final. Resultado: fluxo completo sem erro de console.
+O novo fluxo foi verificado do menu à campanha, incluindo criação de perfil, as quatro cenas do prólogo, orientação do especialista, primeira decisão, relatório de consequência e entrada na cabine. Prólogo, retratos, cenários, instrumentos, canvas e progressão carregaram sem erro de console. O percurso sistêmico completo até o epílogo permanece coberto pela validação da versão anterior e pelos testes automatizados.
 
 - Desktop: composição principal, estados e navegação verificados visualmente.
 - 640×360: menu integral visível, controles mantêm pelo menos 44 px.
@@ -35,6 +35,6 @@ O shell, dados, módulos, arte WebP/PNG e ícone estão no precache. A atualiza�
 
 Esta é uma vertical slice integral, não o volume final AAA. O caminho de campanha é completo e rejogável por seed, mas ainda não possui as centenas de componentes, eventos, personagens, artes, horas narrativas e ciclos de balanceamento descritos em `commercial-roadmap.md`. A interface não exibe essa observação; ela está somente na documentação de produção.
 
-## Arte principal
+## Arte cinematográfica
 
-Gerada com o fluxo integrado de imagem, seguindo o prompt `IMG-BRAND-005`: observação orbital da Terra em colapso controlado, ARK-01 em construção, janela panorâmica, área escura para menu, engenharia plausível, paleta navy/grafite/ciano/âmbar, sem texto, HUD, logotipo ou identidade NASA. A entrega inclui WebP comprimido e PNG de fallback.
+Gerada com o fluxo integrado de imagem em modo nativo. Os retratos foram orientados como personagens cinematográficos AAA de ficção científica plausível, enquadramento de busto, uniforme grafite/navy e iluminação ciano/âmbar, sem marcas ou texto. Os cenários foram orientados como sala de missão, hangar de integração, cabine, plataforma, cruzeiro profundo e colônia em Aurelia, sem HUD ou logotipos incorporados. A entrega inclui WebP otimizado e PNG de fallback.

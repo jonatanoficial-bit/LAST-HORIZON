@@ -1,35 +1,36 @@
 # LAST HORIZON — Global Space Agency Simulator
 
-Versão jogável completa e offline do PROJECT HAVEN, construída a partir da Bíblia Oficial fornecida. Você dirige a GSEA, integra a ARK-01, compra evidência por testes, certifica tripulação, conduz lançamento e cruzeiro, estuda planetas, pousa, funda a colônia e recebe um epílogo calculado pelas decisões tomadas.
+Versão 4.5.0: campanha narrativa, tutorial guiado por especialistas e simulador espacial offline inspirado na Bíblia Oficial do PROJECT HAVEN. Você assume a direção da GSEA, conquista apoio público, integra a ARK-01, certifica sua tripulação, conduz lançamento e cruzeiro, analisa mundos e funda uma colônia cujo futuro depende das suas decisões.
 
-## Jogar
+## Como jogar no Windows
 
-No Windows, dê dois cliques em `INICIAR_JOGO.bat`. O navegador abrirá em `http://localhost:8765/`. Mantenha a janela do inicializador aberta enquanto joga.
+1. Extraia todo o ZIP.
+2. Abra a pasta `LAST-HORIZON`.
+3. Dê dois cliques em `INICIAR_JOGO.bat`.
+4. Mantenha a janela do inicializador aberta enquanto joga.
 
-Também é possível publicar a pasta inteira no GitHub Pages ou servir com qualquer servidor HTTP estático. Após o primeiro carregamento, o service worker mantém o núcleo do jogo disponível offline.
+O jogo abre em `http://localhost:8765/`. Também pode ser publicado no GitHub Pages ou servido por qualquer servidor HTTP estático. Depois do primeiro carregamento, o núcleo fica disponível offline.
 
-## Controles
+## O que há nesta versão
 
-- Toque ou mouse: todos os elementos interativos têm alvo mínimo de 44 px.
-- Teclado: `Tab`, `Shift+Tab`, `Enter`, `Espaço` e teclas nativas de formulário.
-- Orientação: o jogo exige horizontal em dispositivos móveis.
-- Opções: alto contraste, texto ampliado, movimento reduzido, paleta daltônica, áudio e PT/EN/ES para a interface-base.
+- Prólogo cinematográfico em quatro cenas e slot pronto para o vídeo oficial.
+- Onze atos guiados, com objetivo visível e explicações da equipe a cada etapa.
+- Mensagens de consequência em formato de turno antes da progressão.
+- Onze retratos cinematográficos e seis ambientes originais.
+- Cabine com trajetória animada, instrumentos funcionais, fases e controle de potência.
+- Universo procedural por seed local, sem depender de API, conta ou conexão.
+- Construção da ARK-01, testes, falhas causais, tripulação e treinamento.
+- Lançamento, cruzeiro, eventos, ciência, sondas, pouso, colônia e epílogo calculado.
+- Expedição Infinita, Simulador de Sistemas, Museu e Memorial.
+- Autosave, slots, exportação/importação, checksum e migração de saves.
+- Interface horizontal responsiva, teclado, contraste, texto ampliado e movimento reduzido.
 
-## Saves
+## Adicionar o vídeo do prólogo
 
-Autosave e slots usam IndexedDB, com fallback local, checksum, migração e exportação/importação JSON. Um checksum inválido nunca é apagado silenciosamente; o jogo informa a falha e preserva o registro.
-
-## Modos
-
-- Campanha PROJECT HAVEN: progressão completa do Ato I ao epílogo.
-- Expedição Infinita: orçamento e pressão inicial variam por seed compartilhável.
-- Simulador de Sistemas: falhas de suporte de vida, energia, térmica e casco com mitigação causal.
-- Museu e Memorial: decisões, falhas, sintomas, propagação, detecção e mitigação.
+As instruções estão em `assets/video/README.md`. Em resumo, coloque o arquivo em `assets/video/prologo.mp4`, adicione opcionalmente `prologo.vtt` e habilite o vídeo em `video-manifest.json`. Se não houver vídeo, o prólogo ilustrado funciona normalmente.
 
 ## Validação técnica
 
-Com Node.js 20 ou superior: `npm test`, `npm run validate` e `npm run audit`. O jogo não possui dependências de runtime nem serviços pagos.
+Com Node.js 20 ou superior: `npm test`, `npm run validate` e `npm run audit`. Não há dependências de runtime nem serviços pagos.
 
-## Estrutura
-
-O estado é centralizado em `src/core/store.js`; cálculos e causalidade ficam em `src/sim/simulation.js`; persistência está em `src/data/save-manager.js`; dados balanceáveis e narrativos ficam em `data/`. A documentação original enviada foi preservada em `docs/source-package/`.
+O estado central fica em `src/core/store.js`; os cálculos ficam em `src/sim/simulation.js`; persistência em `src/data/save-manager.js`; narrativa em `data/story.json`. A documentação original está preservada em `docs/source-package/` e `docs/production-bible/`.

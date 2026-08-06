@@ -1,0 +1,6 @@
+{
+  "enabled": false,
+  "src": "prologo.mp4",
+  "captions": "prologo.vtt",
+  "poster": "../images/scenes/mission-control.webp"
+}

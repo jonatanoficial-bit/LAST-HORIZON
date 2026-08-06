@@ -1,5 +1,16 @@
 # Changelog
 
+## 4.5.0 — 2026-08-06
+
+- Prólogo cinematográfico ilustrado em quatro cenas e encaixe configurável para vídeo.
+- Tutorial guiado durante os onze atos, com objetivos, dicas e especialistas contextuais.
+- Decisões encerradas por relatórios de consequência em formato de turno.
+- Onze avatares de tripulação e seis cenários cinematográficos originais em WebP e PNG.
+- Cabine espacial redesenhada com trajetória, telemetria, instrumentos e fases operacionais.
+- Observatório procedural determinístico, totalmente local e sem dependência de API externa.
+- Novo estado narrativo, migração de saves para versão 4 e cache PWA `4.5.0-cinematic`.
+- Novos testes de integridade narrativa e presença dos recursos visuais.
+
 ## 4.4.0 — 2026-08-06
 
 - Campanha sistêmica completa em onze etapas, do mandato da GSEA ao epílogo.

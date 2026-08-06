@@ -1,0 +1,64 @@
+{
+  "prologue": [
+    {
+      "year": "2047 · DIA ZERO",
+      "title": "A janela está fechando",
+      "speaker": "Rafael Costa",
+      "role": "Analista-chefe de dados planetários",
+      "avatar": "rafael-costa",
+      "scene": "mission-control",
+      "text": "Diretor, os modelos independentes convergiram. A biosfera não entrará em colapso amanhã, mas nossas redes de alimento, água e energia já ultrapassaram o ponto em que uma única crise pode ser contida. Temos nove anos para estabelecer uma segunda casa autossuficiente."
+    },
+    {
+      "year": "2047 · +06 HORAS",
+      "title": "Uma nave que ainda não existe",
+      "speaker": "Dra. Imani Okafor",
+      "role": "Engenheira-chefe da ARK-01",
+      "avatar": "imani-okafor",
+      "scene": "integration-bay",
+      "text": "A ARK-01 não está pronta. Propulsão, habitat e reator competem pela mesma massa. Cada escolha que você fizer muda o que pode falhar anos depois, quando não houver oficina, resgate ou segunda tentativa."
+    },
+    {
+      "year": "2047 · +11 HORAS",
+      "title": "O mundo precisa de uma decisão",
+      "speaker": "Mateo Vega",
+      "role": "Diretor de voo da GSEA",
+      "avatar": "mateo-vega",
+      "scene": "mission-control",
+      "text": "Dezessete governos aceitaram reativar a Agência Espacial Global, mas ninguém aceita entregar o comando ao outro. O conselho aprovou um nome de consenso: o seu. A partir deste instante, cada atraso custa confiança. Cada atalho custa vidas."
+    },
+    {
+      "year": "PROTOCOLO HAVEN",
+      "title": "Sua missão",
+      "speaker": "AURA",
+      "role": "Assistente de raciocínio e risco",
+      "avatar": "rafael-costa",
+      "scene": "flight-deck",
+      "text": "Você reconstruirá a GSEA, projetará a nave, certificará sistemas e pessoas, comandará o lançamento, atravessará o vazio e fundará uma colônia. Eu apresentarei evidências e consequências. A decisão final permanecerá humana."
+    }
+  ],
+  "briefings": {
+    "agency": {"speaker":"Rafael Costa","role":"Analista-chefe","avatar":"rafael-costa","objective":"Defina como o mundo conhecerá a crise.","message":"Antes de construir a nave, precisamos de legitimidade. Leia as três estratégias e escolha uma. O apoio público compra tempo; o sigilo compra velocidade.","tip":"Sua primeira escolha altera orçamento e apoio até o epílogo."},
+    "design": {"speaker":"Dra. Imani Okafor","role":"Engenheira-chefe","avatar":"imani-okafor","objective":"Integre quatro sistemas dentro das margens.","message":"Selecione uma opção em cada coluna. Observe massa, energia, térmica e delta-v mudarem em tempo real. O botão de certificação só libera quando a arquitetura é fisicamente viável.","tip":"Confiabilidade e redundância geralmente custam massa e orçamento."},
+    "testing": {"speaker":"Dra. Imani Okafor","role":"Engenheira-chefe","avatar":"imani-okafor","objective":"Execute ao menos quatro campanhas de teste.","message":"Teste é uma compra de evidência. Uma falha descoberta agora é uma vitória; a mesma falha no vazio é uma sentença.","tip":"Mais testes aumentam a confiabilidade, mas consomem dias e bilhões."},
+    "crew": {"speaker":"Dra. Samira Haddad","role":"Psicóloga da missão","avatar":"samira-haddad","objective":"Selecione seis especialistas e conclua o treinamento.","message":"Não monte apenas uma planilha de habilidades. Esta tripulação ficará anos confinada e precisará decidir sob perda, silêncio e ambiguidade.","tip":"Clique nos retratos para formar a equipe; depois execute o treinamento integrado."},
+    "countdown": {"speaker":"Mateo Vega","role":"Diretor de voo","avatar":"mateo-vega","objective":"Dê GO ou suspenda o lançamento.","message":"Todos os consoles reportaram. Você pode aceitar a incerteza residual ou gastar a janela em uma revisão final. Quando autorizar, a simulação causal decidirá se a preparação foi suficiente.","tip":"Suspender melhora confiabilidade, mas custa prazo e apoio."},
+    "flight": {"speaker":"Comandante Amara Diallo","role":"Comandante da ARK-01","avatar":"amara-diallo","objective":"Conduza a nave por todas as fases de ascensão.","message":"Diretor, estamos na cabine. Confirme cada fase pela telemetria central. A tripulação executará; você mantém autoridade de missão e abortagem.","tip":"A cabine mostra valores calculados a partir do projeto e dos testes."},
+    "cruise": {"speaker":"Dra. Asha Rao","role":"Médica da missão","avatar":"asha-rao","objective":"Atravesse o trânsito e responda aos eventos anuais.","message":"No cruzeiro, o inimigo não é apenas o vácuo. Recursos, fadiga, isolamento e pequenos defeitos acumulam consequências por anos.","tip":"Cada avanço é um turno anual e pode abrir uma decisão da equipe."},
+    "science": {"speaker":"Dr. Malik Okoye","role":"Astrobiólogo","avatar":"malik-okoye","objective":"Eleve a confiança dos dados e escolha um planeta.","message":"Os mundos diante de nós são gerados pela seed da missão e avaliados por sondas locais. Não escolha a imagem mais bonita; escolha o risco que podemos compreender.","tip":"Escaneie repetidamente até liberar uma decisão de destino."},
+    "landing": {"speaker":"Dra. Nayara Quispe","role":"Planetóloga","avatar":"nayara-quispe","objective":"Escolha o sítio e execute a descida EDL.","message":"Água, terreno e comunicação puxam em direções diferentes. Depois do início da retropropulsão não haverá combustível para voltar à órbita.","tip":"O local escolhido influenciará a narrativa do assentamento."},
+    "colony": {"speaker":"Dra. Imani Okafor","role":"Engenheira-chefe","avatar":"imani-okafor","objective":"Feche os ciclos essenciais da primeira base.","message":"Energia primeiro, sobrevivência depois, conforto por último. Construa habitat, reator, extração de água e estufa antes de convocar o conselho.","tip":"Cada módulo consome materiais e trabalho; a ordem muda sua margem."},
+    "governance": {"speaker":"Comandante Amara Diallo","role":"Comandante da colônia","avatar":"amara-diallo","objective":"Defina o futuro político e encerre a campanha.","message":"Sobrevivemos à viagem. Agora decidimos para quê. Terra, conselho ou autonomia: nenhuma resposta preserva todos os valores ao mesmo tempo.","tip":"Ciência, ética, perdas e autonomia compõem seu epílogo."}
+  },
+  "outcomes": {
+    "agency": {"speaker":"Rafael Costa","avatar":"rafael-costa","title":"O mundo respondeu","message":"O mandato foi registrado. Mercados, governos e cidadãos já recalcularam suas posições. A engenharia recebe autorização para começar."},
+    "design": {"speaker":"Dra. Imani Okafor","avatar":"imani-okafor","title":"Arquitetura congelada","message":"A ARK-01 agora é mais que um conceito. Daqui em diante, toda mudança custará tempo, massa e confiança."},
+    "testing": {"speaker":"Dra. Imani Okafor","avatar":"imani-okafor","title":"Certificação condicional","message":"Temos evidência suficiente para avançar, não certeza. Os riscos residuais seguirão conosco até o lançamento."},
+    "crew": {"speaker":"Dra. Samira Haddad","avatar":"samira-haddad","title":"Uma equipe, não uma lista","message":"A tripulação aprendeu a falhar em conjunto e se recuperar. Eles estão prontos para receber a chave da nave."},
+    "countdown": {"speaker":"Mateo Vega","avatar":"mateo-vega","title":"Liftoff","message":"A torre foi liberada. Milhões de decisões anteriores agora cabem nos próximos oito minutos."},
+    "flight": {"speaker":"Comandante Amara Diallo","avatar":"amara-diallo","title":"A Terra ficou para trás","message":"Queima concluída. Não existe retorno com o combustível restante. A ARK-01 está em rota para HAVEN."},
+    "science": {"speaker":"Dr. Malik Okoye","avatar":"malik-okoye","title":"Um risco escolhido","message":"O destino está gravado no computador de descida. A partir de agora, nossos dados encontrarão um mundo real."},
+    "landing": {"speaker":"Dra. Nayara Quispe","avatar":"nayara-quispe","title":"Contato","message":"Peso nos amortecedores. Poeira baixando. Pela primeira vez, seres humanos respiram sob outro céu."},
+    "colony": {"speaker":"Dra. Imani Okafor","avatar":"imani-okafor","title":"Primeiro lar","message":"Ar, água, energia e alimento formam um ciclo estável. Já não somos apenas sobreviventes de uma nave."}
+  }
+}
