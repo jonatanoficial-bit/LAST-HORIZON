@@ -1,4 +1,4 @@
-# Relatório de qualidade — release 6.0.0
+# Relatório de qualidade — release 6.0.1
 
 Data: 7 de agosto de 2026
 
@@ -11,7 +11,7 @@ Data: 7 de agosto de 2026
 
 ## Verificações automatizadas
 
-- 28/28 testes aprovados: campanha, economia, saves, recursos visuais, engenharia, tripulação, fadiga, órbita circular, propagação kepleriana, janela de nó, consumo de propelente, partida orbital e efemérides planetárias.
+- 31/31 testes aprovados: campanha, economia, saves, recursos visuais, engenharia, tripulação, fadiga, órbita circular, propagação kepleriana, janela de nó, consumo de propelente, partida orbital, efemérides e reprodução do prólogo.
 - 59 entidades de jogo validadas, sem IDs duplicados.
 - 11 etapas jogáveis e 3 idiomas-base presentes.
 - 32 referências estáticas do shell, módulos, dados e textura NASA resolvidas.
@@ -42,10 +42,13 @@ Data: 7 de agosto de 2026
 - Circularização e partida foram executadas em sequência; a reserva diminuiu pela equação do foguete.
 - A progressão da cabine permanece bloqueada até a manobra obrigatória, mas oferece propagação automática até a janela.
 
-## Vídeo compacto
+## Vídeo compacto e reprodução 6.0.1
 
-- `prologo.mp4` possui 82.920.366 bytes e SHA-256 `B4DBB0C8F475865E0FBDFEC80B33E723389ED4D0CEC00FA6F22A0AFF9775E601`.
+- `prologo.mp4` possui 82.920.366 bytes e SHA-256 `6582E36025D8F659E0D3C25535CE35374D7B8914F6052FA487F5433B01AFB9B0`.
 - O contêiner MP4 contém assinaturas `ftyp`, `mdat` e `moov`, vídeo AVC/H.264 e áudio AAC.
+- O índice `moov`, originalmente no fim em 82.793.180 bytes, agora começa em 32 bytes; `mdat` começa depois do índice em 127.226 bytes.
+- 6.884 offsets `stco/co64` foram ajustados e o hash do payload audiovisual `mdat` permaneceu idêntico antes/depois.
+- O prólogo possui tentativa com som, fallback silencioso, ativação de áudio, retry e saída interativa explícita.
 - O arquivo individual permanece abaixo do limite de 100 MB que bloqueava o envio anterior ao GitHub.
 
 ## Sala de Engenharia 4.7

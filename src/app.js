@@ -7,7 +7,7 @@ import { astronomyView, mountAstronomy, unmountAstronomy } from "./ui/astronomy.
 
 const app=document.querySelector("#app"),toastRegion=document.querySelector("#toast-region");
 const json=async path=>{const response=await fetch(path);if(!response.ok)throw new Error(`Falha ao carregar ${path}`);return response.json()};
-const [data,locales,version,story,videoManifest,flightManifest,engineeringData,crewOps,solarData]=await Promise.all([json("./data/game.json"),json("./data/locales.json?v=6.0.0"),json("./version.json?v=6.0.0"),json("./data/story.json?v=6.0.0"),json("./assets/video/video-manifest.json?v=6.0.0"),json("./assets/video/flight-manifest.json?v=6.0.0"),json("./data/engineering.json?v=6.0.0"),json("./data/crew-operations.json?v=6.0.0"),json("./data/solar-system.json?v=6.0.0")]);
+const [data,locales,version,story,videoManifest,flightManifest,engineeringData,crewOps,solarData]=await Promise.all([json("./data/game.json"),json("./data/locales.json?v=6.0.1"),json("./version.json?v=6.0.1"),json("./data/story.json?v=6.0.1"),json("./assets/video/video-manifest.json?v=6.0.1"),json("./assets/video/flight-manifest.json?v=6.0.1"),json("./data/engineering.json?v=6.0.1"),json("./data/crew-operations.json?v=6.0.1"),json("./data/solar-system.json?v=6.0.1")]);
 let locale=localStorage.getItem("lh-locale")||"pt-BR",lastState=null,autosaveTimer=null;
 const t=key=>locales[locale]?.[key]||locales["pt-BR"][key]||key;
 const esc=value=>String(value??"").replace(/[&<>'"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;",'"':"&quot;"}[c]));
@@ -33,6 +33,7 @@ function menu(){const s=store.getState(),hasSave=!!localStorage.getItem("lh-has-
       <button data-action="expedition">${t("expedition")}</button>
       <button data-action="simulator">${t("simulator")}</button>
       <button data-action="atlas">OBSERVATÓRIO REAL</button>
+      <button data-action="intro">ASSISTIR INTRODUÇÃO</button>
       <button data-action="saves">${t("saves")}</button><button data-action="settings">${t("settings")}</button>
     </div><div class="build-tag">${t("build")} ${esc(version.version)} · OFFLINE · ${esc(version.build)}</div>
   </section></main>`;
@@ -44,6 +45,7 @@ function bindMenu(){
   one("[data-action=expedition]","click",()=>profileModal("expedition"));
   one("[data-action=simulator]","click",()=>{const s=createInitialState(`SIM-${Date.now()}`,"simulator");s.ui.route="simulator";store.replace(s);router.navigate("simulator")});
   one("[data-action=atlas]","click",()=>router.navigate("atlas"));
+  one("[data-action=intro]","click",()=>{store.update(x=>{x.campaign.flags.videoSeen=false;x.campaign.prologueStep=0},"Introdução solicitada pelo menu");router.navigate("prologue")});
   one("[data-action=continue]","click",async()=>{try{store.replace(await loadGame("autosave"));locale=store.getState().profile.language||locale;router.navigate(store.getState().ui.route||"agency")}catch(e){toast(e.message,"error")}});
   one("[data-action=saves]","click",saveModal);one("[data-action=settings]","click",settingsModal);
 }
@@ -68,9 +70,32 @@ const flightPhases=[
   {name:"Queima de partida",callout:"TLI BURN",alt:[220,360],speed:[28150,41100],g:[.08,1.18],thrust:[38,82],pitch:[4,0],fuel:[38,24]}
 ];
 let flightAnimationFrame=null,flightCamera="cockpit";
+function prologueVideo(){
+  const source=`./assets/video/${videoManifest.src}?v=faststart-6.0.1`,poster=`./assets/video/${videoManifest.poster}`;
+  app.innerHTML=`<main class="cinematic video-prologue"><video id="intro-video" controls playsinline preload="metadata" poster="${esc(poster)}"><source src="${esc(source)}" type="video/mp4">${videoManifest.captions?`<track kind="captions" src="./assets/video/${esc(videoManifest.captions)}" srclang="pt-BR" label="Português">`:""}</video><div class="video-load-state" data-video-gate><div class="video-spinner" aria-hidden="true"></div><div><span data-video-status>PREPARANDO ARQUIVO GSEA</span><b>Into LAST HORIZON</b><small>Toque para iniciar com áudio. Em conexão lenta, aguarde o carregamento do índice.</small></div><button class="primary" data-video-start>▶ REPRODUZIR COM SOM</button><button data-video-retry hidden>↻ TENTAR NOVAMENTE</button><button data-video-fallback hidden>ABRIR PRÓLOGO INTERATIVO</button></div><div class="video-title"><span>ARQUIVO GSEA</span><b>PRÓLOGO · LAST HORIZON</b><small data-video-network>CARREGANDO METADADOS</small></div><button class="video-audio" data-video-audio hidden>🔊 ATIVAR SOM</button><button class="skip-cinematic" data-skip-video>Pular introdução</button></main>`;
+  const video=document.querySelector("#intro-video"),gate=document.querySelector("[data-video-gate]"),status=document.querySelector("[data-video-status]"),network=document.querySelector("[data-video-network]"),start=document.querySelector("[data-video-start]"),retry=document.querySelector("[data-video-retry]"),fallback=document.querySelector("[data-video-fallback]"),audio=document.querySelector("[data-video-audio]");
+  let failed=false;
+  const finish=()=>store.update(x=>x.campaign.flags.videoSeen=true,"Prólogo em vídeo concluído");
+  const setStatus=(message,detail=message)=>{status.textContent=message;network.textContent=detail};
+  const showGate=(message,error=false)=>{gate.hidden=false;gate.classList.toggle("video-error",error);setStatus(message,error?"FALHA DE MÍDIA":"AGUARDANDO COMANDO");start.hidden=error;retry.hidden=!error;fallback.hidden=!error};
+  const play=async withSound=>{failed=false;gate.classList.remove("video-error");setStatus("INICIANDO TRANSMISSÃO","BUFFER / DECODIFICADOR");video.muted=!withSound;try{await video.play();gate.hidden=true;audio.hidden=withSound}catch(error){if(withSound){video.muted=true;try{await video.play();gate.hidden=true;audio.hidden=false;toast("O navegador iniciou o vídeo sem som. Toque em ATIVAR SOM.")}catch{showGate("TOQUE PARA REPRODUZIR")}}else showGate("TOQUE PARA REPRODUZIR")}};
+  video.addEventListener("loadedmetadata",()=>{const minutes=Math.floor(video.duration/60),seconds=Math.floor(video.duration%60);setStatus("ARQUIVO PRONTO",`${minutes}:${String(seconds).padStart(2,"0")} · FAST START`)});
+  video.addEventListener("canplay",()=>{if(!failed)setStatus("PRONTO PARA REPRODUZIR","BUFFER DISPONÍVEL")});
+  video.addEventListener("playing",()=>{gate.hidden=true;setStatus("TRANSMISSÃO ATIVA",video.muted?"SEM SOM":"ÁUDIO ATIVO")});
+  video.addEventListener("waiting",()=>setStatus("CARREGANDO TRECHO","BUFFERING…"));
+  video.addEventListener("stalled",()=>setStatus("CONEXÃO LENTA","AGUARDANDO DADOS…"));
+  video.addEventListener("ended",finish,{once:true});
+  video.addEventListener("error",()=>{failed=true;const code=video.error?.code||0;showGate(`VÍDEO INDISPONÍVEL · ERRO ${code}`,true);toast("O navegador não recebeu um MP4 reproduzível. Use TENTAR NOVAMENTE.","error")});
+  start.addEventListener("click",()=>play(true));
+  retry.addEventListener("click",()=>{retry.hidden=true;fallback.hidden=true;start.hidden=false;video.load();play(true)});
+  fallback.addEventListener("click",finish);
+  audio.addEventListener("click",async()=>{video.muted=false;video.volume=1;try{await video.play();audio.hidden=true;setStatus("TRANSMISSÃO ATIVA","ÁUDIO ATIVO")}catch{toast("Toque novamente no vídeo para liberar o áudio.","error")}});
+  one("[data-skip-video]","click",finish);
+  play(true);
+}
 function prologue(){
   const s=store.getState();s.ui.route="prologue";
-  if(videoManifest.enabled&&!s.campaign.flags.videoSeen){app.innerHTML=`<main class="cinematic video-prologue"><video controls autoplay playsinline poster="./assets/video/${esc(videoManifest.poster)}"><source src="./assets/video/${esc(videoManifest.src)}" type="video/mp4">${videoManifest.captions?`<track kind="captions" src="./assets/video/${esc(videoManifest.captions)}" srclang="pt-BR" label="Português">`:""}</video><div class="video-title"><span>ARQUIVO GSEA</span><b>PRÓLOGO · LAST HORIZON</b></div><button class="skip-cinematic" data-skip-video>Pular introdução</button></main>`;const finish=()=>store.update(x=>x.campaign.flags.videoSeen=true,"Prólogo em vídeo concluído");one("video","ended",finish);one("video","error",()=>{toast("O vídeo não pôde ser reproduzido. Abrindo o prólogo interativo.","error");finish()});one("[data-skip-video]","click",finish);return}
+  if(videoManifest.enabled&&!s.campaign.flags.videoSeen)return prologueVideo();
   const index=Math.min(s.campaign.prologueStep||0,story.prologue.length-1),scene=story.prologue[index];
   app.innerHTML=`<main class="cinematic" style="--scene:url('./assets/images/scenes/${scene.scene}.webp')"><div class="cinematic-shade"></div><div class="cinematic-progress">${story.prologue.map((_,i)=>`<i class="${i<=index?"active":""}"></i>`).join("")}</div><section class="cinematic-dialogue"><div class="cinematic-portrait">${portrait(scene.avatar)}</div><div class="dialogue-copy"><div class="eyebrow">${esc(scene.year)} · TRANSMISSÃO SEGURA</div><h1>${esc(scene.title)}</h1><div class="speaker"><b>${esc(scene.speaker)}</b><span>${esc(scene.role)}</span></div><p>${esc(scene.text)}</p><div class="dialogue-actions"><button data-prologue-back ${index===0?"disabled":""}>Voltar</button><button class="primary" data-prologue-next>${index===story.prologue.length-1?"ASSUMIR O COMANDO":"Continuar"}</button></div></div></section><button class="skip-cinematic" data-prologue-skip>Pular prólogo</button></main>`;
   one("[data-prologue-back]","click",()=>store.update(x=>x.campaign.prologueStep=Math.max(0,index-1),"Retorno no briefing"));

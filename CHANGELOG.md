@@ -1,5 +1,14 @@
 # Changelog
 
+## 6.0.1 — 2026-08-07
+
+- Reorganiza `prologo.mp4` para fast start, preservando integralmente o payload audiovisual.
+- Move o átomo `moov` de 82.793.180 bytes para o início do MP4 e ajusta 6.884 offsets internos.
+- Trata bloqueio de autoplay com reprodução silenciosa e ativação de som por toque.
+- Adiciona estados de carregamento, buffering, conexão lenta, erro e nova tentativa.
+- Adiciona replay da introdução no menu e renovação forçada do cache PWA.
+- Acrescenta testes específicos de estrutura, hash e controles de reprodução.
+
 ## 6.0.0 — 2026-08-07
 
 - Adiciona o Atlas do Sistema Solar, integrado ao menu e à campanha.

@@ -2,6 +2,10 @@
 
 O vídeo compacto enviado pelo criador já está integrado como `prologo.mp4` e habilitado em `video-manifest.json`. Ele possui 82.920.366 bytes, fica abaixo do limite de 100 MB por arquivo do GitHub e deve permanecer em todos os pacotes futuros.
 
+Na versão 6.0.1, o mesmo conteúdo audiovisual foi reorganizado sem recompressão para mover o índice MP4 `moov` ao início do arquivo. Esse modo “fast start” permite que navegador e celular comecem a reprodução sem baixar os 82,9 MB completos. O manifesto registra o hash da versão otimizada.
+
+O prólogo tenta iniciar com som. Quando a política do navegador bloqueia autoplay, ele começa silencioso e mostra `ATIVAR SOM`; se a hospedagem falhar, oferece `TENTAR NOVAMENTE` sem pular o vídeo automaticamente. O menu principal também possui `ASSISTIR INTRODUÇÃO`.
+
 Os vídeos de voo são opcionais. Coloque cada MP4 nesta pasta usando exatamente os nomes abaixo:
 
 - `launch-ignition.mp4`

@@ -1,6 +1,6 @@
 # LAST HORIZON — Global Space Agency Simulator
 
-Versão 6.0.0: campanha narrativa, tutorial guiado por especialistas e simulador espacial offline inspirado na Bíblia Oficial do PROJECT HAVEN. Você assume a direção da GSEA, conquista apoio público, integra a ARK-01, certifica sua tripulação, conduz lançamento e cruzeiro, analisa mundos e funda uma colônia cujo futuro depende das suas decisões.
+Versão 6.0.1: campanha narrativa, tutorial guiado por especialistas e simulador espacial offline inspirado na Bíblia Oficial do PROJECT HAVEN. Você assume a direção da GSEA, conquista apoio público, integra a ARK-01, certifica sua tripulação, conduz lançamento e cruzeiro, analisa mundos e funda uma colônia cujo futuro depende das suas decisões.
 
 ## Como jogar no Windows
 
@@ -13,6 +13,11 @@ O jogo abre em `http://localhost:8765/`. Também pode ser publicado no GitHub Pa
 
 ## O que há nesta versão
 
+- Correção do vídeo introdutório: índice MP4 movido do final para o início sem recompressão ou perda de qualidade.
+- Reprodução compatível com bloqueio de autoplay: tentativa com som, fallback silencioso e botão para ativar áudio.
+- Tela de carregamento informa buffering, conexão lenta e erro de mídia; permite tentar novamente.
+- Comando `ASSISTIR INTRODUÇÃO` no menu principal para rever ou testar o vídeo a qualquer momento.
+- Atualização do PWA força a remoção do cache anterior e recarrega as janelas abertas uma vez.
 - Atlas astronômico persistente, acessível pelo menu principal e durante toda a campanha.
 - Globo terrestre WebGL interativo com textura global Blue Marble da NASA incorporada ao jogo.
 - Iluminação diurna/noturna calculada para a data escolhida, arraste para rotação e zoom.

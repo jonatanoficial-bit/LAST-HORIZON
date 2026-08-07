@@ -3,6 +3,8 @@
   "src": "prologo.mp4",
   "sizeBytes": 82920366,
   "release": "compact-git-safe",
+  "fastStart": true,
+  "sha256": "6582E36025D8F659E0D3C25535CE35374D7B8914F6052FA487F5433B01AFB9B0",
   "captions": null,
   "poster": "../images/scenes/mission-control.webp"
 }
