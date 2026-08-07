@@ -1,5 +1,15 @@
 # Changelog
 
+## 6.0.0 — 2026-08-07
+
+- Adiciona o Atlas do Sistema Solar, integrado ao menu e à campanha.
+- Incorpora globo terrestre WebGL com textura NASA Blue Marble e luz solar dependente da data.
+- Adiciona centros de lançamento reais e coordenadas no globo.
+- Calcula posições planetárias por elementos keplerianos JPL para 1800–2050.
+- Adiciona propagação de tempo, escala linear/logarítmica, seleção e dossiês planetários.
+- Preserva funcionamento offline, celulares em horizontal e saves das versões anteriores.
+- Eleva o schema de save para 8 e atualiza o cache PWA.
+
 ## 5.0.0 — 2026-08-07
 
 - Prólogo antigo de 148,7 MB substituído pela versão compacta de 82,9 MB fornecida pelo autor.

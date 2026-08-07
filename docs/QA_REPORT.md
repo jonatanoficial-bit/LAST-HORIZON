@@ -1,4 +1,4 @@
-# Relatório de qualidade — release 5.0.0
+# Relatório de qualidade — release 6.0.0
 
 Data: 7 de agosto de 2026
 
@@ -11,11 +11,20 @@ Data: 7 de agosto de 2026
 
 ## Verificações automatizadas
 
-- 25/25 testes aprovados: campanha, economia, saves, recursos visuais, engenharia, tripulação, fadiga, órbita circular, propagação kepleriana, janela de nó, consumo de propelente e partida orbital.
+- 28/28 testes aprovados: campanha, economia, saves, recursos visuais, engenharia, tripulação, fadiga, órbita circular, propagação kepleriana, janela de nó, consumo de propelente, partida orbital e efemérides planetárias.
 - 59 entidades de jogo validadas, sem IDs duplicados.
 - 11 etapas jogáveis e 3 idiomas-base presentes.
-- 28 referências estáticas do shell, módulos e dados resolvidas.
+- 32 referências estáticas do shell, módulos, dados e textura NASA resolvidas.
 - Sintaxe de `app.js` e `service-worker.js` aprovada pelo Node.js.
+
+## Atlas astronômico 6.0
+
+- Época J2000 confirmada em JD 2451545.0.
+- Distâncias heliocêntricas da Terra e de Netuno em 2047 permaneceram dentro das faixas orbitais físicas esperadas.
+- Vetor solar terrestre permanece normalizado e alimenta a iluminação diurna/noturna do globo.
+- Oito planetas possuem elementos JPL, parâmetros físicos, seleção e leitura de distância/tempo-luz.
+- Blue Marble NASA incorporada ao cache offline com 2048×1024 pixels.
+- Saves anteriores migram para o schema 8 sem apagar a progressão da campanha.
 
 ## Correção de progressão móvel 5.0
 

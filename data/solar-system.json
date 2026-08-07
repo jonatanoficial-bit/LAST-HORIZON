@@ -1,0 +1,52 @@
+{
+  "epoch": "J2000.0",
+  "validFrom": "1800-01-01",
+  "validTo": "2050-12-31",
+  "positionModel": "JPL approximate Keplerian elements, Table 1",
+  "texture": {
+    "src": "./assets/images/real/earth-blue-marble-2048.jpg",
+    "name": "NASA Blue Marble: Land Surface, Ocean Color and Sea Ice",
+    "credit": "NASA Earth Observatory / Reto Stöckli / Robert Simmon / MODIS Science Team"
+  },
+  "launchSites": [
+    {"id":"alcantara","name":"Centro de Lançamento de Alcântara","country":"Brasil","lat":-2.373,"lon":-44.396,"note":"Baixa latitude; vantagem para lançamentos prógrados."},
+    {"id":"kennedy","name":"Kennedy Space Center","country":"Estados Unidos","lat":28.573,"lon":-80.649,"note":"Corredor histórico do Atlântico."},
+    {"id":"kourou","name":"Centre Spatial Guyanais","country":"Guiana Francesa","lat":5.236,"lon":-52.775,"note":"Próximo ao equador, com ampla faixa oceânica."},
+    {"id":"tanegashima","name":"Tanegashima Space Center","country":"Japão","lat":30.401,"lon":130.977,"note":"Corredor de lançamento sobre o Pacífico."},
+    {"id":"baikonur","name":"Cosmódromo de Baikonur","country":"Cazaquistão","lat":45.965,"lon":63.305,"note":"Grande infraestrutura orbital terrestre."}
+  ],
+  "bodies": [
+    {
+      "id":"mercury","name":"Mercúrio","symbol":"☿","color":"#b9aea2","radiusKm":2439.7,"massE24Kg":0.33011,"gravityMs2":3.70,"dayHours":1407.6,"yearDays":87.969,"moons":0,"description":"Mundo rochoso extremo, com a órbita mais rápida do Sistema Solar.",
+      "elements":{"a":[0.38709927,0.00000037],"e":[0.20563593,0.00001906],"I":[7.00497902,-0.00594749],"L":[252.25032350,149472.67411175],"peri":[77.45779628,0.16047689],"node":[48.33076593,-0.12534081]}
+    },
+    {
+      "id":"venus","name":"Vênus","symbol":"♀","color":"#e6c68b","radiusKm":6051.8,"massE24Kg":4.8675,"gravityMs2":8.87,"dayHours":-5832.5,"yearDays":224.701,"moons":0,"description":"Planeta de tamanho terrestre sob uma atmosfera densa e superaquecida.",
+      "elements":{"a":[0.72333566,0.00000390],"e":[0.00677672,-0.00004107],"I":[3.39467605,-0.00078890],"L":[181.97909950,58517.81538729],"peri":[131.60246718,0.00268329],"node":[76.67984255,-0.27769418]}
+    },
+    {
+      "id":"earth","name":"Terra","symbol":"⊕","color":"#5ca8ff","radiusKm":6371.0,"massE24Kg":5.9722,"gravityMs2":9.82,"dayHours":23.9345,"yearDays":365.256,"moons":1,"description":"Origem da humanidade e ponto de partida da ARK-01.",
+      "elements":{"a":[1.00000261,0.00000562],"e":[0.01671123,-0.00004392],"I":[-0.00001531,-0.01294668],"L":[100.46457166,35999.37244981],"peri":[102.93768193,0.32327364],"node":[0,0]}
+    },
+    {
+      "id":"mars","name":"Marte","symbol":"♂","color":"#d76b4a","radiusKm":3389.5,"massE24Kg":0.64171,"gravityMs2":3.71,"dayHours":24.6229,"yearDays":686.980,"moons":2,"description":"Mundo frio e oxidado, principal laboratório natural para presença humana.",
+      "elements":{"a":[1.52371034,0.00001847],"e":[0.09339410,0.00007882],"I":[1.84969142,-0.00813131],"L":[-4.55343205,19140.30268499],"peri":[-23.94362959,0.44441088],"node":[49.55953891,-0.29257343]}
+    },
+    {
+      "id":"jupiter","name":"Júpiter","symbol":"♃","color":"#d7b68a","radiusKm":69911,"massE24Kg":1898.19,"gravityMs2":24.79,"dayHours":9.925,"yearDays":4332.589,"moons":95,"description":"Gigante gasoso dominante, decisivo em assistências gravitacionais e risco radiológico.",
+      "elements":{"a":[5.20288700,-0.00011607],"e":[0.04838624,-0.00013253],"I":[1.30439695,-0.00183714],"L":[34.39644051,3034.74612775],"peri":[14.72847983,0.21252668],"node":[100.47390909,0.20469106]}
+    },
+    {
+      "id":"saturn","name":"Saturno","symbol":"♄","color":"#e3cf94","radiusKm":58232,"massE24Kg":568.34,"gravityMs2":10.44,"dayHours":10.656,"yearDays":10759.22,"moons":146,"description":"Gigante de baixa densidade, cercado pelo sistema de anéis mais amplo.",
+      "elements":{"a":[9.53667594,-0.00125060],"e":[0.05386179,-0.00050991],"I":[2.48599187,0.00193609],"L":[49.95424423,1222.49362201],"peri":[92.59887831,-0.41897216],"node":[113.66242448,-0.28867794]}
+    },
+    {
+      "id":"uranus","name":"Urano","symbol":"♅","color":"#8fdce5","radiusKm":25362,"massE24Kg":86.813,"gravityMs2":8.69,"dayHours":-17.24,"yearDays":30688.5,"moons":27,"description":"Gigante de gelo inclinado, com estações extremas e magnetosfera assimétrica.",
+      "elements":{"a":[19.18916464,-0.00196176],"e":[0.04725744,-0.00004397],"I":[0.77263783,-0.00242939],"L":[313.23810451,428.48202785],"peri":[170.95427630,0.40805281],"node":[74.01692503,0.04240589]}
+    },
+    {
+      "id":"neptune","name":"Netuno","symbol":"♆","color":"#487ee8","radiusKm":24622,"massE24Kg":102.413,"gravityMs2":11.15,"dayHours":16.11,"yearDays":60182,"moons":14,"description":"Gigante de gelo remoto, com ventos supersônicos e uma órbita de 165 anos.",
+      "elements":{"a":[30.06992276,0.00026291],"e":[0.00859048,0.00005105],"I":[1.77004347,0.00035372],"L":[-55.12002969,218.45945325],"peri":[44.96476227,-0.32241464],"node":[131.78422574,-0.00508664]}
+    }
+  ]
+}

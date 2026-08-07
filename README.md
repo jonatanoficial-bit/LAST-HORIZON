@@ -1,6 +1,6 @@
 # LAST HORIZON — Global Space Agency Simulator
 
-Versão 5.0.0: campanha narrativa, tutorial guiado por especialistas e simulador espacial offline inspirado na Bíblia Oficial do PROJECT HAVEN. Você assume a direção da GSEA, conquista apoio público, integra a ARK-01, certifica sua tripulação, conduz lançamento e cruzeiro, analisa mundos e funda uma colônia cujo futuro depende das suas decisões.
+Versão 6.0.0: campanha narrativa, tutorial guiado por especialistas e simulador espacial offline inspirado na Bíblia Oficial do PROJECT HAVEN. Você assume a direção da GSEA, conquista apoio público, integra a ARK-01, certifica sua tripulação, conduz lançamento e cruzeiro, analisa mundos e funda uma colônia cujo futuro depende das suas decisões.
 
 ## Como jogar no Windows
 
@@ -13,6 +13,15 @@ O jogo abre em `http://localhost:8765/`. Também pode ser publicado no GitHub Pa
 
 ## O que há nesta versão
 
+- Atlas astronômico persistente, acessível pelo menu principal e durante toda a campanha.
+- Globo terrestre WebGL interativo com textura global Blue Marble da NASA incorporada ao jogo.
+- Iluminação diurna/noturna calculada para a data escolhida, arraste para rotação e zoom.
+- Rede de centros de lançamento com coordenadas reais e destaque direto no globo.
+- Mapa do Sistema Solar com os oito planetas e posições heliocêntricas calculadas por elementos JPL.
+- Data UTC ajustável entre 1800 e 2050, propagação acelerada e sincronização com o relógio da missão.
+- Escalas logarítmica e linear; seleção de planetas, distâncias, tempo-luz e dados físicos.
+- Rota da ARK-01 sobreposta ao mapa depois do lançamento.
+- Nova migração de save mantém campanhas anteriores e acrescenta o estado do observatório.
 - Vídeo oficial `Into LAST HORIZON` integrado antes do prólogo interativo.
 - Vídeo introdutório substituído pela versão compacta de 82,9 MB, adequada ao limite de arquivos do GitHub.
 - Correção definitiva do bloqueio da Arquitetura Habitável: propostas nunca ficam inacessíveis por falta de verba.
@@ -42,6 +51,10 @@ O jogo abre em `http://localhost:8765/`. Também pode ser publicado no GitHub Pa
 - Expedição Infinita, Simulador de Sistemas, Museu e Memorial.
 - Autosave, slots, exportação/importação, checksum e migração de saves.
 - Interface horizontal responsiva, teclado, contraste, texto ampliado e movimento reduzido.
+
+## Limite de fidelidade
+
+O atlas é uma simulação astronômica aproximada, apropriada à leitura estratégica do jogo. Ele não substitui uma efeméride operacional. O modelo orbital planetário usa elementos JPL e dinâmica kepleriana; missões reais exigem efemérides N-corpos SPICE/Horizons, forças perturbadoras, propagação de covariância e validação independente. O plano para chegar a esse nível está em `docs/ROADMAP_SIMULADOR_REALISTA.md`.
 
 ## Vídeos cinematográficos
 

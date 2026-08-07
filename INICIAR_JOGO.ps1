@@ -3,7 +3,7 @@ $gameRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
 $port = 8765
 $listener = [System.Net.HttpListener]::new()
 $listener.Prefixes.Add("http://localhost:$port/")
-$mime = @{ ".html"="text/html; charset=utf-8"; ".js"="text/javascript; charset=utf-8"; ".css"="text/css; charset=utf-8"; ".json"="application/json; charset=utf-8"; ".webmanifest"="application/manifest+json"; ".svg"="image/svg+xml"; ".png"="image/png"; ".webp"="image/webp"; ".pdf"="application/pdf"; ".mp4"="video/mp4"; ".vtt"="text/vtt; charset=utf-8" }
+$mime = @{ ".html"="text/html; charset=utf-8"; ".js"="text/javascript; charset=utf-8"; ".css"="text/css; charset=utf-8"; ".json"="application/json; charset=utf-8"; ".webmanifest"="application/manifest+json"; ".svg"="image/svg+xml"; ".png"="image/png"; ".jpg"="image/jpeg"; ".jpeg"="image/jpeg"; ".webp"="image/webp"; ".pdf"="application/pdf"; ".mp4"="video/mp4"; ".vtt"="text/vtt; charset=utf-8" }
 $listener.Start()
 Start-Process "http://localhost:$port/"
 Write-Host "LAST HORIZON iniciado em http://localhost:$port/"
