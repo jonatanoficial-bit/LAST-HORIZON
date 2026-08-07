@@ -1,5 +1,16 @@
 # Changelog
 
+## 8.0.0 — 2026-08-07
+
+- Adiciona renderizador WebGL offline específico para o voo da ARK-01.
+- Renderiza Terra texturizada, iluminação diurna/noturna, atmosfera, nuvens, estrelas e aquecimento.
+- Adiciona modelo tridimensional multiestágio da nave e pluma vinculada ao empuxo físico.
+- Transforma a rota de voo em cabine imersiva, ocultando a aparência de dashboard lateral.
+- Adiciona HUD, câmeras 3D, orientação contextual do piloto e estados visuais de abortagem e órbita.
+- Adiciona áudio procedural reativo a empuxo, Max-Q e eventos de rádio.
+- Inclui três níveis de qualidade e fallback bidimensional para dispositivos sem WebGL.
+- Mantém o vídeo oficial, campanha, saves, atlas astronômico e funcionamento offline.
+
 ## 7.0.0 — 2026-08-07
 
 - Substitui a ascensão animada por um integrador físico de voo 6-DOF.

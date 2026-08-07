@@ -91,9 +91,10 @@ Esta é uma vertical slice integral, não o volume final AAA. O caminho de campa
 Gerada com o fluxo integrado de imagem em modo nativo. Os retratos foram orientados como personagens cinematográficos AAA de ficção científica plausível, enquadramento de busto, uniforme grafite/navy e iluminação ciano/âmbar, sem marcas ou texto. Os cenários foram orientados como sala de missão, hangar de integração, cabine, plataforma, cruzeiro profundo e colônia em Aurelia, sem HUD ou logotipos incorporados. A entrega inclui WebP otimizado e PNG de fallback.
 
 A cabine 4.6 foi gerada separadamente como placa fotorealista 16:9: perspectiva do assento do piloto, para-brisa amplo, ferragens aeroespaciais, três telas apagadas para composição e iluminação pré-lançamento. O exterior, os instrumentos e a telemetria são renderizados em tempo real sobre essa estrutura.
-# QA — versão 7.0.0
+# QA — versão 8.0.0
 
-- 35/35 testes automatizados aprovados.
+- 37/37 testes automatizados aprovados.
+- Pipeline WebGL e áudio procedural verificados por testes de integração offline.
 - Sintaxe de `src/app.js` e do integrador 6-DOF validada pelo Node.
 - Atmosfera, separação, atitude manual e inserção orbital cobertas por testes determinísticos.
 - 59 entidades, 11 etapas e 3 idiomas validados.

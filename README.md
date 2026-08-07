@@ -1,6 +1,6 @@
 # LAST HORIZON — Global Space Agency Simulator
 
-Versão 7.0.0: campanha narrativa, tutorial guiado por especialistas e simulador espacial offline inspirado na Bíblia Oficial do PROJECT HAVEN. Você assume a direção da GSEA, conquista apoio público, integra a ARK-01, certifica sua tripulação, pilota a inserção orbital e conduz a missão até a fundação de uma colônia.
+Versão 8.0.0: campanha narrativa, tutorial guiado por especialistas e simulador espacial offline inspirado na Bíblia Oficial do PROJECT HAVEN. Você assume a direção da GSEA, integra a ARK-01 e pilota uma inserção orbital física em uma cabine WebGL imersiva antes de conduzir a missão até a fundação de uma colônia.
 
 ## Como jogar no Windows
 
@@ -13,6 +13,13 @@ O jogo abre em `http://localhost:8765/`. Também pode ser publicado no GitHub Pa
 
 ## O que há nesta versão
 
+- Vertical slice WebGL com Terra esférica, textura Blue Marble, atmosfera, nuvens procedurais e iluminação solar.
+- Campo estelar, brilho atmosférico, cidades noturnas e aquecimento de reentrada calculados em shader.
+- Modelo 3D da ARK-01 na câmera externa, com corpo multiestágio, aletas, iluminação e pluma reativa.
+- Cabine em tela ampla com estrutura do para-brisa, HUD, vetor prógrado e telemetria sobre a cena.
+- Áudio procedural de motor e fluxo aerodinâmico conectado ao empuxo e à pressão dinâmica.
+- Comunicações contextuais de Jun Park para ignição, Max-Q, separação, linha de Kármán, costeio e órbita.
+- Perfis gráficos alto, médio e leve para computadores e celulares.
 - Versão 7.0.0 com voo pilotável em seis graus de liberdade: posição e velocidade 3D, pitch, yaw e roll.
 - Gravidade terrestre, rotação do planeta, atmosfera em camadas, vento, arrasto, Max-Q e aquecimento aerodinâmico.
 - Propulsão com massa variável, vazão por impulso específico, dois estágios e separação comandada.
