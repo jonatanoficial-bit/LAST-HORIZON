@@ -1,5 +1,15 @@
 # Changelog
 
+## 7.0.0 — 2026-08-07
+
+- Substitui a ascensão animada por um integrador físico de voo 6-DOF.
+- Calcula gravidade, atmosfera, rotação terrestre, vento, arrasto, pressão dinâmica, aquecimento e carga g.
+- Modela massa variável, combustível, impulso específico, throttle e separação de dois estágios.
+- Adiciona guiamento automático com inserção orbital, modo manual, SAS, abortagem e aceleração temporal.
+- Redesenha a cabine com horizonte móvel, instrumentos conectados, três câmeras e solução apoastro/periastro.
+- Migra saves para o schema 9 e preserva campanhas anteriores.
+- Adiciona quatro testes determinísticos de atmosfera, atitude, separação e inserção orbital.
+
 ## 6.0.1 — 2026-08-07
 
 - Reorganiza `prologo.mp4` para fast start, preservando integralmente o payload audiovisual.

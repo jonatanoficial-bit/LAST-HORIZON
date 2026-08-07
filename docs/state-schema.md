@@ -9,3 +9,6 @@ O saveVersion atual é `3`. Os domínios persistidos são `meta`, `profile`, `ca
 - `logs.events` registra a origem humana ou sistêmica de cada transição.
 
 O importador aceita versões anteriores, adiciona estruturas ausentes e nunca remove decisões existentes.
+# Schema de estado — versão 9
+
+O bloco `mission.flight6d` persiste posição/velocidade cartesianas, atitude, velocidades angulares, controles, estágio, propelente, massa, integridade, objetivos e falhas. Ao alcançar uma órbita estável, `commitFlightToOrbit` transfere periastro, apoastro e propelente para `mission.orbit`, mantendo um único encadeamento físico entre lançamento e navegação.
