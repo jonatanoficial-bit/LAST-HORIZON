@@ -1,5 +1,14 @@
 # Changelog
 
+## 10.0.1 — 2026-08-07
+
+- Corrige a regra responsiva que ocultava todos os controles da cabine em celulares na horizontal.
+- Adiciona botão de ignição/decolagem destacado, controles críticos fixos e suporte a arraste para olhar ao redor.
+- Adiciona centralização de câmera e tutorial guiado de cinco passos, pulável e reabrível.
+- Conecta a câmera WebGL ao deslocamento de visão sem alterar a atitude física da nave.
+- Integra os seis primeiros vídeos ao contexto real da simulação: ignição, Max-Q, separação, órbita, partida e docking.
+- Mantém cenas futuras opcionais e garante fallback sem travar a missão quando a mídia estiver ausente.
+
 ## 10.0.0 — 2026-08-07
 
 - Adiciona simulador jogável de rendezvous e acoplagem orbital com dinâmica relativa Clohessy–Wiltshire.

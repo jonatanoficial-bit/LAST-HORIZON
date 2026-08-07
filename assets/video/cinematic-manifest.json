@@ -8,42 +8,42 @@
                      "title":  "Ignição da ARK-01",
                      "caption":  "T−0 · liberação da torre",
                      "src":  "01-launch-ignition.mp4",
-                     "enabled":  false
+                     "enabled":  true
                  },
                  {
                      "id":  "launch_maxq",
                      "title":  "Pressão dinâmica máxima",
                      "caption":  "Estrutura sob carga aerodinâmica",
                      "src":  "02-launch-maxq.mp4",
-                     "enabled":  false
+                     "enabled":  true
                  },
                  {
                      "id":  "stage_separation",
                      "title":  "Separação de estágio",
                      "caption":  "Confirmação visual externa",
                      "src":  "03-stage-separation.mp4",
-                     "enabled":  false
+                     "enabled":  true
                  },
                  {
                      "id":  "orbit_insertion",
                      "title":  "Inserção orbital",
                      "caption":  "Terra no horizonte e motores em corte",
                      "src":  "04-orbit-insertion.mp4",
-                     "enabled":  false
+                     "enabled":  true
                  },
                  {
                      "id":  "departure_burn",
                      "title":  "Partida para HAVEN",
                      "caption":  "Queima de escape e afastamento da Terra",
                      "src":  "05-departure-burn.mp4",
-                     "enabled":  false
+                     "enabled":  true
                  },
                  {
                      "id":  "docking_success",
                      "title":  "Captura orbital",
                      "caption":  "Garras de acoplagem confirmadas",
                      "src":  "06-docking-success.mp4",
-                     "enabled":  false
+                     "enabled":  true
                  },
                  {
                      "id":  "docking_collision",

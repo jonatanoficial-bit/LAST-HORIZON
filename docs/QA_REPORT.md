@@ -126,3 +126,14 @@ A cabine 4.6 foi gerada separadamente como placa fotorealista 16:9: perspectiva 
 - Migração para saveVersion 11 preserva campanha, operações, nave e tripulação.
 - Sintaxe do aplicativo, física de rendezvous, interface, diretor cinematográfico e service worker aprovada pelo Node.js.
 - 59 entidades, 11 etapas, 3 idiomas e 43 referências locais estáticas resolvidas.
+
+# QA — versão 10.0.1
+
+- 55/55 testes automatizados aprovados; sintaxe do aplicativo, tutorial, WebGL e service worker validada.
+- Ignição visível inicia o estado de ascensão e produz movimento físico mensurável.
+- Arraste por mouse/toque altera a visão da cabine; `CENTRALIZAR` restaura yaw e pitch visuais.
+- Tutorial possui cinco passos, pode ser pulado e reaberto sem bloquear a simulação.
+- Regra responsiva final mantém comandos de atitude e botões críticos visíveis no celular em paisagem.
+- Os seis MP4 entregues estão presentes, habilitados, abaixo de 100 MB e contêm `ftyp`, `moov` e `mdat`.
+- Cada vídeo foi conectado ao evento correspondente da missão e as seis cenas futuras permanecem opcionais.
+- 59 entidades, 11 etapas e 3 idiomas validados; 44 referências locais estáticas resolvidas.

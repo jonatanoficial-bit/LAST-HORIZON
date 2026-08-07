@@ -23,4 +23,13 @@ Recomendação: MP4 H.264, 1920×1080, 30 fps, 8 a 12 segundos, sem texto, logot
 
 As cenas adicionais ficam em `assets/video/cinematics/` e são controladas por `cinematic-manifest.json`. O roteiro e os prompts completos estão em `docs/PACOTE_VIDEOS_IA_GROK_V10.md`.
 
+Os seis primeiros arquivos já estão incluídos e ativos na versão 10.0.1:
+
+- `01-launch-ignition.mp4` — aparece ao comandar a ignição e decolagem.
+- `02-launch-maxq.mp4` — aparece quando a pressão dinâmica entra no corredor de Max-Q.
+- `03-stage-separation.mp4` — aparece após o comando de separação.
+- `04-orbit-insertion.mp4` — aparece quando o modelo físico confirma órbita estável.
+- `05-departure-burn.mp4` — aparece após a execução do nó de partida para HAVEN.
+- `06-docking-success.mp4` — aparece após contato seguro e captura orbital.
+
 Esses arquivos são opcionais. Se uma cena habilitada estiver ausente ou não carregar, o jogo remove a sobreposição em até cinco segundos e continua na simulação, preservando o save.

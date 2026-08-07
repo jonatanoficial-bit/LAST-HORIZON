@@ -1,6 +1,6 @@
 # Pacote de vídeos IA — LAST HORIZON v10
 
-O jogo já possui encaixes para estes vídeos. Eles são opcionais: se estiverem ausentes, a simulação continua normalmente. Exporte cada cena em MP4 H.264, 1920×1080, 24 ou 30 fps, AAC, proporção 16:9, entre 6 e 12 segundos. Não coloque textos, HUD, legendas, logotipos ou marcas dentro do vídeo; o jogo acrescenta sua própria interface.
+O jogo já possui encaixes para estes vídeos. As cenas 01 a 06 foram entregues, incorporadas e ativadas na versão 10.0.1. As cenas 07 a 12 continuam opcionais: se estiverem ausentes, a simulação continua normalmente. Exporte cada cena em MP4 H.264, 1920×1080, 24 ou 30 fps, AAC, proporção 16:9, entre 6 e 12 segundos. Não coloque textos, HUD, legendas, logotipos ou marcas dentro do vídeo; o jogo acrescenta sua própria interface.
 
 ## Continuidade visual obrigatória
 
