@@ -100,3 +100,29 @@ A cabine 4.6 foi gerada separadamente como placa fotorealista 16:9: perspectiva 
 - 59 entidades, 11 etapas e 3 idiomas validados.
 - 33 referências locais estáticas resolvidas; funcionamento offline preservado.
 - MP4 introdutório permanece abaixo de 100 MB e com índice `moov` antes de `mdat`.
+
+# QA — versão 9.0.0
+
+- 42/42 testes automatizados aprovados, incluindo progressão operacional, persistência de decisões e recuperação de combustível.
+- Geração procedural do quadro de missões é determinística por seed e mantém três famílias distintas por ciclo.
+- Um contrato completo foi aceito, percorreu três decisões, produziu debriefing e abriu um novo ciclo sem perder estado.
+- Reabastecimento de contingência foi validado com orçamento zero e recuperou a campanha sem apagar consequências políticas.
+- Sala de operações, arte PNG/WebP, módulo de missões e renderizador planetário foram verificados no pacote offline.
+- Sintaxe de `app.js`, service worker, missões, interface operacional e shader planetário aprovada pelo Node.js.
+- 59 entidades, 11 etapas e 3 idiomas validados; 38 referências locais estáticas resolvidas.
+- Renderização planetária limita resolução e taxa de quadros em telas móveis e interrompe animação no modo de movimento reduzido.
+- MP4 introdutório preservado com 82.920.366 bytes, fast start e hash SHA-256 conhecido.
+
+# QA — versão 10.0.0
+
+- 49/49 testes automatizados aprovados; dados e referências locais também validados.
+- Movimento relativo utiliza mean motion plausível para órbita terrestre circular a 220 km.
+- Pulsos RCS alteram velocidade e consomem propelente finito.
+- Contato lento, alinhado e dentro do corredor produz acoplagem; excesso de velocidade produz colisão.
+- Acoplagem e colisão foram aplicadas ao risco, pontuação e integridade de uma operação persistente.
+- Repetir o mesmo treinamento não acumula novamente pontuação de missão.
+- Doze encaixes cinematográficos e dezoito falas opcionais foram validados por manifesto.
+- Mídia ausente permanece desabilitada e o diretor cinematográfico possui fallback, timeout e botão de saída.
+- Migração para saveVersion 11 preserva campanha, operações, nave e tripulação.
+- Sintaxe do aplicativo, física de rendezvous, interface, diretor cinematográfico e service worker aprovada pelo Node.js.
+- 59 entidades, 11 etapas, 3 idiomas e 43 referências locais estáticas resolvidas.

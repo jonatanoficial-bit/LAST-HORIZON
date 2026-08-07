@@ -1,0 +1,151 @@
+{
+    "version":  1,
+    "folder":  "assets/audio/voices",
+    "format":  "MP3 192 kbps ou OGG, mono, 48 kHz, normalizado em -16 LUFS",
+    "lines":  [
+                  {
+                      "id":  "jun_ignition",
+                      "speaker":  "Jun Park",
+                      "text":  "Diretor, ignição estabilizada. Empuxo nominal nos dois núcleos. Torre liberada; a ARK-01 está em voo.",
+                      "src":  "jun-01-ignition.mp3",
+                      "duration":  7,
+                      "enabled":  false
+                  },
+                  {
+                      "id":  "jun_maxq",
+                      "speaker":  "Jun Park",
+                      "text":  "Aproximando Max-Q. Não persiga as oscilações. Mantenha o corredor e deixe o guidance aliviar a carga.",
+                      "src":  "jun-02-maxq.mp3",
+                      "duration":  7,
+                      "enabled":  false
+                  },
+                  {
+                      "id":  "jun_separation",
+                      "speaker":  "Jun Park",
+                      "text":  "Primeiro estágio esgotado. Travas abertas, afastamento positivo. Segundo estágio confirmado.",
+                      "src":  "jun-03-separation.mp3",
+                      "duration":  6,
+                      "enabled":  false
+                  },
+                  {
+                      "id":  "jun_orbit",
+                      "speaker":  "Jun Park",
+                      "text":  "Periastro positivo. Órbita estável confirmada. Pela primeira vez, a missão pode respirar.",
+                      "src":  "jun-04-orbit.mp3",
+                      "duration":  6,
+                      "enabled":  false
+                  },
+                  {
+                      "id":  "jun_rv_intro",
+                      "speaker":  "Jun Park",
+                      "text":  "No encontro orbital, velocidade absoluta não importa. Leia o movimento relativo e use pulsos curtos; cada correção cria outra deriva.",
+                      "src":  "jun-05-rendezvous-intro.mp3",
+                      "duration":  9,
+                      "enabled":  false
+                  },
+                  {
+                      "id":  "jun_rv_close",
+                      "speaker":  "Jun Park",
+                      "text":  "Dentro de vinte metros. Cancele a velocidade lateral e reduza o fechamento. A partir daqui, centímetros decidem a missão.",
+                      "src":  "jun-06-rendezvous-close.mp3",
+                      "duration":  8,
+                      "enabled":  false
+                  },
+                  {
+                      "id":  "jun_docked",
+                      "speaker":  "Jun Park",
+                      "text":  "Contato suave. Captura confirmada, garras travadas. Excelente aproximação, diretor.",
+                      "src":  "jun-07-docked.mp3",
+                      "duration":  6,
+                      "enabled":  false
+                  },
+                  {
+                      "id":  "jun_collision",
+                      "speaker":  "Jun Park",
+                      "text":  "Impacto no anel de acoplagem. Fechando anteparas e interrompendo a aproximação. Precisamos avaliar o casco.",
+                      "src":  "jun-08-collision.mp3",
+                      "duration":  7,
+                      "enabled":  false
+                  },
+                  {
+                      "id":  "rafael_design",
+                      "speaker":  "Rafael Costa",
+                      "text":  "Não existe componente perfeito. Escolha qual falha conseguimos detectar, isolar e reparar longe da Terra.",
+                      "src":  "rafael-01-design.mp3",
+                      "duration":  8,
+                      "enabled":  false
+                  },
+                  {
+                      "id":  "rafael_damage",
+                      "speaker":  "Rafael Costa",
+                      "text":  "A telemetria indica deformação localizada. Posso preservar a nave, mas teremos de aceitar perda de capacidade.",
+                      "src":  "rafael-02-damage.mp3",
+                      "duration":  8,
+                      "enabled":  false
+                  },
+                  {
+                      "id":  "asha_fatigue",
+                      "speaker":  "Asha Rao",
+                      "text":  "A tripulação ainda responde, mas o tempo de reação aumentou. Se continuarmos assim, o próximo erro será coletivo.",
+                      "src":  "asha-01-fatigue.mp3",
+                      "duration":  8,
+                      "enabled":  false
+                  },
+                  {
+                      "id":  "asha_rescue",
+                      "speaker":  "Asha Rao",
+                      "text":  "Tenho duas vidas críticas e uma janela fechando. Diga quem transferimos primeiro; eu assumo as consequências médicas.",
+                      "src":  "asha-02-rescue.mp3",
+                      "duration":  9,
+                      "enabled":  false
+                  },
+                  {
+                      "id":  "malik_signal",
+                      "speaker":  "Malik Okoye",
+                      "text":  "O padrão se repetiu com correção de erro. Isto não é ruído natural. Há intenção do outro lado.",
+                      "src":  "malik-01-signal.mp3",
+                      "duration":  7,
+                      "enabled":  false
+                  },
+                  {
+                      "id":  "amara_command",
+                      "speaker":  "Amara Diallo",
+                      "text":  "Todos os pareceres estão na mesa. A equipe recomenda; você decide. Qual risco a missão vai carregar?",
+                      "src":  "amara-01-command.mp3",
+                      "duration":  8,
+                      "enabled":  false
+                  },
+                  {
+                      "id":  "samira_conflict",
+                      "speaker":  "Samira Haddad",
+                      "text":  "Eles não discordam dos dados. Discordam do que consideram uma perda aceitável. Resolva isso antes da emergência.",
+                      "src":  "samira-01-conflict.mp3",
+                      "duration":  9,
+                      "enabled":  false
+                  },
+                  {
+                      "id":  "nayara_landing",
+                      "speaker":  "Nayara Quispe",
+                      "text":  "Terreno adquirido. O radar vê uma faixa segura entre as cristas. Depois do commit, não teremos combustível para outra tentativa.",
+                      "src":  "nayara-01-landing.mp3",
+                      "duration":  10,
+                      "enabled":  false
+                  },
+                  {
+                      "id":  "lena_colony",
+                      "speaker":  "Lena Volkov",
+                      "text":  "O primeiro módulo está pressurizado. Ainda não é uma cidade, mas já é um lugar onde alguém pode acordar amanhã.",
+                      "src":  "lena-01-colony.mp3",
+                      "duration":  9,
+                      "enabled":  false
+                  },
+                  {
+                      "id":  "aura_failure",
+                      "speaker":  "AURA",
+                      "text":  "Falha confirmada. Preservei a cadeia causal e os últimos cento e vinte segundos de telemetria para investigação.",
+                      "src":  "aura-01-failure.mp3",
+                      "duration":  8,
+                      "enabled":  false
+                  }
+              ]
+}

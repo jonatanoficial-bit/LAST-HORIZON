@@ -1,0 +1,91 @@
+{
+    "version":  1,
+    "folder":  "assets/video/cinematics",
+    "format":  "MP4 H.264, 1920x1080, 24 ou 30 fps, AAC, fast start, 6 a 12 segundos",
+    "cues":  [
+                 {
+                     "id":  "launch_ignition",
+                     "title":  "Ignição da ARK-01",
+                     "caption":  "T−0 · liberação da torre",
+                     "src":  "01-launch-ignition.mp4",
+                     "enabled":  false
+                 },
+                 {
+                     "id":  "launch_maxq",
+                     "title":  "Pressão dinâmica máxima",
+                     "caption":  "Estrutura sob carga aerodinâmica",
+                     "src":  "02-launch-maxq.mp4",
+                     "enabled":  false
+                 },
+                 {
+                     "id":  "stage_separation",
+                     "title":  "Separação de estágio",
+                     "caption":  "Confirmação visual externa",
+                     "src":  "03-stage-separation.mp4",
+                     "enabled":  false
+                 },
+                 {
+                     "id":  "orbit_insertion",
+                     "title":  "Inserção orbital",
+                     "caption":  "Terra no horizonte e motores em corte",
+                     "src":  "04-orbit-insertion.mp4",
+                     "enabled":  false
+                 },
+                 {
+                     "id":  "departure_burn",
+                     "title":  "Partida para HAVEN",
+                     "caption":  "Queima de escape e afastamento da Terra",
+                     "src":  "05-departure-burn.mp4",
+                     "enabled":  false
+                 },
+                 {
+                     "id":  "docking_success",
+                     "title":  "Captura orbital",
+                     "caption":  "Garras de acoplagem confirmadas",
+                     "src":  "06-docking-success.mp4",
+                     "enabled":  false
+                 },
+                 {
+                     "id":  "docking_collision",
+                     "title":  "Colisão no porto",
+                     "caption":  "Impacto de baixa velocidade e perda de vedação",
+                     "src":  "07-docking-collision.mp4",
+                     "enabled":  false
+                 },
+                 {
+                     "id":  "debris_impact",
+                     "title":  "Impacto de detrito",
+                     "caption":  "Dano localizado no casco da ARK-01",
+                     "src":  "08-debris-impact.mp4",
+                     "enabled":  false
+                 },
+                 {
+                     "id":  "atmospheric_entry",
+                     "title":  "Entrada atmosférica",
+                     "caption":  "Plasma e controle de atitude",
+                     "src":  "09-atmospheric-entry.mp4",
+                     "enabled":  false
+                 },
+                 {
+                     "id":  "touchdown",
+                     "title":  "Contato planetário",
+                     "caption":  "Poeira, retropropulsão e pouso",
+                     "src":  "10-touchdown.mp4",
+                     "enabled":  false
+                 },
+                 {
+                     "id":  "mission_failure",
+                     "title":  "Perda da missão",
+                     "caption":  "Sequência de emergência e tela de telemetria",
+                     "src":  "11-mission-failure.mp4",
+                     "enabled":  false
+                 },
+                 {
+                     "id":  "first_contact",
+                     "title":  "A Portadora",
+                     "caption":  "O sinal coerente responde à ARK-01",
+                     "src":  "12-first-contact.mp4",
+                     "enabled":  false
+                 }
+             ]
+}

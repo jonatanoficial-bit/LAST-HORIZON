@@ -1,6 +1,6 @@
 # LAST HORIZON — Global Space Agency Simulator
 
-Versão 8.0.0: campanha narrativa, tutorial guiado por especialistas e simulador espacial offline inspirado na Bíblia Oficial do PROJECT HAVEN. Você assume a direção da GSEA, integra a ARK-01 e pilota uma inserção orbital física em uma cabine WebGL imersiva antes de conduzir a missão até a fundação de uma colônia.
+Versão 10.0.0: simulador espacial offline e gratuito inspirado na Bíblia Oficial do PROJECT HAVEN. Além da campanha, cabine WebGL e operações persistentes, esta versão acrescenta aproximação e acoplagem orbital física, colisões causais e uma infraestrutura opcional para vídeos do Grok e vozes gravadas no BandLab.
 
 ## Como jogar no Windows
 
@@ -11,8 +11,26 @@ Versão 8.0.0: campanha narrativa, tutorial guiado por especialistas e simulador
 
 O jogo abre em `http://localhost:8765/`. Também pode ser publicado no GitHub Pages ou servido por qualquer servidor HTTP estático. Depois do primeiro carregamento, o núcleo fica disponível offline.
 
+Para adicionar vídeos do Grok ou vozes do BandLab, copie os arquivos para as pastas indicadas na documentação e dê dois cliques em `ATIVAR_MIDIA.bat`. O ativador habilita somente os arquivos realmente encontrados; mídia ausente nunca bloqueia a campanha.
+
 ## O que há nesta versão
 
+- Simulador de rendezvous baseado nas equações de Hill/Clohessy–Wiltshire em uma órbita terrestre de 220 km.
+- Seis eixos de comando por teclado e toque, RCS com consumo, atitude, Coriolis, gravidade diferencial, corredor de aproximação e aceleração temporal.
+- Autoaproximação didática que pode ser desligada a qualquer momento para controle manual.
+- Acoplagem exige velocidade, alinhamento e desvio seguros; impactos danificam casco e alteram a missão ativa.
+- Resultado do treinamento não pode ser repetido para acumular artificialmente pontuação ou confiança.
+- Diretor cinematográfico opcional com doze encaixes de vídeo, fallback automático e botão para pular.
+- Dezoito encaixes de voz com legendas, nomes de arquivo e roteiro completo para gravação no BandLab.
+- Pacote de prompts do Grok para lançamento, Max-Q, separação, órbita, acoplagem, colisão, impacto, entrada, pouso e primeiro contato.
+- Central cinematográfica de Operações Orbitais, acessível a partir do ato 5, com quadro de contratos e debriefing persistente.
+- Oito famílias de missão — salvamento, detritos, ciência, exploração lunar, logística, manutenção, prospecção e sinais — recombinadas em ciclos ilimitados.
+- Cada contrato contém três crises guiadas pela tripulação e três soluções por crise; risco, habilidade, propelente, casco, fadiga, confiança, ciência, tempo e orçamento participam do resultado.
+- Progressão de carreira em cinco patentes, reputação operacional e histórico completo de êxitos e falhas.
+- Reabastecimento orbital de contingência evita que uma campanha longa fique irrecuperavelmente presa por falta de propelente.
+- Superfícies planetárias WebGL procedurais para os três locais de pouso, com relevo, atmosfera, céu, iluminação e voo de reconhecimento em tempo real.
+- Horizonte tridimensional da colônia preserva visualmente o local selecionado e cresce junto com a campanha.
+- Novo ambiente cinematográfico original da central orbital, incluído localmente em PNG e WebP e disponível offline.
 - Vertical slice WebGL com Terra esférica, textura Blue Marble, atmosfera, nuvens procedurais e iluminação solar.
 - Campo estelar, brilho atmosférico, cidades noturnas e aquecimento de reentrada calculados em shader.
 - Modelo 3D da ARK-01 na câmera externa, com corpo multiestágio, aletas, iluminação e pluma reativa.

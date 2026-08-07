@@ -1,5 +1,28 @@
 # Changelog
 
+## 10.0.0 — 2026-08-07
+
+- Adiciona simulador jogável de rendezvous e acoplagem orbital com dinâmica relativa Clohessy–Wiltshire.
+- Modela RCS, propelente, atitude, Coriolis, gravidade diferencial, fechamento, corredor e contato estrutural.
+- Adiciona autoaproximação didática, controle manual em seis eixos, aceleração temporal e interface responsiva.
+- Conecta acoplagem ou colisão ao risco, pontuação, confiança e integridade da campanha operacional.
+- Evita exploração por repetição: apenas a primeira tentativa de cada contexto altera a pontuação.
+- Adiciona diretor cinematográfico para doze vídeos opcionais com fallback sem bloquear o jogo.
+- Adiciona manifesto de dezoito vozes e roteiro completo para produção gratuita no BandLab.
+- Inclui prompts completos para gerar cenas curtas no Grok mantendo continuidade visual da ARK-01.
+- Migra saves para o schema 11 sem apagar campanhas ou operações anteriores.
+
+## 9.0.0 — 2026-08-07
+
+- Adiciona campanha operacional ilimitada com oito famílias de contratos, três atos decisórios por missão e geração determinística por seed.
+- Conecta decisões a combustível, risco, habilidade da tripulação, fadiga, casco, confiança, ciência, orçamento, tempo e reputação.
+- Adiciona cinco patentes operacionais, histórico persistente, debriefing e renovação de janelas.
+- Inclui reabastecimento orbital de contingência para impedir bloqueio permanente de campanhas longas.
+- Adiciona sala de operações cinematográfica original e integração completa ao PWA offline.
+- Renderiza os locais de pouso e o horizonte da colônia em WebGL procedural com terreno e atmosfera em tempo real.
+- Migra saves para o schema 10 sem apagar o progresso das versões anteriores.
+- Mantém o vídeo oficial compactado, a cabine 3D, o globo real, o mapa do Sistema Solar e todas as fases anteriores.
+
 ## 8.0.0 — 2026-08-07
 
 - Adiciona renderizador WebGL offline específico para o voo da ARK-01.

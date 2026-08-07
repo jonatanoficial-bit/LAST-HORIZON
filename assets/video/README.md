@@ -18,3 +18,9 @@ Os vídeos de voo são opcionais. Coloque cada MP4 nesta pasta usando exatamente
 Depois, altere `enabled` para `true` no item correspondente de `flight-manifest.json`. Cada vídeo aparecerá dentro do para-brisa da cabine, enquanto instrumentos e telemetria continuarão funcionando por cima.
 
 Recomendação: MP4 H.264, 1920×1080, 30 fps, 8 a 12 segundos, sem texto, logotipo, HUD ou barras pretas.
+
+## Diretor cinematográfico v10
+
+As cenas adicionais ficam em `assets/video/cinematics/` e são controladas por `cinematic-manifest.json`. O roteiro e os prompts completos estão em `docs/PACOTE_VIDEOS_IA_GROK_V10.md`.
+
+Esses arquivos são opcionais. Se uma cena habilitada estiver ausente ou não carregar, o jogo remove a sobreposição em até cinco segundos e continua na simulação, preservando o save.
