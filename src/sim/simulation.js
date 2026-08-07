@@ -1,10 +1,12 @@
 import { pick, roll } from "../core/rng.js";
+import { ensureOrbitState } from "./orbital.js";
 
 const clamp = (n,min=0,max=100)=>Math.max(min,Math.min(max,n));
 export { clamp };
 
 export function recalculate(state, data, crewOps={}) {
-  state.engineering ||= {active:0,drafts:{},locked:[],consulted:[],history:[],revisionCount:0};
+  ensureOrbitState(state);
+  state.engineering ||= {active:0,drafts:{},locked:[],consulted:[],history:[],revisionCount:0,recoveryCount:0};state.engineering.recoveryCount??=0;
   state.crew.assignments ||= {command:null,flight:null,engineering:null,medical:null,science:null,operations:null};state.crew.interviewed||=[];state.crew.trainingModules||=[];state.crew.fatigue||={};
   state.crew.members=[...new Set(Object.values(state.crew.assignments).filter(Boolean))];
   for(const id of state.crew.members)state.crew.fatigue[id]??=0;
@@ -98,6 +100,16 @@ export function reopenEngineeringDecision(state,category){
   state.ship.design[category]=null;delete state.engineering.drafts[category];state.engineering.locked=state.engineering.locked.filter(id=>id!==category);state.engineering.revisionCount++;
   state.engineering.history.push({category,revision:true,cost,days,influence:-influence,turn:state.campaign.turn||1});
   return {ok:true,cost,days};
+}
+
+export function authorizeEngineeringRecovery(state,component,option){
+  state.engineering||={recoveryCount:0};state.engineering.recoveryCount??=0;
+  const budgetGap=Math.max(0,component.cost-state.economy.available),influenceGap=Math.max(0,-(state.agency.politicalCapital+(option.influence||0)));
+  if(!budgetGap&&!influenceGap)return {ok:false,reason:"A proposta já possui autorização financeira e política."};
+  const reserve=Math.min(state.economy.contingency||0,budgetGap),bond=budgetGap-reserve,days=14+Math.ceil(bond/2)+influenceGap*3,supportCost=4+Math.ceil(bond/3)+influenceGap*2;
+  state.economy.contingency=Math.max(0,(state.economy.contingency||0)-reserve);state.economy.available+=budgetGap;state.agency.politicalCapital+=influenceGap;state.agency.support-=supportCost;state.time.earthDate+=days;state.engineering.recoveryCount++;
+  state.engineering.history.push({category:"recovery",componentId:component.id,reserve,bond,budgetGap,influenceGap,days,support:-supportCost,turn:state.campaign.turn||1});
+  return {ok:true,budgetGap,influenceGap,reserve,bond,days,supportCost};
 }
 
 export function completeTest(state, test) {

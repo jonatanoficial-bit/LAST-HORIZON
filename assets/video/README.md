@@ -1,6 +1,6 @@
 # Vídeos cinematográficos
 
-O vídeo enviado pelo criador já está integrado como `prologo.mp4` e habilitado em `video-manifest.json`.
+O vídeo compacto enviado pelo criador já está integrado como `prologo.mp4` e habilitado em `video-manifest.json`. Ele possui 82.920.366 bytes, fica abaixo do limite de 100 MB por arquivo do GitHub e deve permanecer em todos os pacotes futuros.
 
 Os vídeos de voo são opcionais. Coloque cada MP4 nesta pasta usando exatamente os nomes abaixo:
 

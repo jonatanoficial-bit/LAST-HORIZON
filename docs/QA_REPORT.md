@@ -1,6 +1,6 @@
-# Relatório de qualidade — release 4.8.0
+# Relatório de qualidade — release 5.0.0
 
-Data: 6 de agosto de 2026
+Data: 7 de agosto de 2026
 
 ## Fontes analisadas
 
@@ -11,11 +11,33 @@ Data: 6 de agosto de 2026
 
 ## Verificações automatizadas
 
-- 20/20 testes aprovados: seed determinística, integração, economia de testes, ciência por confiança, recursos finitos, final, checksum, migração, cobertura narrativa, integridade visual, vídeos, engenharia, designação por vaga, certificação coletiva, fadiga operacional e efeito da equipe no risco de lançamento.
+- 25/25 testes aprovados: campanha, economia, saves, recursos visuais, engenharia, tripulação, fadiga, órbita circular, propagação kepleriana, janela de nó, consumo de propelente e partida orbital.
 - 59 entidades de jogo validadas, sem IDs duplicados.
 - 11 etapas jogáveis e 3 idiomas-base presentes.
-- 9 referências do shell resolvidas.
+- 28 referências estáticas do shell, módulos e dados resolvidas.
 - Sintaxe de `app.js` e `service-worker.js` aprovada pelo Node.js.
+
+## Correção de progressão móvel 5.0
+
+- Reproduzida estruturalmente a condição relatada: orçamento menor que todas as opções marcava os três cartões como desabilitados.
+- Cartões sem verba agora permanecem selecionáveis e exibem claramente que exigem revisão financeira.
+- Um protocolo de contingência libera a diferença exata e registra uso de reserva, crédito, prazo e perda de apoio.
+- O fluxo de recuperação foi coberto por teste com orçamento zero e reserva insuficiente.
+- O service worker solicita atualização sem usar o cache HTTP anterior, reduzindo mistura de versões no celular.
+
+## Navegação orbital 5.0
+
+- Velocidade e período de uma órbita terrestre circular de 220 km foram verificados em faixas físicas plausíveis.
+- Uma propagação de um período retorna à anomalia inicial com erro menor que 0,01 grau.
+- Nós exigem janela angular antes da queima e registram vetores prograde, normal e radial.
+- Circularização e partida foram executadas em sequência; a reserva diminuiu pela equação do foguete.
+- A progressão da cabine permanece bloqueada até a manobra obrigatória, mas oferece propagação automática até a janela.
+
+## Vídeo compacto
+
+- `prologo.mp4` possui 82.920.366 bytes e SHA-256 `B4DBB0C8F475865E0FBDFEC80B33E723389ED4D0CEC00FA6F22A0AFF9775E601`.
+- O contêiner MP4 contém assinaturas `ftyp`, `mdat` e `moov`, vídeo AVC/H.264 e áudio AAC.
+- O arquivo individual permanece abaixo do limite de 100 MB que bloqueava o envio anterior ao GitHub.
 
 ## Sala de Engenharia 4.7
 

@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import {access,readFile} from "node:fs/promises";
+import {access,readFile,stat} from "node:fs/promises";
 
 const root=new URL("../",import.meta.url);
 const story=JSON.parse(await readFile(new URL("data/story.json",root),"utf8"));
@@ -24,7 +24,7 @@ test("all cinematic advisor portraits and scenes exist in both formats",async()=
 
 test("intro video and five optional flight sequences are wired",async()=>{
   assert.equal(videoManifest.enabled,true);
-  await access(new URL(`assets/video/${videoManifest.src}`,root));
+  const introUrl=new URL(`assets/video/${videoManifest.src}`,root),introStat=await stat(introUrl);assert.equal(introStat.size,videoManifest.sizeBytes);assert.ok(introStat.size<100*1024*1024);
   assert.equal(flightManifest.phases.length,5);
   assert.deepEqual(flightManifest.phases.map(x=>x.id),["ignition","maxq","separation","orbit","departure"]);
   assert.equal(flightManifest.failure.src,"explosion-game-over.mp4");

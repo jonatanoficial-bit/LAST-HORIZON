@@ -7,12 +7,11 @@ As releases 4.7 e 4.8 transformaram o projeto da ARK-01 e a seleção da tripula
 - Vagas fixas por função, relações, entrevistas, conflitos, fadiga e treinamento já estão ativos.
 - Próxima extensão deste marco: incapacidade médica, sucessão de comando e substituição durante a missão.
 
-## Marco 2 — Mecânica orbital e navegação
+## Marco 2 — Mecânica orbital e navegação — núcleo concluído na 5.0
 
-- Modelo físico consistente de altitude, velocidade, atitude, combustível e delta-v.
-- Órbitas, nós de manobra, janelas de lançamento e consequências de trajetória.
-- Instrumentos ligados ao mesmo estado físico, não a animações independentes.
-- Câmeras externa, cabine, trajetória e mapa do sistema.
+- Modelo de dois corpos, propagação kepleriana, vis-viva, nós, janelas, combustível e delta-v já estão ativos.
+- Cabine, câmeras, mapa e instrumentos compartilham o mesmo estado orbital persistente.
+- Próxima extensão deste marco: encontros orbitais, acoplamento, perturbações e navegação de espaço profundo.
 
 ## Marco 3 — Universo astronômico real
 

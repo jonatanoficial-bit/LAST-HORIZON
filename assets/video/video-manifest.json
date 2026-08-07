@@ -1,6 +1,8 @@
 {
   "enabled": true,
   "src": "prologo.mp4",
+  "sizeBytes": 82920366,
+  "release": "compact-git-safe",
   "captions": null,
   "poster": "../images/scenes/mission-control.webp"
 }

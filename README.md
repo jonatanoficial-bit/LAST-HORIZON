@@ -1,6 +1,6 @@
 # LAST HORIZON — Global Space Agency Simulator
 
-Versão 4.8.0: campanha narrativa, tutorial guiado por especialistas e simulador espacial offline inspirado na Bíblia Oficial do PROJECT HAVEN. Você assume a direção da GSEA, conquista apoio público, integra a ARK-01, certifica sua tripulação, conduz lançamento e cruzeiro, analisa mundos e funda uma colônia cujo futuro depende das suas decisões.
+Versão 5.0.0: campanha narrativa, tutorial guiado por especialistas e simulador espacial offline inspirado na Bíblia Oficial do PROJECT HAVEN. Você assume a direção da GSEA, conquista apoio público, integra a ARK-01, certifica sua tripulação, conduz lançamento e cruzeiro, analisa mundos e funda uma colônia cujo futuro depende das suas decisões.
 
 ## Como jogar no Windows
 
@@ -14,6 +14,13 @@ O jogo abre em `http://localhost:8765/`. Também pode ser publicado no GitHub Pa
 ## O que há nesta versão
 
 - Vídeo oficial `Into LAST HORIZON` integrado antes do prólogo interativo.
+- Vídeo introdutório substituído pela versão compacta de 82,9 MB, adequada ao limite de arquivos do GitHub.
+- Correção definitiva do bloqueio da Arquitetura Habitável: propostas nunca ficam inacessíveis por falta de verba.
+- Protocolo de contingência libera reserva ou crédito emergencial com consequências políticas e de cronograma.
+- Mecânica orbital de dois corpos com equação vis-viva, período, anomalia e propagação kepleriana.
+- Nós de circularização, elevação de apogeu, correção de plano e partida interestelar.
+- Janelas de queima, propagação até o nó e consumo calculado pela equação do foguete.
+- Cabine, mapa orbital, instrumentos e reserva de propelente ligados ao mesmo estado físico persistente.
 - Sala de Engenharia cinematográfica com quatro revisões técnicas guiadas pelo Eng. Rafael Costa.
 - Três propostas por sistema, pareceres conflitantes da equipe e projeção física antes da assinatura.
 - Orçamento, influência, confiança e cronograma afetados por cada contrato; revisão tem custo e não devolve o investimento anterior.

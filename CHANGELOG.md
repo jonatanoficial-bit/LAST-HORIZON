@@ -1,5 +1,18 @@
 # Changelog
 
+## 5.0.0 — 2026-08-07
+
+- Prólogo antigo de 148,7 MB substituído pela versão compacta de 82,9 MB fornecida pelo autor.
+- Corrigido o soft lock móvel na revisão de Arquitetura Habitável quando nenhuma proposta cabia no orçamento.
+- Cartões de proposta permanecem analisáveis; insuficiência abre um protocolo de contingência com custo político.
+- Novo modelo orbital terrestre de dois corpos com equação vis-viva e propagação kepleriana.
+- Mapa orbital mostra nave, órbita, anomalia verdadeira e posição do nó.
+- Nós de circularização, elevação, plano e partida têm vetores prograde/normal/radial e delta-v calculado.
+- Queimas exigem janela angular, consomem propelente pela equação do foguete e ficam registradas.
+- Instrumentos digitais, analógicos, mapa, combustível e progressão de voo usam o mesmo estado orbital.
+- Migração de saves para versão 7 preserva campanhas que já estavam em órbita ou cruzeiro.
+- Atualização do service worker ignora cache HTTP antigo para reduzir versões misturadas em dispositivos móveis.
+
 ## 4.8.0 — 2026-08-06
 
 - Seleção livre de seis retratos substituída por seis estações operacionais obrigatórias.
