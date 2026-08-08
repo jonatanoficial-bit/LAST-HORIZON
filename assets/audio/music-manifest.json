@@ -1,0 +1,70 @@
+{
+    "version":  1,
+    "folder":  "assets/audio/music",
+    "defaultMix":  {
+                       "music":  22,
+                       "voices":  90,
+                       "effects":  56
+                   },
+    "sceneMoods":  {
+                       "menu":  "calm",
+                       "prologue":  "calm",
+                       "agency":  "calm",
+                       "design":  "psychological",
+                       "testing":  "psychological",
+                       "crew":  "calm",
+                       "countdown":  "psychological",
+                       "flight":  "chase",
+                       "operations":  "psychological",
+                       "rendezvous":  "chase",
+                       "cruise":  "calm",
+                       "science":  "calm",
+                       "landing":  "psychological",
+                       "colony":  "calm",
+                       "governance":  "psychological",
+                       "simulator":  "chase",
+                       "atlas":  "calm",
+                       "memorial":  "calm",
+                       "ending":  "calm",
+                       "failure":  "chase",
+                       "cinematic":  "none"
+                   },
+    "tracks":  [
+                   {
+                       "id":  "calm-01",
+                       "mood":  "calm",
+                       "src":  "suspense-calma-01.mp3",
+                       "enabled":  true
+                   },
+                   {
+                       "id":  "calm-02",
+                       "mood":  "calm",
+                       "src":  "suspense-calma-02.mp3",
+                       "enabled":  true
+                   },
+                   {
+                       "id":  "psychological-01",
+                       "mood":  "psychological",
+                       "src":  "suspense-psicologico-01.mp3",
+                       "enabled":  true
+                   },
+                   {
+                       "id":  "psychological-02",
+                       "mood":  "psychological",
+                       "src":  "suspense-psicologico-02.mp3",
+                       "enabled":  true
+                   },
+                   {
+                       "id":  "chase-01",
+                       "mood":  "chase",
+                       "src":  "suspense-perseguicao-01.mp3",
+                       "enabled":  true
+                   },
+                   {
+                       "id":  "chase-02",
+                       "mood":  "chase",
+                       "src":  "suspense-perseguicao-02.mp3",
+                       "enabled":  true
+                   }
+               ]
+}

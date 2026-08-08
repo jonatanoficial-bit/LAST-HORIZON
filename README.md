@@ -1,6 +1,6 @@
 # LAST HORIZON — Global Space Agency Simulator
 
-Versão 10.0.2: simulador espacial offline e gratuito inspirado na Bíblia Oficial do PROJECT HAVEN. Esta correção garante que o prólogo compacto seja enviado ao GitHub e elimina o bloqueio de toque que impedia fechar ou pular o tutorial da cabine.
+Versão 11.0.0: simulador espacial offline e gratuito inspirado na Bíblia Oficial do PROJECT HAVEN. Esta versão integra a trilha sonora contextual completa, as dezoito falas da equipe e os doze vídeos cinematográficos, com mixagem controlável pelo jogador.
 
 ## Como jogar no Windows
 
@@ -15,13 +15,18 @@ Para adicionar vídeos do Grok ou vozes do BandLab, copie os arquivos para as pa
 
 ## O que há nesta versão
 
+- Seis músicas originais alternadas entre calma, suspense psicológico e perseguição conforme a situação.
+- Música em 22% por padrão, falas em 90% e efeitos/vídeos em 56%, todos ajustáveis separadamente em Configurações.
+- Redução automática da trilha durante falas e cinematics para manter a equipe inteligível.
+- Dezoito falas gravadas, com legendas, ligadas a lançamento, voo, rendezvous, decisões, falhas, pouso e colônia.
+- Doze vídeos ativos: lançamento, Max-Q, separação, órbita, partida, docking, colisão, detritos, entrada, pouso, falha e primeiro contato.
 - `prologo.mp4` removido da lista de arquivos ignorados pelo Git e identificado claramente no menu como mídia local incluída.
 - Tutorial da cabine sempre acima do para-brisa, com botões por delegação segura, fechamento por `Esc` e proteção contra abertura duplicada.
 - Tutorial aguarda o celular ser girado para a horizontal antes de abrir.
 - Botão grande `IGNIÇÃO E DECOLAR` sempre visível, inclusive em celular na horizontal.
 - Câmera da cabine controlada por arraste/toque, comando `CENTRALIZAR` e controles de voo móveis restaurados.
 - Tutorial de cinco passos com Jun Park, opção de pular e botão `GUIA DE VOO` para rever quando quiser.
-- Seis vídeos entregues integrados ao momento correto: ignição, Max-Q, separação, inserção orbital, queima de partida e acoplagem.
+- Todos os vídeos entregues integrados ao momento físico ou narrativo correspondente.
 - Simulador de rendezvous baseado nas equações de Hill/Clohessy–Wiltshire em uma órbita terrestre de 220 km.
 - Seis eixos de comando por teclado e toque, RCS com consumo, atitude, Coriolis, gravidade diferencial, corredor de aproximação e aceleração temporal.
 - Autoaproximação didática que pode ser desligada a qualquer momento para controle manual.

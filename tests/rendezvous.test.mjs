@@ -42,20 +42,19 @@ test("rendezvous result persists in campaign and modifies an active operation",(
   assert.equal(state.operations.active.score,15,"repeating training cannot farm mission score");
 });
 
-test("the six delivered cinematics are enabled while future slots stay optional",async()=>{
+test("all delivered cinematics and voice lines are enabled",async()=>{
   const root=new URL("../",import.meta.url),[cinematic,voice,app]=await Promise.all([
     readFile(new URL("assets/video/cinematic-manifest.json",root),"utf8").then(JSON.parse),
     readFile(new URL("assets/audio/voice-manifest.json",root),"utf8").then(JSON.parse),
     readFile(new URL("src/app.js",root),"utf8")
   ]);
   assert.equal(cinematic.cues.length,12);
-  assert.deepEqual(cinematic.cues.filter(cue=>cue.enabled).map(cue=>cue.id),["launch_ignition","launch_maxq","stage_separation","orbit_insertion","departure_burn","docking_success"]);
+  assert.equal(cinematic.cues.filter(cue=>cue.enabled).length,12);
   assert.ok(cinematic.cues.every(cue=>cue.src.endsWith(".mp4")));
-  assert.ok(cinematic.cues.slice(6).every(cue=>!cue.enabled));
   assert.equal(voice.lines.length,18);
-  assert.ok(voice.lines.every(line=>line.text&&line.src.endsWith(".mp3")&&!line.enabled));
+  assert.ok(voice.lines.every(line=>line.text&&line.src.endsWith(".mp3")&&line.enabled));
   assert.match(app,/playCinematicCue/);
-  for(const cue of cinematic.cues.slice(0,6))assert.match(app,new RegExp(cue.id));
+  for(const cue of cinematic.cues)assert.match(app,new RegExp(cue.id));
   assert.match(app,/createRendezvousController/);
 });
 

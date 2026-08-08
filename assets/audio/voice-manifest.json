@@ -9,7 +9,7 @@
                       "text":  "Diretor, ignição estabilizada. Empuxo nominal nos dois núcleos. Torre liberada; a ARK-01 está em voo.",
                       "src":  "jun-01-ignition.mp3",
                       "duration":  7,
-                      "enabled":  false
+                      "enabled":  true
                   },
                   {
                       "id":  "jun_maxq",
@@ -17,7 +17,7 @@
                       "text":  "Aproximando Max-Q. Não persiga as oscilações. Mantenha o corredor e deixe o guidance aliviar a carga.",
                       "src":  "jun-02-maxq.mp3",
                       "duration":  7,
-                      "enabled":  false
+                      "enabled":  true
                   },
                   {
                       "id":  "jun_separation",
@@ -25,7 +25,7 @@
                       "text":  "Primeiro estágio esgotado. Travas abertas, afastamento positivo. Segundo estágio confirmado.",
                       "src":  "jun-03-separation.mp3",
                       "duration":  6,
-                      "enabled":  false
+                      "enabled":  true
                   },
                   {
                       "id":  "jun_orbit",
@@ -33,7 +33,7 @@
                       "text":  "Periastro positivo. Órbita estável confirmada. Pela primeira vez, a missão pode respirar.",
                       "src":  "jun-04-orbit.mp3",
                       "duration":  6,
-                      "enabled":  false
+                      "enabled":  true
                   },
                   {
                       "id":  "jun_rv_intro",
@@ -41,7 +41,7 @@
                       "text":  "No encontro orbital, velocidade absoluta não importa. Leia o movimento relativo e use pulsos curtos; cada correção cria outra deriva.",
                       "src":  "jun-05-rendezvous-intro.mp3",
                       "duration":  9,
-                      "enabled":  false
+                      "enabled":  true
                   },
                   {
                       "id":  "jun_rv_close",
@@ -49,7 +49,7 @@
                       "text":  "Dentro de vinte metros. Cancele a velocidade lateral e reduza o fechamento. A partir daqui, centímetros decidem a missão.",
                       "src":  "jun-06-rendezvous-close.mp3",
                       "duration":  8,
-                      "enabled":  false
+                      "enabled":  true
                   },
                   {
                       "id":  "jun_docked",
@@ -57,7 +57,7 @@
                       "text":  "Contato suave. Captura confirmada, garras travadas. Excelente aproximação, diretor.",
                       "src":  "jun-07-docked.mp3",
                       "duration":  6,
-                      "enabled":  false
+                      "enabled":  true
                   },
                   {
                       "id":  "jun_collision",
@@ -65,7 +65,7 @@
                       "text":  "Impacto no anel de acoplagem. Fechando anteparas e interrompendo a aproximação. Precisamos avaliar o casco.",
                       "src":  "jun-08-collision.mp3",
                       "duration":  7,
-                      "enabled":  false
+                      "enabled":  true
                   },
                   {
                       "id":  "rafael_design",
@@ -73,7 +73,7 @@
                       "text":  "Não existe componente perfeito. Escolha qual falha conseguimos detectar, isolar e reparar longe da Terra.",
                       "src":  "rafael-01-design.mp3",
                       "duration":  8,
-                      "enabled":  false
+                      "enabled":  true
                   },
                   {
                       "id":  "rafael_damage",
@@ -81,7 +81,7 @@
                       "text":  "A telemetria indica deformação localizada. Posso preservar a nave, mas teremos de aceitar perda de capacidade.",
                       "src":  "rafael-02-damage.mp3",
                       "duration":  8,
-                      "enabled":  false
+                      "enabled":  true
                   },
                   {
                       "id":  "asha_fatigue",
@@ -89,7 +89,7 @@
                       "text":  "A tripulação ainda responde, mas o tempo de reação aumentou. Se continuarmos assim, o próximo erro será coletivo.",
                       "src":  "asha-01-fatigue.mp3",
                       "duration":  8,
-                      "enabled":  false
+                      "enabled":  true
                   },
                   {
                       "id":  "asha_rescue",
@@ -97,7 +97,7 @@
                       "text":  "Tenho duas vidas críticas e uma janela fechando. Diga quem transferimos primeiro; eu assumo as consequências médicas.",
                       "src":  "asha-02-rescue.mp3",
                       "duration":  9,
-                      "enabled":  false
+                      "enabled":  true
                   },
                   {
                       "id":  "malik_signal",
@@ -105,7 +105,7 @@
                       "text":  "O padrão se repetiu com correção de erro. Isto não é ruído natural. Há intenção do outro lado.",
                       "src":  "malik-01-signal.mp3",
                       "duration":  7,
-                      "enabled":  false
+                      "enabled":  true
                   },
                   {
                       "id":  "amara_command",
@@ -113,7 +113,7 @@
                       "text":  "Todos os pareceres estão na mesa. A equipe recomenda; você decide. Qual risco a missão vai carregar?",
                       "src":  "amara-01-command.mp3",
                       "duration":  8,
-                      "enabled":  false
+                      "enabled":  true
                   },
                   {
                       "id":  "samira_conflict",
@@ -121,7 +121,7 @@
                       "text":  "Eles não discordam dos dados. Discordam do que consideram uma perda aceitável. Resolva isso antes da emergência.",
                       "src":  "samira-01-conflict.mp3",
                       "duration":  9,
-                      "enabled":  false
+                      "enabled":  true
                   },
                   {
                       "id":  "nayara_landing",
@@ -129,7 +129,7 @@
                       "text":  "Terreno adquirido. O radar vê uma faixa segura entre as cristas. Depois do commit, não teremos combustível para outra tentativa.",
                       "src":  "nayara-01-landing.mp3",
                       "duration":  10,
-                      "enabled":  false
+                      "enabled":  true
                   },
                   {
                       "id":  "lena_colony",
@@ -137,7 +137,7 @@
                       "text":  "O primeiro módulo está pressurizado. Ainda não é uma cidade, mas já é um lugar onde alguém pode acordar amanhã.",
                       "src":  "lena-01-colony.mp3",
                       "duration":  9,
-                      "enabled":  false
+                      "enabled":  true
                   },
                   {
                       "id":  "aura_failure",
@@ -145,7 +145,7 @@
                       "text":  "Falha confirmada. Preservei a cadeia causal e os últimos cento e vinte segundos de telemetria para investigação.",
                       "src":  "aura-01-failure.mp3",
                       "duration":  8,
-                      "enabled":  false
+                      "enabled":  true
                   }
               ]
 }

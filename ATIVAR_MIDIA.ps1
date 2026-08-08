@@ -24,9 +24,11 @@ function Update-MediaManifest {
 try {
     $videoCount = Update-MediaManifest -ManifestPath (Join-Path $gameRoot "assets\video\cinematic-manifest.json") -MediaFolder (Join-Path $gameRoot "assets\video\cinematics") -CollectionName "cues"
     $voiceCount = Update-MediaManifest -ManifestPath (Join-Path $gameRoot "assets\audio\voice-manifest.json") -MediaFolder (Join-Path $gameRoot "assets\audio\voices") -CollectionName "lines"
+    $musicCount = Update-MediaManifest -ManifestPath (Join-Path $gameRoot "assets\audio\music-manifest.json") -MediaFolder (Join-Path $gameRoot "assets\audio\music") -CollectionName "tracks"
     Write-Host "LAST HORIZON - MIDIA ATUALIZADA" -ForegroundColor Cyan
     Write-Host "Videos encontrados e habilitados: $videoCount / 12"
     Write-Host "Vozes encontradas e habilitadas: $voiceCount / 18"
+    Write-Host "Musicas encontradas e habilitadas: $musicCount / 6"
     Write-Host "Arquivos ausentes permaneceram desabilitados e nao travarao o jogo." -ForegroundColor Green
 }
 catch {

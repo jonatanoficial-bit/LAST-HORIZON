@@ -1,5 +1,15 @@
 # Changelog
 
+## 11.0.0 — 2026-08-08
+
+- Integra seis faixas originais em três climas contextuais, com alternância para reduzir repetição.
+- Adiciona controles independentes de Música, Falas e Efeitos/Vídeos, persistidos no saveVersion 12.
+- Reduz automaticamente a música durante falas e sequências cinematográficas.
+- Ativa as dezoito falas gravadas e conecta cada personagem ao evento narrativo correspondente.
+- Ativa os doze vídeos e conecta detritos, entrada atmosférica, colisão, pouso, falha e primeiro contato.
+- Impede sobreposição de vozes e cinematics, preservando legendas e liberando a mixagem após interrupções.
+- Atualiza o ativador de mídia para reconhecer 12 vídeos, 18 vozes e 6 músicas.
+
 ## 10.0.2 — 2026-08-08
 
 - Remove a regra duplicada do `.gitignore` que impedia `assets/video/prologo.mp4` de chegar ao GitHub.

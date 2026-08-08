@@ -146,3 +146,13 @@ A cabine 4.6 foi gerada separadamente como placa fotorealista 16:9: perspectiva 
 - O alvo destacado do tutorial não recebe mais `z-index` capaz de cobrir seu próprio cartão.
 - Pular, avançar, voltar e fechar com `Esc` usam um controlador único e fechamento idempotente.
 - Em celular vertical, o guia aguarda a rotação e não disputa interação com o aviso de orientação.
+
+# QA — versão 11.0.0
+
+- 59/59 testes automatizados aprovados.
+- Seis músicas, dezoito falas e doze vídeos estão presentes, habilitados e associados aos manifestos.
+- Todos os MP4 contêm `ftyp`, `moov` e `mdat` e permanecem abaixo do limite individual do GitHub.
+- Os três canais de volume são normalizados entre 0 e 100 e persistidos pela migração saveVersion 12.
+- A trilha é reduzida a 16% do volume escolhido enquanto uma voz ou cinematic está ativo.
+- Uma nova fala ou cena encerra corretamente a anterior, evitando sobreposição e travamento do ducking.
+- 59 entidades, 11 etapas, 3 idiomas e 46 referências locais foram validados, além da sintaxe do aplicativo, service worker e módulos de áudio.
