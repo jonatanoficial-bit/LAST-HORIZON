@@ -1,2 +1,3 @@
-assets/video/prologo.mp4
-assets/video/prologo.mp4
+# Mantenha a mídia de produção no repositório.
+# O prólogo compacto possui menos de 100 MB e deve ser enviado ao GitHub.
+

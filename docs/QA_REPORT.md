@@ -137,3 +137,12 @@ A cabine 4.6 foi gerada separadamente como placa fotorealista 16:9: perspectiva 
 - Os seis MP4 entregues estão presentes, habilitados, abaixo de 100 MB e contêm `ftyp`, `moov` e `mdat`.
 - Cada vídeo foi conectado ao evento correspondente da missão e as seis cenas futuras permanecem opcionais.
 - 59 entidades, 11 etapas e 3 idiomas validados; 44 referências locais estáticas resolvidas.
+
+# QA — versão 10.0.2
+
+- O arquivo reenviado produz exatamente o mesmo prólogo otimizado já incorporado: 82.920.366 bytes e SHA-256 `6582E36025D8F659E0D3C25535CE35374D7B8914F6052FA487F5433B01AFB9B0`.
+- O conteúdo audiovisual `mdat` foi preservado integralmente; somente o índice `moov` foi movido para o início.
+- `.gitignore` não exclui mais o prólogo, permitindo que `git add .` o inclua no próximo commit.
+- O alvo destacado do tutorial não recebe mais `z-index` capaz de cobrir seu próprio cartão.
+- Pular, avançar, voltar e fechar com `Esc` usam um controlador único e fechamento idempotente.
+- Em celular vertical, o guia aguarda a rotação e não disputa interação com o aviso de orientação.

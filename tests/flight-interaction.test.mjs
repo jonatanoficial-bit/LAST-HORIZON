@@ -25,12 +25,19 @@ test("flight viewport implements drag look and explicit centering",async()=>{
 });
 
 test("guided flight tutorial contains five steps and can be skipped or reopened",async()=>{
-  const [tutorial,app]=await Promise.all([readFile(new URL("src/ui/flight-tutorial.js",root),"utf8"),readFile(new URL("src/app.js",root),"utf8")]);
+  const [tutorial,app,css]=await Promise.all([readFile(new URL("src/ui/flight-tutorial.js",root),"utf8"),readFile(new URL("src/app.js",root),"utf8"),readFile(new URL("styles/screens.css",root),"utf8")]);
   assert.match(tutorial,/PASSO 1 · DECOLAGEM/);
   assert.match(tutorial,/PASSO 5 · MISSÃO/);
   assert.match(tutorial,/PULAR TUTORIAL/);
+  assert.match(tutorial,/event\.target\.closest\("button"\)/);
+  assert.match(tutorial,/event\.key==="Escape"/);
+  assert.match(tutorial,/if\(closed\)return/);
+  const focusRule=css.match(/\.flight-tutorial-focus\{([^}]*)\}/)?.[1]||"";
+  assert.doesNotMatch(focusRule,/z-index/,"highlighted cockpit targets must never cover the tutorial controls");
+  assert.match(css,/\.flight-tutorial-overlay\{[^}]*z-index:3000/);
   assert.match(app,/data-flight-tutorial/);
   assert.match(app,/lh-flight-tutorial-seen-v2/);
+  assert.match(app,/orientation: portrait/);
 });
 
 test("landscape mobile override keeps critical and axis controls visible",async()=>{

@@ -1,5 +1,14 @@
 # Changelog
 
+## 10.0.2 — 2026-08-08
+
+- Remove a regra duplicada do `.gitignore` que impedia `assets/video/prologo.mp4` de chegar ao GitHub.
+- Confirma o prólogo compacto de 82.920.366 bytes, sem recompressão e com `moov` antes de `mdat`.
+- Torna o acesso ao prólogo explícito no menu e remove a consulta de versão da URL do MP4 local.
+- Corrige o tutorial que elevava o para-brisa acima do cartão e interceptava os toques em `PULAR TUTORIAL`.
+- Adiciona fechamento idempotente, delegação de botões, tecla `Esc` e tratamento correto da orientação do celular.
+- Atualiza o cache do aplicativo para substituir imediatamente a versão defeituosa.
+
 ## 10.0.1 — 2026-08-07
 
 - Corrige a regra responsiva que ocultava todos os controles da cabine em celulares na horizontal.

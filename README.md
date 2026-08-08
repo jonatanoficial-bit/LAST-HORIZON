@@ -1,6 +1,6 @@
 # LAST HORIZON — Global Space Agency Simulator
 
-Versão 10.0.1: simulador espacial offline e gratuito inspirado na Bíblia Oficial do PROJECT HAVEN. Esta revisão corrige a cabine no celular, acrescenta tutorial de voo pulável, câmera por arraste e integra os seis primeiros vídeos cinematográficos diretamente aos eventos físicos da missão.
+Versão 10.0.2: simulador espacial offline e gratuito inspirado na Bíblia Oficial do PROJECT HAVEN. Esta correção garante que o prólogo compacto seja enviado ao GitHub e elimina o bloqueio de toque que impedia fechar ou pular o tutorial da cabine.
 
 ## Como jogar no Windows
 
@@ -15,6 +15,9 @@ Para adicionar vídeos do Grok ou vozes do BandLab, copie os arquivos para as pa
 
 ## O que há nesta versão
 
+- `prologo.mp4` removido da lista de arquivos ignorados pelo Git e identificado claramente no menu como mídia local incluída.
+- Tutorial da cabine sempre acima do para-brisa, com botões por delegação segura, fechamento por `Esc` e proteção contra abertura duplicada.
+- Tutorial aguarda o celular ser girado para a horizontal antes de abrir.
 - Botão grande `IGNIÇÃO E DECOLAR` sempre visível, inclusive em celular na horizontal.
 - Câmera da cabine controlada por arraste/toque, comando `CENTRALIZAR` e controles de voo móveis restaurados.
 - Tutorial de cinco passos com Jun Park, opção de pular e botão `GUIA DE VOO` para rever quando quiser.
