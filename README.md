@@ -1,6 +1,11 @@
 # LAST HORIZON — Global Space Agency Simulator
 
-Versão 11.0.0: simulador espacial offline e gratuito inspirado na Bíblia Oficial do PROJECT HAVEN. Esta versão integra a trilha sonora contextual completa, as dezoito falas da equipe e os doze vídeos cinematográficos, com mixagem controlável pelo jogador.
+Versão 11.0.1: simulador espacial offline e gratuito inspirado na Bíblia Oficial do PROJECT HAVEN. Esta correção emergencial elimina bloqueios por falta de orçamento sem apagar as consequências das decisões.
+
+- Projeto inválido e sem verba: reestruturação emergencial com 80 bi, dívida, atraso e perda de apoio, confiança e moral.
+- Alternativa definitiva na mesma tela: reiniciar toda a missão preservando idioma, acessibilidade e mixagem de áudio.
+- Programa de testes sem verba: financiamento apenas da sequência mínima necessária para avançar.
+- Saves existentes, inclusive o turno 012 mostrado no erro, continuam compatíveis e recebem as novas rotas automaticamente.
 
 ## Como jogar no Windows
 

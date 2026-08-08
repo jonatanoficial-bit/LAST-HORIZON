@@ -1,5 +1,13 @@
 # Changelog
 
+## 11.0.1 — 2026-08-08
+
+- Corrigido bloqueio crítico quando o orçamento acaba após as quatro decisões de engenharia.
+- Adicionado protocolo de reestruturação com crédito emergencial e consequências persistentes.
+- Adicionado reinício completo da missão preservando as configurações do jogador.
+- Adicionado resgate financeiro mínimo para impedir bloqueio posterior no programa de testes.
+- Mantida compatibilidade com os saves da versão 11.0.0.
+
 ## 11.0.0 — 2026-08-08
 
 - Integra seis faixas originais em três climas contextuais, com alternância para reduzir repetição.

@@ -112,6 +112,18 @@ export function authorizeEngineeringRecovery(state,component,option){
   return {ok:true,budgetGap,influenceGap,reserve,bond,days,supportCost};
 }
 
+export function restructureEngineeringProgram(state){
+  state.engineering||={};const cycle=(state.engineering.restructureCount||0)+1,targetBudget=80,gap=Math.max(0,targetBudget-state.economy.available),days=120+cycle*30,supportCost=12+cycle*4;
+  state.economy.available+=gap;state.economy.emergencyDebt=(state.economy.emergencyDebt||0)+gap;state.time.earthDate+=days;state.agency.support=clamp(state.agency.support-supportCost);state.agency.politicalCapital=Math.max(10,state.agency.politicalCapital-6);state.crew.trust=clamp(state.crew.trust-10);state.crew.morale=clamp(state.crew.morale-6);
+  state.ship.design={propulsion:null,habitat:null,power:null,shield:null};state.engineering.active=0;state.engineering.drafts={};state.engineering.locked=[];state.engineering.consulted=[];state.engineering.restructureCount=cycle;state.engineering.history||=[];state.engineering.history.push({category:"program-restructure",cycle,credit:gap,days,support:-supportCost,turn:state.campaign.turn||1});state.campaign.turn=(state.campaign.turn||1)+1;
+  return {ok:true,cycle,credit:gap,targetBudget,days,supportCost};
+}
+
+export function authorizeTestRecovery(state,tests){
+  const completed=new Set(state.mission.testsCompleted||[]),needed=Math.max(0,4-completed.size),remaining=tests.filter(test=>!completed.has(test.id)).sort((a,b)=>a.cost-b.cost),required=remaining.slice(0,needed).reduce((sum,test)=>sum+test.cost,0),gap=Math.max(0,required-state.economy.available);if(!needed)return {ok:false,reason:"O programa já possui evidência suficiente."};if(!gap)return {ok:false,reason:"Ainda há uma sequência de ensaios financeiramente viável."};
+  const cycle=(state.mission.testRecoveryCount||0)+1,days=20+gap*2+cycle*5,supportCost=4+gap+cycle;state.economy.available+=gap;state.economy.emergencyDebt=(state.economy.emergencyDebt||0)+gap;state.time.earthDate+=days;state.agency.support=clamp(state.agency.support-supportCost);state.mission.testRecoveryCount=cycle;state.campaign.turn=(state.campaign.turn||1)+1;return {ok:true,cycle,credit:gap,required,days,supportCost};
+}
+
 export function completeTest(state, test) {
   state.mission.testsCompleted ||= [];
   if (state.mission.testsCompleted.includes(test.id)) return false;
