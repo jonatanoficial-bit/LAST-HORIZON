@@ -1,6 +1,16 @@
-# Relatório de qualidade — release 6.0.1
+# Relatório de qualidade — release 14.0.0
 
-Data: 7 de agosto de 2026
+Data: 10 de agosto de 2026
+
+## Verificação da fundação comercial 14.0
+
+- 80 testes automatizados exercitam campanha, física, navegação JPL, voo, rendezvous, mídia, recuperação antibloqueio, cruzeiro longo, gêmeo digital e migrações.
+- O relógio do cruzeiro avança em vigílias limitadas pela duração real da rota; uma decisão aberta impede novo salto de tempo até receber ordem válida.
+- Todas as oito crises possuem três alternativas, resultado determinístico pela seed e continuação segura tanto em sucesso quanto em desvio.
+- Elétrica, térmica, ECLSS e navegação degradam com o tempo; procedimentos recuperam subsistemas consumindo horas e estoque finito.
+- A nova ponte existe em PNG e WebP, participa do cache offline e possui fallback estático local.
+- Saves de versões anteriores recebem `deepSpace` e `systemsModel` por migração para schema 16 sem apagar progresso.
+- Sintaxe dos módulos de produção foi aprovada pelo Node.js e todas as referências locais foram auditadas.
 
 ## Fontes analisadas
 

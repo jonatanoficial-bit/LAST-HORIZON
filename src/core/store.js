@@ -5,11 +5,13 @@ import { createRendezvousState } from "../sim/rendezvous.js";
 import { createNavigationState } from "../sim/interplanetary.js";
 import { createFlightTrainingState } from "../sim/flight-training.js";
 import { createOrbitalCommandState } from "../sim/orbital-command.js";
+import { createDeepSpaceState } from "../sim/deep-space.js";
+import { createDetailedSystemsState } from "../sim/ship-systems.js";
 
 export function createInitialState(seed = "HAVEN-2047", mode = "campaign") {
   const now = new Date().toISOString();
   return {
-    meta:{saveVersion:15,build:"2026.08.10-real-navigation-command-rpg",seed,createdAt:now,lastSavedAt:now,rngState:hashSeed(seed)},
+    meta:{saveVersion:16,build:"2026.08.10-commercial-mission-one",seed,createdAt:now,lastSavedAt:now,rngState:hashSeed(seed)},
     profile:{directorName:"Diretor(a)",avatarId:"AVT-DIR-001",difficulty:"standard",language:"pt-BR",accessibility:{reduceMotion:false,highContrast:false,largeText:false,colorblind:false},audio:true,audioMix:{music:22,voices:90,effects:56}},
     campaign:{mode,act:0,turn:1,prologueStep:0,visited:[],sceneId:"prologue",flags:{briefing:false,publicPolicy:null,launched:false,arrived:false,landed:false},decisions:[],endingScore:{}},
     time:{earthDate:0,missionHours:0,speed:1,paused:false},
@@ -19,7 +21,7 @@ export function createInitialState(seed = "HAVEN-2047", mode = "campaign") {
     ship:{design:{propulsion:null,habitat:null,power:null,shield:null},mass:{total:18400,limit:43000},powerMargin:0,thermalMargin:32,deltaV:0,capacity:0,requirements:{},risks:[],rooms:{},integrity:100},
     systems:{propulsion:{fuelPct:100,thrustPct:0,temperature:280},power:{generationKw:0,loadKw:440,batterySoc:100},thermal:{cabinTemp:22,coreTemp:460,radiatorMargin:32},lifeSupport:{cabinPressure:101.3,oxygenPercent:21.0,co2ppm:620,waterPercent:100,foodDays:1680},avionics:{status:"nominal"},comms:{linkQuality:100}},
     crew:{members:[],assignments:{command:null,flight:null,engineering:null,medical:null,science:null,operations:null},activeStation:"command",interviewed:[],morale:72,trust:64,cohesion:70,fatigue:{},health:{average:91},relationships:[],training:0,trainingModules:[],legacyCertified:false},
-    mission:{phase:"planejamento",flightStage:0,flight6d:createDefaultFlightState(),flightTraining:createFlightTrainingState(),navigation:createNavigationState(),commandCouncil:createOrbitalCommandState(),rendezvous:createRendezvousState(seed),rendezvousHistory:[],route:{target:null,site:null,progress:0},checklists:{design:false,tests:false,crew:false,go:false},telemetry:[],alerts:[],orbit:{body:"Terra",status:"insertion",periapsisKm:168,apoapsisKm:220,inclinationDeg:28.5,meanAnomalyDeg:158,elapsedSeconds:0,propellantKg:14000,initialPropellantKg:14000,plannedNode:null,executed:[],windowToleranceDeg:6,lastBurn:null}},
+    mission:{phase:"planejamento",flightStage:0,flight6d:createDefaultFlightState(),flightTraining:createFlightTrainingState(),navigation:createNavigationState(),commandCouncil:createOrbitalCommandState(),deepSpace:createDeepSpaceState(),systemsModel:createDetailedSystemsState(),rendezvous:createRendezvousState(seed),rendezvousHistory:[],route:{target:null,site:null,progress:0},checklists:{design:false,tests:false,crew:false,go:false},telemetry:[],alerts:[],orbit:{body:"Terra",status:"insertion",periapsisKm:168,apoapsisKm:220,inclinationDeg:28.5,meanAnomalyDeg:158,elapsedSeconds:0,propellantKg:14000,initialPropellantKg:14000,plannedNode:null,executed:[],windowToleranceDeg:6,lastBurn:null}},
     operations:createOperationsState(seed),
     cinematics:{played:[],voicePlayed:[],enabled:true},
     astronomy:{view:"earth",dateIso:"2047-01-01T12:00:00.000Z",selectedBody:"earth",launchSite:"alcantara",scale:"log"},

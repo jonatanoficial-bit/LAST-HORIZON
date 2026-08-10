@@ -1,0 +1,131 @@
+LAST HORIZON — PACOTE DE PRODUÇÃO COMERCIAL V14
+Versão do documento: 1.0 — 10/08/2026
+
+OBJETIVO
+Completar os materiais que não podem ser produzidos com fidelidade AAA apenas por HTML/WebGL. Os arquivos abaixo são opcionais: quando ausentes, o jogo continua com arte, simulação e legendas locais. Quando entregues com os nomes exatos, poderão ser ligados ao diretor cinematográfico sem alterar saves.
+
+PADRÃO VISUAL OBRIGATÓRIO DA ARK-01
+Ano 2047, hard science, nave interplanetária modular construída por uma agência global. Estrutura de titânio e compósitos cerâmicos, proteção Whipple segmentada, radiadores dobráveis, dois anéis habitáveis de rotação lenta, seção de comando blindada, módulos de hibernação, estágio de propulsão nuclear-elétrica e tanques externos. A nave deve parecer usada e operacional, jamais fantasia, caça espacial, videogame arcade ou nave limpa de exposição. Paleta: grafite, alumínio queimado, branco térmico gasto, luz funcional ciano e âmbar. Sem logotipos, texto, marca d'água ou HUD gerado pela IA. Não mudar a geometria entre cenas.
+
+CONFIGURAÇÃO DE TODOS OS VÍDEOS
+- 1920x1080, 16:9, 24 ou 30 fps, duração entre 8 e 12 segundos.
+- MP4 H.264, pixel format yuv420p, áudio AAC opcional, fast start, menos de 25 MB por arquivo.
+- Câmera estável e cinematográfica; movimento fisicamente plausível, sem cortes impossíveis.
+- Deixar bordas e centro inferior relativamente limpos para o HUD do jogo.
+- Nunca inserir letras, legendas, botões, indicadores, nomes ou marca d'água.
+
+PROMPT-BASE PARA COLAR NO INÍCIO DE CADA VÍDEO
+"Cinematic hard-science space mission in 2047, same consistent ARK-01 interplanetary vessel in every shot: plausible modular titanium and ceramic composite construction, segmented Whipple shielding, deployable radiators, two slow rotating habitat rings, armored command section, hibernation modules, nuclear-electric propulsion truss and external tanks, worn functional surfaces, graphite and weathered thermal white, restrained cyan and amber practical light. Photorealistic, physically plausible scale, inertia and lighting, premium grounded science-fiction production, no fantasy technology, no arcade look, no text, no captions, no logos, no watermark, no HUD, 16:9."
+
+VÍDEOS NOVOS PRIORITÁRIOS
+
+13-bridge-reactor-arc.mp4
+Contexto: incidente "O fantasma do reator".
+Prompt complementar: Interior engineering compartment of ARK-01. A high-voltage bus cabinet produces one brief contained electrical arc behind a transparent armored service panel. Elias is only a distant suited silhouette, never facing camera. Emergency amber light replaces cyan for two seconds, vapor and dust react subtly, then isolation relays shut the section down. Camera slowly pushes toward the damaged bus, no explosion, technically credible.
+
+14-solar-storm-window.mp4
+Contexto: alerta de radiação durante o cruzeiro.
+Prompt complementar: View from the ARK-01 armored bridge through a broad observation window. A distant Sun blooms with a violent coronal event while external shutters begin closing in physically segmented layers. Mars is a tiny distant disc. Interior exposure adapts realistically; restrained particle hits sparkle against the shielding. Slow handheld vibration, no colorful nebula.
+
+15-hull-eva-repair.mp4
+Contexto: decisão de reparar a cicatriz no escudo.
+Prompt complementar: Exterior close shot along the ARK-01 Whipple shielding during deep-space cruise. Two tethered EVA crew members install a rigid replacement panel over a small hypervelocity impact scar. Their motion is slow, constrained and reaction-controlled. The ship rotates almost imperceptibly; stars remain sharp, sunlight harsh with absolute black shadows. End on the repaired patch locking into place.
+
+16-mars-approach.mp4
+Contexto: rota para Marte atingindo 95%.
+Prompt complementar: Forward bridge view during final Mars approach. Realistic Mars dominates one side of the window with recognisable atmosphere haze, Olympus Mons region and natural muted colour. The ARK-01 performs a gentle attitude correction; only distant thruster glow reflected on canopy structure. Camera remains inside the plausible armored bridge, emphasizing scale and orbital speed.
+
+17-moon-flyby.mp4
+Contexto: missão lunar ou assistência gravitacional.
+Prompt complementar: External wide orbital shot, same ARK-01 passing above the real lunar farside at safe altitude. Slow habitat rings, Earth small and blue above the horizon, accurate harsh sunlight, no engine plume during coast. Camera tracks laterally with long-lens compression and measured spacecraft inertia.
+
+18-hibernation-anomaly.mp4
+Contexto: "Alguém acordou cedo".
+Prompt complementar: Interior hibernation bay, rows of practical medical capsules built into structural frames. One capsule opens after a fault, condensation drifting in low gravity. A stable adult passenger breathes behind an oxygen mask while Asha and Lena enter frame in utilitarian flight clothing. Clinical cyan turns to soft amber; no horror, no gore, respectful medical realism.
+
+19-reactor-shutdown.mp4
+Contexto: procedimento crítico de energia.
+Prompt complementar: ARK-01 reactor control chamber, no exposed impossible core. Mechanical control assemblies, shielded piping and service displays without readable text. Sequential relays disengage, coolant vibration settles, cyan indicators go dark in ordered banks and emergency batteries bring up dim amber aisle lights. Slow fixed camera, procedural tension rather than spectacle.
+
+20-crew-conflict.mp4
+Contexto: conselho humano após perda de coesão.
+Prompt complementar: Interior mess and briefing compartment in partial gravity. Six diverse crew members around a bolted table argue quietly with restrained body language; Commander Amara stands and restores order without shouting. Practical worn habitat, personal objects fixed to walls, Earth mission patches with no readable logo. Camera circles slowly, intimate and grounded, no melodrama.
+
+21-ark-exterior-cruise.mp4
+Contexto: transição entre vigílias; material reutilizável.
+Prompt complementar: Hero exterior of the consistent complete ARK-01 in interplanetary cruise, seen from front quarter then slowly overtaken by the camera. Two habitat rings rotate slowly in opposite directions, radiators glow faintly in infrared-like deep red only at edges, stars and Milky Way natural, distant Sun. No thrust plume, absolutely believable huge scale and inertia.
+
+22-colony-expansion.mp4
+Contexto: assentamento com sistemas fechados.
+Prompt complementar: Time-compressed but realistic expansion of a first Mars settlement at golden low-angle light. Pressurised rovers place modular habitats, regolith shielding covers structures, solar and small nuclear power systems connect, greenhouse lighting activates. People remain tiny for scale. No instant magical construction; use three subtle dissolves across months, ending with a functioning modest colony.
+
+IMAGENS ESTÁTICAS NECESSÁRIAS
+Gerar todas em 2560x1440, 16:9, sem pessoas em primeiro plano, sem texto, sem HUD. Repetir o PADRÃO VISUAL OBRIGATÓRIO.
+
+1. deep-space-bridge-alert.png — mesma ponte já presente no jogo, mas em luz vermelha/âmbar de emergência, shutters parcialmente fechados, estrelas e uma tempestade solar realista.
+2. engineering-reactor-bay.png — compartimento técnico plausível, blindado, tubulações identificáveis apenas por cor, acesso apertado, marcas de manutenção.
+3. eclss-service-bay.png — scrubbers, membranas de água, tanques e dutos em rack modular, condensação leve, espaço funcional.
+4. hibernation-bay.png — cápsulas médicas integradas à estrutura, luz baixa e redundância visível, nenhuma aparência de hospital mágico.
+5. mars-orbit-bridge.png — visão da ponte com Marte em escala orbital convincente, canopy estrutural em primeiro plano.
+6. ark-damaged-exterior.png — mesma ARK-01, uma seção Whipple marcada por micrometeoritos, sem destruição exagerada.
+7. colony-command-room.png — posto de comando da colônia, janelas blindadas pequenas, tempestade de poeira marciana, consoles físicos.
+8. mission-memorial.png — sala silenciosa com placas sem texto legível e uma janela para o assentamento; tom humano, não religioso.
+
+MODELO 3D DEFINITIVO — BRIEF PARA BLENDER
+Nome de entrega: ark-01-commercial.glb
+- Escala em metros, eixo Y para cima, origem no centro de massa e transformações aplicadas.
+- Exterior completo com silhueta idêntica ao padrão visual; interiores separados para bridge, engineering, ECLSS, habitat e hibernation.
+- Peças móveis nomeadas: ring_a, ring_b, radiator_01..04, shutter_left/right, docking_port, rcs_*.
+- LOD0 até 300 mil triângulos, LOD1 até 120 mil, LOD2 até 40 mil e cockpit móvel até 80 mil.
+- Materiais PBR 2K, atlas quando possível: base color, normal, ORM e emissive. Sem texturas de terceiros sem licença.
+- Colisores simples e pontos de câmera como empty nodes: cam_bridge, cam_external, cam_engineering, cam_docking.
+- Testar no glTF Validator, remover objetos ocultos, texturas órfãs e nomes automáticos.
+
+FALAS NOVAS — GRAVAR EM BANDLAB
+Formato: MP3, 44.1 kHz, 128–192 kbps, mono ou estéreo centralizado, sem música, sem reverb excessivo, pico máximo -3 dBFS. Tom contido, profissional e urgente. Nome exato do arquivo antes de cada fala.
+
+elias-02-reactor.mp3
+"Capitão, o barramento B está pulsando sem carga registrada. Posso isolá-lo agora ou abrir o compartimento e procurar a origem. Manter como está preserva a redundância, mas o próximo pulso pode não ser apenas um sensor."
+
+samira-02-silence.mp3
+"A eficiência dos dois turnos subiu porque eles pararam de se comunicar. Também pararam de admitir os próprios erros. Isso não é disciplina, é uma falha se propagando em silêncio. Preciso da sua decisão."
+
+jun-09-course.mp3
+"As estrelas não fecham com a solução inercial. Uma correção agora custa propelente; esperar custa certeza e talvez uma queima maior. A rota continua recuperável, mas não indefinidamente."
+
+asha-03-water.mp3
+"A reciclagem perdeu margem. Consigo proteger a equipe ativa ou manter intacta a reserva dos passageiros em hibernação. Para salvar ambas, todos terão de aceitar racionamento e uma manutenção exaustiva."
+
+malik-02-signal.mp3
+"A portadora mudou de frequência no instante em que começamos a observar. Coincidência ainda é possível. Responder transformará uma hipótese em uma decisão da humanidade inteira."
+
+rafael-03-shield.mp3
+"O primeiro painel Whipple cumpriu a função e morreu no lugar da cabine. Um segundo impacto nesse vetor encontrará menos material. Posso mandar uma EVA, girar a nave ou registrar o risco."
+
+amara-02-earth-order.mp3
+"A ordem da Terra foi enviada antes da nossa última emergência. Eles comandam uma nave que já não existe no mesmo estado. Podemos obedecer, adaptar a intenção ou assumir publicamente a autonomia."
+
+lena-02-awake.mp3
+"A cápsula abriu sozinha. O passageiro está estável, mas outra indução pode causar dano neurológico. Acordado, ele consumirá recursos que não estavam no plano. Não existe escolha sem custo."
+
+aura-02-critical.mp3
+"Atenção. O gêmeo digital prevê perda de margem crítica antes da próxima vigília. O tempo de missão está bloqueado até uma ordem de manutenção ou aceitação formal do risco."
+
+MIXAGEM
+- Música padrão no jogo: 22%; durante falas e cinematics: ducking automático.
+- Voz: 90%, inteligível em celular; efeitos: 56%.
+- Não masterizar a trilha junto com a voz. Entregar stems separados para preservar os controles do usuário.
+
+ORDEM DE PRIORIDADE DE PRODUÇÃO
+1. Vozes dos oito incidentes — maior ganho narrativo pelo menor tamanho.
+2. 21-ark-exterior-cruise e 16-mars-approach — dão identidade ao trânsito longo.
+3. Alertas/reator/EVA/hibernação — respondem diretamente às decisões.
+4. Modelo 3D GLB — maior salto visual, porém exige mais trabalho e otimização.
+5. Imagens de variação e vídeo de colônia — acabamento final.
+
+CHECKLIST ANTES DE ENVIAR AO CODEX
+- Todos os nomes exatamente iguais a este documento.
+- Nenhum vídeo acima de 25 MB; nenhum texto ou marca d'água dentro da imagem.
+- O mesmo desenho da ARK-01 em todas as cenas.
+- Informar se a ferramenta usada permite exploração comercial do resultado.
+- Enviar arquivos originais, não dentro de documento ou mensageiro que recomprima.

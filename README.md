@@ -1,6 +1,16 @@
 # LAST HORIZON — Global Space Agency Simulator
 
-Versão 13.0.0: simulador espacial offline e gratuito inspirado na Bíblia Oficial do PROJECT HAVEN. Esta versão substitui o mapa decorativo por navegação heliocêntrica calculada com elementos oficiais JPL, acrescenta decisões de capitão que mudam missões futuras e usa um novo horizonte espacial cinematográfico na cabine.
+Versão 14.0.0: fundação comercial offline e gratuita do simulador espacial inspirado na Bíblia Oficial do PROJECT HAVEN. A campanha agora mantém um objetivo contínuo, transforma o cruzeiro em uma missão longa por vigílias e conecta decisões de capitão, tripulação, recursos e desgaste técnico ao mesmo save.
+
+- Ponte cinematográfica original da ARK-01 com rota, chegada prevista, atraso de sinal, condição dos sistemas e histórico de decisões.
+- Vigílias de até 90 dias propagam tempo físico, progresso da transferência, alimento, combustível, saúde, moral, fadiga e degradação da nave.
+- Oito crises de cruzeiro determinísticas com três ordens de capitão cada; nenhuma escolha encerra a campanha silenciosamente e toda consequência permanece registrada.
+- Gêmeo digital persistente com geração e demanda elétrica, baterias e barramentos, radiadores, coolant, ECLSS, CO₂, água, oxigênio, deriva de navegação, peças e backlog.
+- Seis procedimentos operacionais consomem tempo e peças finitas; alertas e falhas críticas afetam casco e tripulação.
+- Códice pesquisável e barra de missão comercial explicam objetivo, fase e sistemas sem transformar o simulador em um conjunto de páginas desconectadas.
+- Novo cenário `deep-space-bridge-v1`, produzido para esta versão em PNG/WebP e armazenado localmente para uso offline.
+- Saves anteriores são migrados para saveVersion 16 sem reiniciar a campanha.
+- Pacote separado em `docs/PACOTE_PROMPTS_PRODUCAO_COMERCIAL_V14.txt` especifica vídeos, imagens, vozes e modelo 3D ainda necessários para uma produção audiovisual final.
 
 - Mapa GPS do Sistema Solar com escala linear, órbitas elípticas, posições reais para a data da missão e três níveis de zoom até Netuno.
 - Transferência Terra–destino traçada até a posição futura do planeta na chegada; a ARK-01 se desloca pela rota conforme o progresso salvo.

@@ -1,5 +1,19 @@
 # Changelog
 
+## 14.0.0 — 2026-08-10
+
+- Criada a Missão Comercial 01, com objetivo persistente e progressão visível do mandato ao epílogo.
+- Substituído o salto genérico de cruzeiro por vigílias de até 90 dias ligadas ao tempo de transferência da rota real.
+- Adicionadas oito crises de ponte, 24 ordens de capitão e consequências persistentes em recursos, relações, ciência, apoio, casco e navegação.
+- Implementado gêmeo digital da ARK-01 para elétrica, térmica, ECLSS, navegação, peças, backlog e alertas.
+- Adicionados seis procedimentos de manutenção com custo real em horas e peças finitas.
+- Criada ponte de espaço profundo cinematográfica, integrada em PNG/WebP ao jogo e ao cache offline.
+- Adicionados códigos operacional pesquisável, console de fadiga, histórico de vigílias e plano de voo assinado no cruzeiro.
+- Migração saveVersion 16 preserva campanhas existentes e inicializa somente os novos modelos ausentes.
+- Adicionados workflow gratuito de GitHub Pages e guia de empacotamento PWA/Android/desktop sem licença de engine.
+- Adicionado pacote de prompts de produção para manter consistência visual e sonora nos próximos vídeos, imagens, vozes e modelo 3D.
+- 80 testes automatizados cobrem agora também cruzeiro comercial, decisões, desgaste, procedimentos e migração de save.
+
 ## 13.0.0 — 2026-08-10
 
 - Substituído o mapa orbital decorativo por GPS heliocêntrico interativo com órbitas, posições e escalas lineares calculadas a partir das Tabelas 1/2 do JPL.
