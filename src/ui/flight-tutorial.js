@@ -1,9 +1,9 @@
 const steps=[
-  {target:"[data-six-ignite]",kicker:"PASSO 1 · DECOLAGEM",title:"Ligue os motores",body:"Toque em IGNIÇÃO E DECOLAR. O throttle já começa em 100% e o Guidance mantém o primeiro corredor de subida.",action:"LOCALIZAR IGNIÇÃO"},
+  {target:"[data-six-ignite]",kicker:"PASSO 1 · AUTORIZAÇÃO",title:"Autorize a ignição",body:"Toque em IGNIÇÃO E DECOLAR. O vídeo registra o evento e, ao terminar, Jun continua a subida automaticamente. Se algo falhar, use RECUPERAR VOO.",action:"LOCALIZAR IGNIÇÃO"},
   {target:".flight-window-wrap",kicker:"PASSO 2 · VISÃO",title:"Olhe ao redor da cabine",body:"Arraste o dedo ou o mouse sobre a janela para olhar até 110° para os lados e 70° para cima ou para baixo. Toque em CENTRALIZAR para voltar à frente.",action:"ENTENDI O GESTO"},
-  {target:'[data-six-mode="guidance"]',kicker:"PASSO 3 · ASSISTÊNCIA",title:"Guidance e SAS",body:"Guidance executa o perfil de subida. SAS amortece rotações. Desligue Guidance somente quando quiser pilotar manualmente; deixe SAS ativo nas primeiras tentativas.",action:"MANTER ASSISTÊNCIA"},
-  {target:".axis-pad",kicker:"PASSO 4 · PILOTAGEM",title:"Pitch, yaw e roll",body:"Pitch inclina o nariz, yaw muda a direção e roll gira a nave. No teclado use W/S, Q/E e A/D. No celular, mantenha pressionados os botões da faixa inferior.",action:"VER CONTROLES"},
-  {target:"[data-six-separate]",kicker:"PASSO 5 · MISSÃO",title:"Responda aos marcos de voo",body:"A separação só libera no corredor seguro. Depois, eleve o apoastro, circularize e toque em ASSUMIR NAVEGAÇÃO ORBITAL. Jun Park avisará cada marco.",action:"ENTRAR NA CABINE"}
+  {target:'.command-authority',kicker:"PASSO 3 · FUNÇÃO",title:"Comandante ou piloto",body:"Como comandante, você dá ordens e Jun executa guidance e separação. Toque em ASSUMIR CONTROLE somente quando quiser pilotar diretamente.",action:"MANTER COMANDO"},
+  {target:".axis-pad",kicker:"PASSO 4 · PILOTAGEM OPCIONAL",title:"Pitch, yaw e roll",body:"No modo manual, pitch inclina o nariz, yaw muda a direção e roll gira a nave. No modo comandante estes controles ficam protegidos contra toque acidental.",action:"VER CONTROLES"},
+  {target:"[data-six-orbit]",kicker:"PASSO 5 · MISSÃO",title:"Da órbita ao destino",body:"Jun separa os estágios no corredor seguro e conduz a inserção. Depois assuma a navegação orbital, escolha obrigatoriamente um planeta no mapa GPS e confirme a rota.",action:"ENTRAR NA CABINE"}
 ];
 
 let closeActiveTutorial=null;

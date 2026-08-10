@@ -147,7 +147,17 @@ A cabine 4.6 foi gerada separadamente como placa fotorealista 16:9: perspectiva 
 - Pular, avançar, voltar e fechar com `Esc` usam um controlador único e fechamento idempotente.
 - Em celular vertical, o guia aguarda a rotação e não disputa interação com o aviso de orientação.
 
-# QA — versão 11.0.0
+# QA — versão 12.0.0
+
+## Voo comandado e navegação interplanetária
+
+- Cobertura automatizada da continuidade ignição → ascensão → separação automática → órbita.
+- Velocidade relativa ao solo e velocidade inercial verificadas separadamente.
+- Migração de save preso por cinematográfica verificada sem perda de campanha.
+- Modo comandante, controle manual e recuperação visual estão presentes na interface móvel.
+- Rota Terra–Marte validada com efemérides JPL, transferência de Hohmann e grandezas finitas.
+- Seleção e confirmação de destino são exigidas antes da partida.
+- Renderizador contém atmosfera/tower e detector de perda de contexto; fallback 2D permanece ligado à física.
 
 - 59/59 testes automatizados aprovados.
 - Seis músicas, dezoito falas e doze vídeos estão presentes, habilitados e associados aos manifestos.

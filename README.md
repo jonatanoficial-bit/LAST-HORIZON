@@ -1,6 +1,14 @@
 # LAST HORIZON — Global Space Agency Simulator
 
-Versão 11.0.1: simulador espacial offline e gratuito inspirado na Bíblia Oficial do PROJECT HAVEN. Esta correção emergencial elimina bloqueios por falta de orçamento sem apagar as consequências das decisões.
+Versão 12.0.0: simulador espacial offline e gratuito inspirado na Bíblia Oficial do PROJECT HAVEN. Esta versão reconstrói a ascensão como uma missão comandável, elimina a tela preta pós-ignição e adiciona planejamento interplanetário real.
+
+- Modo Comandante: Jun Park pilota, executa guidance e separação automática enquanto o jogador toma decisões e mantém autoridade de abortagem.
+- Pilotagem direta opcional com pitch, yaw, roll, throttle, SAS, mouse, toque e câmeras de cabine, externa e trajetória.
+- Visor de subida com céu atmosférico, nuvens, torre em movimento, curvatura terrestre e transição ao espaço.
+- Recuperação automática para falha do WebGL e botão de recuperação do voo; nunca mais uma tela preta sem saída.
+- Instrumentos ligados ao estado físico 6-DOF; velocidade no solo agora começa em 0 m/s e é separada da velocidade inercial da rotação terrestre.
+- Mapa GPS interplanetário com efemérides JPL, planetas reais, posição da ARK-01, distância, janela, tempo de transferência, delta-v e alertas de habitabilidade.
+- A escolha e confirmação de um planeta são obrigatórias antes do nó de partida.
 
 - Projeto inválido e sem verba: reestruturação emergencial com 80 bi, dívida, atraso e perda de apoio, confiança e moral.
 - Alternativa definitiva na mesma tela: reiniciar toda a missão preservando idioma, acessibilidade e mixagem de áudio.

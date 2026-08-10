@@ -8,7 +8,7 @@ precision highp float;
 uniform vec2 uResolution;
 uniform vec3 uCamera,uForward,uRight,uUp,uSun;
 uniform sampler2D uEarth;
-uniform float uTime,uHeat,uAtmosphere,uClouds,uExposure;
+uniform float uTime,uHeat,uAtmosphere,uClouds,uExposure,uAltitude,uCockpit;
 
 float hash(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453123);}
 float noise(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(hash(i),hash(i+vec2(1.,0.)),f.x),mix(hash(i+vec2(0.,1.)),hash(i+vec2(1.,1.)),f.x),f.y);}
@@ -18,6 +18,19 @@ void main(){
   vec2 q=(gl_FragCoord.xy/uResolution)*2.-1.;q.x*=uResolution.x/uResolution.y;
   vec3 ray=normalize(uForward+q.x*uRight*.62+q.y*uUp*.62);
   vec3 color=stars(ray),oc=uCamera;
+  float elevation=dot(ray,normalize(oc)),altKm=max(0.,uAltitude*6378.137);
+  float denseAir=1.-smoothstep(12.,95.,altKm);
+  vec3 skyZenith=mix(vec3(.12,.38,.68),vec3(.015,.12,.28),smoothstep(0.,25.,altKm));
+  vec3 skyHorizon=mix(vec3(.52,.73,.88),vec3(.08,.28,.52),smoothstep(0.,35.,altKm));
+  vec3 sky=mix(skyHorizon,skyZenith,smoothstep(-.12,.72,elevation));
+  color=mix(color,sky,denseAir*smoothstep(-.32,.08,elevation));
+  float cloudBand=(1.-smoothstep(4.,15.,altKm))*smoothstep(-.25,.38,elevation)*(1.-smoothstep(.18,.82,elevation));
+  color=mix(color,vec3(.76,.84,.87),cloudBand*smoothstep(.5,.78,fbm(q*5.+vec2(uTime*.004,altKm*.03)))*.62);
+  float towerFade=(1.-smoothstep(.05,1.65,altKm))*uCockpit;
+  float rails=smoothstep(.72,.79,abs(q.x))*(1.-smoothstep(.93,.98,abs(q.x)));
+  float crossbeam=step(.88,fract((q.y+1.)*3.8+altKm*1.45+uTime*.012))*(1.-smoothstep(.62,.94,abs(q.x)));
+  float tower=clamp(rails+crossbeam,0.,1.)*towerFade;
+  color=mix(color,vec3(.14,.19,.21)+vec3(.22,.1,.015)*step(.965,fract(q.y*18.+uTime*.2)),tower*.92);
   float b=dot(oc,ray),c=dot(oc,oc)-1.,disc=b*b-c;
   float closest=length(oc+ray*max(0.,-b));
   float halo=exp(-max(0.,closest-1.)*30.)*(1.-smoothstep(1.,1.28,closest))*uAtmosphere;
@@ -100,8 +113,8 @@ export function createFlight3DRenderer(canvas,{textureSrc="./assets/images/real/
     const mesh=rocketMesh(),meshBuffer=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,meshBuffer);gl.bufferData(gl.ARRAY_BUFFER,mesh,gl.STATIC_DRAW);
     const location=(p,name)=>gl.getUniformLocation(p,name),set3=(p,name,v)=>gl.uniform3fv(location(p,name),v),set1=(p,name,v)=>gl.uniform1f(location(p,name),v);
     const resize=()=>{const rect=canvas.getBoundingClientRect(),limit=quality==="low"?1:quality==="medium"?1.35:1.75,dpr=Math.min(devicePixelRatio||1,limit),w=Math.max(2,Math.round(rect.width*dpr)),h=Math.max(2,Math.round(rect.height*dpr));if(canvas.width!==w||canvas.height!==h){canvas.width=w;canvas.height=h}gl.viewport(0,0,w,h);return {w,h}};
-    const render=({flight,telemetry,camera="cockpit",look={yawDeg:0,pitchDeg:0},reduceMotion=false})=>{const {w,h}=resize(),time=reduceMotion?0:performance.now()/1000,basis=basisFor(flight,camera,look),heat=Math.min(1,(telemetry.heatFluxWm2||0)/1800000);gl.disable(gl.DEPTH_TEST);gl.disable(gl.BLEND);gl.useProgram(earthProgram);gl.bindBuffer(gl.ARRAY_BUFFER,quad);attribute(gl,earthProgram,"aPosition",2,0,0);gl.uniform2f(location(earthProgram,"uResolution"),w,h);set3(earthProgram,"uCamera",basis.camera);set3(earthProgram,"uForward",basis.forward);set3(earthProgram,"uRight",basis.right);set3(earthProgram,"uUp",basis.up);set3(earthProgram,"uSun",unit([.35,.18,.92]));set1(earthProgram,"uTime",time);set1(earthProgram,"uHeat",heat);set1(earthProgram,"uAtmosphere",1);set1(earthProgram,"uClouds",quality==="low"?0:.8);set1(earthProgram,"uExposure",camera==="external"?1.35:1.12);gl.activeTexture(gl.TEXTURE0);gl.bindTexture(gl.TEXTURE_2D,texture);gl.uniform1i(location(earthProgram,"uEarth"),0);gl.drawArrays(gl.TRIANGLES,0,6);
-      if(camera==="external"){gl.clearDepth(1);gl.clear(gl.DEPTH_BUFFER_BIT);gl.enable(gl.DEPTH_TEST);gl.enable(gl.BLEND);gl.blendFunc(gl.SRC_ALPHA,gl.ONE_MINUS_SRC_ALPHA);gl.useProgram(rocketProgram);gl.bindBuffer(gl.ARRAY_BUFFER,meshBuffer);const stride=10*4;attribute(gl,rocketProgram,"aPosition",3,stride,0);attribute(gl,rocketProgram,"aNormal",3,stride,3*4);attribute(gl,rocketProgram,"aColor",3,stride,6*4);attribute(gl,rocketProgram,"aPart",1,stride,9*4);set1(rocketProgram,"uRoll",(flight.attitudeDeg?.roll||0)*DEG);set1(rocketProgram,"uTilt",Math.max(-.32,Math.min(.32,(55-(flight.attitudeDeg?.pitch||0))*DEG*.24)));set1(rocketProgram,"uPlume",Math.min(1,(telemetry.thrustN||0)/8200000));set1(rocketProgram,"uStage",flight.stage||1);set1(rocketProgram,"uTime",time);set1(rocketProgram,"uAspect",w/h);gl.drawArrays(gl.TRIANGLES,0,mesh.length/10);gl.disable(gl.BLEND)}
+    const render=({flight,telemetry,camera="cockpit",look={yawDeg:0,pitchDeg:0},reduceMotion=false})=>{if(gl.isContextLost())throw new Error("Contexto WebGL perdido");const {w,h}=resize(),time=reduceMotion?0:performance.now()/1000,basis=basisFor(flight,camera,look),heat=Math.min(1,(telemetry.heatFluxWm2||0)/1800000);gl.disable(gl.DEPTH_TEST);gl.disable(gl.BLEND);gl.useProgram(earthProgram);gl.bindBuffer(gl.ARRAY_BUFFER,quad);attribute(gl,earthProgram,"aPosition",2,0,0);gl.uniform2f(location(earthProgram,"uResolution"),w,h);set3(earthProgram,"uCamera",basis.camera);set3(earthProgram,"uForward",basis.forward);set3(earthProgram,"uRight",basis.right);set3(earthProgram,"uUp",basis.up);set3(earthProgram,"uSun",unit([.35,.18,.92]));set1(earthProgram,"uTime",time);set1(earthProgram,"uHeat",heat);set1(earthProgram,"uAtmosphere",1);set1(earthProgram,"uClouds",quality==="low"?0:.8);set1(earthProgram,"uExposure",camera==="external"?1.35:1.12);set1(earthProgram,"uAltitude",Math.max(0,telemetry.altitudeKm||0)/6378.137);set1(earthProgram,"uCockpit",camera==="cockpit"?1:0);gl.activeTexture(gl.TEXTURE0);gl.bindTexture(gl.TEXTURE_2D,texture);gl.uniform1i(location(earthProgram,"uEarth"),0);gl.drawArrays(gl.TRIANGLES,0,6);
+      if(camera==="external"){gl.clearDepth(1);gl.clear(gl.DEPTH_BUFFER_BIT);gl.enable(gl.DEPTH_TEST);gl.enable(gl.BLEND);gl.blendFunc(gl.SRC_ALPHA,gl.ONE_MINUS_SRC_ALPHA);gl.useProgram(rocketProgram);gl.bindBuffer(gl.ARRAY_BUFFER,meshBuffer);const stride=10*4;attribute(gl,rocketProgram,"aPosition",3,stride,0);attribute(gl,rocketProgram,"aNormal",3,stride,3*4);attribute(gl,rocketProgram,"aColor",3,stride,6*4);attribute(gl,rocketProgram,"aPart",1,stride,9*4);set1(rocketProgram,"uRoll",(flight.attitudeDeg?.roll||0)*DEG);set1(rocketProgram,"uTilt",Math.max(-.32,Math.min(.32,(55-(flight.attitudeDeg?.pitch||0))*DEG*.24)));set1(rocketProgram,"uPlume",Math.min(1,(telemetry.thrustN||0)/8200000));set1(rocketProgram,"uStage",flight.stage||1);set1(rocketProgram,"uTime",time);set1(rocketProgram,"uAspect",w/h);gl.drawArrays(gl.TRIANGLES,0,mesh.length/10);gl.disable(gl.BLEND)}return true;
     };
     return {render,destroy(){gl.deleteBuffer(quad);gl.deleteBuffer(meshBuffer);gl.deleteTexture(texture);gl.deleteProgram(earthProgram);gl.deleteProgram(rocketProgram)},available:true};
   }catch(error){onFallback?.(error.message);return null}

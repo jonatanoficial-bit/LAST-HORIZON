@@ -1,5 +1,17 @@
 # Changelog
 
+## 12.0.0 — 2026-08-10
+
+- Resolvida a falha crítica LH-FLIGHT-001: a ignição não depende mais do encerramento do vídeo para criar um estado de voo válido.
+- Adicionada recuperação de save pausado por cinematográfica e fallback visual 2D quando WebGL falha ou perde o contexto.
+- Adicionados atmosfera, nuvens e torre móvel à visão da subida, mantendo a Terra e o espaço no mesmo renderizador.
+- Adicionados modos Comandante e Pilotagem Manual, ordens à tripulação e separação automática no perfil comandado.
+- Corrigida a velocidade indicada em solo: 0 m/s relativo à superfície, preservando separadamente a velocidade inercial.
+- Adicionado mapa GPS interplanetário baseado em posições JPL aproximadas, com escolha livre entre os planetas reais.
+- Adicionados cálculo de Hohmann, distância, janela de fase, velocidade média, delta-v e parecer de habitabilidade.
+- A rota confirmada tornou-se requisito para criar o nó de partida e prosseguir ao cruzeiro.
+- Migração saveVersion 13 preserva campanhas existentes e recupera voos presos após a ignição.
+
 ## 11.0.1 — 2026-08-08
 
 - Corrigido bloqueio crítico quando o orçamento acaba após as quatro decisões de engenharia.
