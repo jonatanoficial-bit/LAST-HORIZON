@@ -1,6 +1,13 @@
 # LAST HORIZON — Global Space Agency Simulator
 
-Versão 12.1.0: simulador espacial offline e gratuito inspirado na Bíblia Oficial do PROJECT HAVEN. Esta versão torna a visão livre perceptível e conduz a primeira ascensão com um tutorial persistente ligado à telemetria real.
+Versão 13.0.0: simulador espacial offline e gratuito inspirado na Bíblia Oficial do PROJECT HAVEN. Esta versão substitui o mapa decorativo por navegação heliocêntrica calculada com elementos oficiais JPL, acrescenta decisões de capitão que mudam missões futuras e usa um novo horizonte espacial cinematográfico na cabine.
+
+- Mapa GPS do Sistema Solar com escala linear, órbitas elípticas, posições reais para a data da missão e três níveis de zoom até Netuno.
+- Transferência Terra–destino traçada até a posição futura do planeta na chegada; a ARK-01 se desloca pela rota conforme o progresso salvo.
+- Distância atual, tempo de transferência, delta-v, janela de fase, atraso de sinal e habitabilidade calculados para cada planeta.
+- Conselho orbital com três decisões narrativas obrigatórias e consequências persistentes em reputação, apoio, confiança, risco, consumo e recompensas.
+- Novo fundo fotográfico original de órbita terrestre integrado ao WebGL, fallback 2D, fases orbitais e cache offline.
+- Saves anteriores são migrados para saveVersion 15; uma rota antiga meramente decorativa é reaberta para recálculo físico sem apagar a campanha.
 
 - Tutorial fixo somente na primeira missão, com Jun Park, seis etapas, progresso salvo, opção de pular e guia reabrível.
 - Marcos explicados ao vivo: Max-Q nominal em T+48 s / 6,6 km, separação B1 em T+82 s / 20,6 km, linha de Kármán a 100 km e órbita perto de 185 km.

@@ -1,5 +1,18 @@
 # Changelog
 
+## 13.0.0 — 2026-08-10
+
+- Substituído o mapa orbital decorativo por GPS heliocêntrico interativo com órbitas, posições e escalas lineares calculadas a partir das Tabelas 1/2 do JPL.
+- Adicionados zoom dos planetas internos, gigantes e Sistema Solar completo, seleção direta no canvas e fonte científica visível.
+- A transferência calcula a posição do alvo na data de chegada, desenha a elipse de Hohmann e move a ARK-01 conforme o progresso persistido.
+- Adicionados atraso de comunicação, data de chegada, erro de fase, janela, delta-v e parecer de habitabilidade ao plano de voo.
+- Criado conselho de comando em formato RPG com três briefings e nove ordens possíveis; decisões alteram missões orbitais futuras, reputação e recursos.
+- Progressão de fase agora exige parecer do conselho, nó orbital e rota assinada, com mensagens específicas para cada pendência.
+- Novo horizonte espacial cinematográfico original integrado ao WebGL e ao fallback 2D, substituindo a aparência azul abstrata.
+- Service worker atualizado para incluir a arte e os novos módulos integralmente offline.
+- Migração saveVersion 15 preserva a campanha e força o recálculo apenas de rotas legadas sem geometria física.
+- 75/75 testes automatizados aprovados; 59 entidades, 11 etapas, 3 idiomas e 52 referências locais validadas.
+
 ## 12.1.0 — 2026-08-10
 
 - Adicionado tutorial persistente de seis etapas, visível durante toda a primeira ascensão e ausente nas missões seguintes após conclusão ou salto.

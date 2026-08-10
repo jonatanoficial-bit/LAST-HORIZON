@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import {readFile} from "node:fs/promises";
-import {julianDate,planetaryPositions,distanceBetween,earthSunDirection} from "../src/sim/solar-system.js";
+import {julianDate,planetaryPositions,planetOrbitPath,distanceBetween,earthSunDirection} from "../src/sim/solar-system.js";
 
 const solarData=JSON.parse(await readFile(new URL("../data/solar-system.json",import.meta.url),"utf8"));
 
@@ -19,4 +19,9 @@ test("Earth-fixed Sun vector remains normalized",()=>{
   const earth=planetaryPositions("2047-06-21T12:00:00Z",solarData).find(body=>body.id==="earth");
   const vector=earthSunDirection("2047-06-21T12:00:00Z",earth);
   assert.ok(Math.abs(Math.hypot(...vector)-1)<1e-10);
+});
+
+test("extended JPL table remains finite beyond 2050 and yields an orbit path",()=>{
+  const positions=planetaryPositions("2077-08-10T12:00:00Z",solarData),jupiter=positions.find(body=>body.id==="jupiter"),body=solarData.bodies.find(item=>item.id==="jupiter"),path=planetOrbitPath(body,"2077-08-10T12:00:00Z",72);
+  assert.ok(jupiter.distanceAu>4.9&&jupiter.distanceAu<5.5);assert.equal(path.length,73);assert.ok(path.every(point=>Number.isFinite(point.x)&&Number.isFinite(point.y)&&Number.isFinite(point.z)));
 });

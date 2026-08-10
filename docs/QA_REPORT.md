@@ -178,3 +178,16 @@ A cabine 4.6 foi gerada separadamente como placa fotorealista 16:9: perspectiva 
 - O service worker inclui o novo módulo de treinamento e troca o cache para `12.1.0-first-flight-training`.
 - 59 entidades, 11 etapas, 3 idiomas e 49 referências estáticas locais validadas.
 - Sintaxe de `app.js`, renderizador, treinamento e service worker aprovada pelo Node.js.
+
+# QA — versão 13.0.0
+
+## GPS real e decisões orbitais
+
+- 75/75 testes automatizados aprovados, incluindo efemérides estendidas, transferência interplanetária, conselho orbital, consequências operacionais e migração de save.
+- Rota Terra–Marte verificada com data de chegada, posição futura do planeta, atraso de sinal, elipse de transferência e grandezas finitas.
+- Posições JPL verificadas em 2047 e 2077; Netuno e Júpiter permanecem dentro de distâncias heliocêntricas plausíveis.
+- O conselho impede progressão sem decisão e os modificadores resultantes alteram prontidão e risco de contratos futuros.
+- Sintaxe aprovada para aplicativo, WebGL, mapa, conselho, física e migração.
+- Validação de dados: 59 entidades, 11 etapas e 3 idiomas.
+- Auditoria de assets: 52 referências locais estáticas resolvidas.
+- Service worker inclui os novos módulos, PNG/WebP do horizonte espacial e cache `13.0.0-real-navigation-command-rpg`.

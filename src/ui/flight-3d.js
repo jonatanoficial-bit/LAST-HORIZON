@@ -8,7 +8,7 @@ precision highp float;
 uniform vec2 uResolution;
 uniform vec2 uLook;
 uniform vec3 uCamera,uForward,uRight,uUp,uSun;
-uniform sampler2D uEarth;
+uniform sampler2D uEarth,uSpace;
 uniform float uTime,uHeat,uAtmosphere,uClouds,uExposure,uAltitude,uCockpit;
 
 float hash(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453123);}
@@ -18,12 +18,14 @@ vec3 stars(vec3 ray){vec2 cell=floor((ray.xy/(abs(ray.z)+1.15))*420.);float star
 void main(){
   vec2 q=(gl_FragCoord.xy/uResolution)*2.-1.;q.x*=uResolution.x/uResolution.y;
   vec3 ray=normalize(uForward+q.x*uRight*.62+q.y*uUp*.62);
-  vec3 color=stars(ray),oc=uCamera;
+  vec2 spaceUv=vec2(fract(gl_FragCoord.x/uResolution.x+uLook.x/720.),clamp(1.-gl_FragCoord.y/uResolution.y-uLook.y/360.,0.,1.));
+  vec3 photographedSpace=texture2D(uSpace,spaceUv).rgb,color=mix(stars(ray),photographedSpace,.68),oc=uCamera;
   float elevation=dot(ray,normalize(oc)),altKm=max(0.,uAltitude*6378.137);
   float denseAir=1.-smoothstep(12.,95.,altKm);
   vec3 skyZenith=mix(vec3(.12,.38,.68),vec3(.015,.12,.28),smoothstep(0.,25.,altKm));
   vec3 skyHorizon=mix(vec3(.52,.73,.88),vec3(.08,.28,.52),smoothstep(0.,35.,altKm));
   vec3 sky=mix(skyHorizon,skyZenith,smoothstep(-.12,.72,elevation));
+  sky=mix(sky,photographedSpace,.16+.54*smoothstep(8.,90.,altKm));
   color=mix(color,sky,denseAir*smoothstep(-.32,.08,elevation));
   float horizonLine=denseAir*exp(-abs(elevation)*42.);
   color+=vec3(.32,.64,.82)*horizonLine*.24;
@@ -113,18 +115,19 @@ function basisFor(flight,camera,look={yawDeg:0,pitchDeg:0}){
   return {camera:cameraPosition,forward,right,up:cameraUp};
 }
 
-export function createFlight3DRenderer(canvas,{textureSrc="./assets/images/real/earth-blue-marble-2048.jpg",quality="high",onFallback}={}){
+export function createFlight3DRenderer(canvas,{textureSrc="./assets/images/real/earth-blue-marble-2048.jpg",spaceTextureSrc="./assets/images/scenes/space-cockpit-v1.webp",quality="high",onFallback}={}){
   const gl=canvas?.getContext("webgl",{alpha:false,antialias:quality!=="low",powerPreference:"high-performance"});if(!gl){onFallback?.("WebGL indisponível");return null}
   try{
     let earthProgram;try{earthProgram=program(gl,vertexSource,fragmentSource)}catch{earthProgram=program(gl,vertexSource,fragmentSource.replace("precision highp float","precision mediump float"))}const rocketProgram=program(gl,rocketVertex,rocketFragment),quad=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,quad);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,-1,1,1,-1,1,1]),gl.STATIC_DRAW);
     const texture=gl.createTexture();gl.bindTexture(gl.TEXTURE_2D,texture);gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,1,1,0,gl.RGBA,gl.UNSIGNED_BYTE,new Uint8Array([12,42,69,255]));gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,gl.REPEAT);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_T,gl.CLAMP_TO_EDGE);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.LINEAR);
     const image=new Image();image.onload=()=>{gl.bindTexture(gl.TEXTURE_2D,texture);gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL,false);gl.texImage2D(gl.TEXTURE_2D,0,gl.RGB,gl.RGB,gl.UNSIGNED_BYTE,image)};image.src=textureSrc;
+    const spaceTexture=gl.createTexture();gl.bindTexture(gl.TEXTURE_2D,spaceTexture);gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,1,1,0,gl.RGBA,gl.UNSIGNED_BYTE,new Uint8Array([1,4,9,255]));gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,gl.REPEAT);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_T,gl.CLAMP_TO_EDGE);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.LINEAR);const spaceImage=new Image();spaceImage.onload=()=>{gl.bindTexture(gl.TEXTURE_2D,spaceTexture);gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL,false);gl.texImage2D(gl.TEXTURE_2D,0,gl.RGB,gl.RGB,gl.UNSIGNED_BYTE,spaceImage)};spaceImage.src=spaceTextureSrc;
     const mesh=rocketMesh(),meshBuffer=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,meshBuffer);gl.bufferData(gl.ARRAY_BUFFER,mesh,gl.STATIC_DRAW);
     const location=(p,name)=>gl.getUniformLocation(p,name),set3=(p,name,v)=>gl.uniform3fv(location(p,name),v),set1=(p,name,v)=>gl.uniform1f(location(p,name),v);
     const resize=()=>{const rect=canvas.getBoundingClientRect(),limit=quality==="low"?1:quality==="medium"?1.35:1.75,dpr=Math.min(devicePixelRatio||1,limit),w=Math.max(2,Math.round(rect.width*dpr)),h=Math.max(2,Math.round(rect.height*dpr));if(canvas.width!==w||canvas.height!==h){canvas.width=w;canvas.height=h}gl.viewport(0,0,w,h);return {w,h}};
-    const render=({flight,telemetry,camera="cockpit",look={yawDeg:0,pitchDeg:0},reduceMotion=false})=>{if(gl.isContextLost())throw new Error("Contexto WebGL perdido");const {w,h}=resize(),time=reduceMotion?0:performance.now()/1000,basis=basisFor(flight,camera,look),heat=Math.min(1,(telemetry.heatFluxWm2||0)/1800000);gl.disable(gl.DEPTH_TEST);gl.disable(gl.BLEND);gl.useProgram(earthProgram);gl.bindBuffer(gl.ARRAY_BUFFER,quad);attribute(gl,earthProgram,"aPosition",2,0,0);gl.uniform2f(location(earthProgram,"uResolution"),w,h);gl.uniform2f(location(earthProgram,"uLook"),look.yawDeg||0,look.pitchDeg||0);set3(earthProgram,"uCamera",basis.camera);set3(earthProgram,"uForward",basis.forward);set3(earthProgram,"uRight",basis.right);set3(earthProgram,"uUp",basis.up);set3(earthProgram,"uSun",unit([.35,.18,.92]));set1(earthProgram,"uTime",time);set1(earthProgram,"uHeat",heat);set1(earthProgram,"uAtmosphere",1);set1(earthProgram,"uClouds",quality==="low"?0:.8);set1(earthProgram,"uExposure",camera==="external"?1.35:1.12);set1(earthProgram,"uAltitude",Math.max(0,telemetry.altitudeKm||0)/6378.137);set1(earthProgram,"uCockpit",camera==="cockpit"?1:0);gl.activeTexture(gl.TEXTURE0);gl.bindTexture(gl.TEXTURE_2D,texture);gl.uniform1i(location(earthProgram,"uEarth"),0);gl.drawArrays(gl.TRIANGLES,0,6);
+    const render=({flight,telemetry,camera="cockpit",look={yawDeg:0,pitchDeg:0},reduceMotion=false})=>{if(gl.isContextLost())throw new Error("Contexto WebGL perdido");const {w,h}=resize(),time=reduceMotion?0:performance.now()/1000,basis=basisFor(flight,camera,look),heat=Math.min(1,(telemetry.heatFluxWm2||0)/1800000);gl.disable(gl.DEPTH_TEST);gl.disable(gl.BLEND);gl.useProgram(earthProgram);gl.bindBuffer(gl.ARRAY_BUFFER,quad);attribute(gl,earthProgram,"aPosition",2,0,0);gl.uniform2f(location(earthProgram,"uResolution"),w,h);gl.uniform2f(location(earthProgram,"uLook"),look.yawDeg||0,look.pitchDeg||0);set3(earthProgram,"uCamera",basis.camera);set3(earthProgram,"uForward",basis.forward);set3(earthProgram,"uRight",basis.right);set3(earthProgram,"uUp",basis.up);set3(earthProgram,"uSun",unit([.35,.18,.92]));set1(earthProgram,"uTime",time);set1(earthProgram,"uHeat",heat);set1(earthProgram,"uAtmosphere",1);set1(earthProgram,"uClouds",quality==="low"?0:.8);set1(earthProgram,"uExposure",camera==="external"?1.35:1.12);set1(earthProgram,"uAltitude",Math.max(0,telemetry.altitudeKm||0)/6378.137);set1(earthProgram,"uCockpit",camera==="cockpit"?1:0);gl.activeTexture(gl.TEXTURE0);gl.bindTexture(gl.TEXTURE_2D,texture);gl.uniform1i(location(earthProgram,"uEarth"),0);gl.activeTexture(gl.TEXTURE1);gl.bindTexture(gl.TEXTURE_2D,spaceTexture);gl.uniform1i(location(earthProgram,"uSpace"),1);gl.drawArrays(gl.TRIANGLES,0,6);
       if(camera==="external"){gl.clearDepth(1);gl.clear(gl.DEPTH_BUFFER_BIT);gl.enable(gl.DEPTH_TEST);gl.enable(gl.BLEND);gl.blendFunc(gl.SRC_ALPHA,gl.ONE_MINUS_SRC_ALPHA);gl.useProgram(rocketProgram);gl.bindBuffer(gl.ARRAY_BUFFER,meshBuffer);const stride=10*4;attribute(gl,rocketProgram,"aPosition",3,stride,0);attribute(gl,rocketProgram,"aNormal",3,stride,3*4);attribute(gl,rocketProgram,"aColor",3,stride,6*4);attribute(gl,rocketProgram,"aPart",1,stride,9*4);set1(rocketProgram,"uRoll",(flight.attitudeDeg?.roll||0)*DEG);set1(rocketProgram,"uTilt",Math.max(-.32,Math.min(.32,(55-(flight.attitudeDeg?.pitch||0))*DEG*.24)));set1(rocketProgram,"uPlume",Math.min(1,(telemetry.thrustN||0)/8200000));set1(rocketProgram,"uStage",flight.stage||1);set1(rocketProgram,"uTime",time);set1(rocketProgram,"uAspect",w/h);gl.drawArrays(gl.TRIANGLES,0,mesh.length/10);gl.disable(gl.BLEND)}return true;
     };
-    return {render,destroy(){gl.deleteBuffer(quad);gl.deleteBuffer(meshBuffer);gl.deleteTexture(texture);gl.deleteProgram(earthProgram);gl.deleteProgram(rocketProgram)},available:true};
+    return {render,destroy(){gl.deleteBuffer(quad);gl.deleteBuffer(meshBuffer);gl.deleteTexture(texture);gl.deleteTexture(spaceTexture);gl.deleteProgram(earthProgram);gl.deleteProgram(rocketProgram)},available:true};
   }catch(error){onFallback?.(error.message);return null}
 }
