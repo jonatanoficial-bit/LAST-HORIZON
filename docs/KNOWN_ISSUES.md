@@ -47,3 +47,10 @@ Após autorizar a ignição, o vídeo `01-launch-ignition.mp4` é reproduzido co
 - Perda ou falha do WebGL substitui o canvas por uma vista 2D funcional alimentada pela mesma telemetria.
 - O modo Comandante executa automaticamente guidance e separação; a pilotagem manual permanece opcional.
 - O botão **RECUPERAR VOO** reinicia relógio, guidance e imagem sem apagar a campanha.
+
+### Reforço visual e tutorial na versão 12.1.0
+
+- O shader ganhou referências direcionais visíveis — nuvens panorâmicas, Sol, horizonte e torre deslocável — para que o arraste produza movimento inequívoco.
+- O fallback 2D também usa yaw e pitch da visão livre; a câmera deixa de alterar somente números quando WebGL não está disponível.
+- O HUD mostra os graus de visão em tempo real e o tutorial só libera a etapa de câmera depois de reconhecer um gesto.
+- A primeira ascensão mantém um painel instrucional fixo e pulável, com os marcos físicos do perfil nominal e distinção explícita entre separação de estágio e acoplagem.

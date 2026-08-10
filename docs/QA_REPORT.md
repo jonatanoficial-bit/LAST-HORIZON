@@ -166,3 +166,15 @@ A cabine 4.6 foi gerada separadamente como placa fotorealista 16:9: perspectiva 
 - A trilha é reduzida a 16% do volume escolhido enquanto uma voz ou cinematic está ativo.
 - Uma nova fala ou cena encerra corretamente a anterior, evitando sobreposição e travamento do ducking.
 - 59 entidades, 11 etapas, 3 idiomas e 46 referências locais foram validados, além da sintaxe do aplicativo, service worker e módulos de áudio.
+
+# QA — versão 12.1.0
+
+## Visão livre e treinamento da primeira missão
+
+- 71/71 testes automatizados aprovados, incluindo tutorial persistente, salto, conclusão, migração e resposta visual da câmera em WebGL e fallback 2D.
+- Perfil nominal medido diretamente no integrador 6-DOF: Max-Q T+48,1 s / 6,60 km; separação T+82,1 s / 20,57 km; Kármán T+447,5 s / 100,02 km; órbita T+1031,9 s / 185,60 km.
+- A separação automática, a linha de Kármán e a órbita permanecem consequências do mesmo estado físico que alimenta instrumentos, tutorial e renderização.
+- O saveVersion 14 adiciona o estado do tutorial sem apagar progresso e marca como concluídas campanhas que já alcançaram a navegação orbital.
+- O service worker inclui o novo módulo de treinamento e troca o cache para `12.1.0-first-flight-training`.
+- 59 entidades, 11 etapas, 3 idiomas e 49 referências estáticas locais validadas.
+- Sintaxe de `app.js`, renderizador, treinamento e service worker aprovada pelo Node.js.

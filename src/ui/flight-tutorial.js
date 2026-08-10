@@ -3,7 +3,8 @@ const steps=[
   {target:".flight-window-wrap",kicker:"PASSO 2 · VISÃO",title:"Olhe ao redor da cabine",body:"Arraste o dedo ou o mouse sobre a janela para olhar até 110° para os lados e 70° para cima ou para baixo. Toque em CENTRALIZAR para voltar à frente.",action:"ENTENDI O GESTO"},
   {target:'.command-authority',kicker:"PASSO 3 · FUNÇÃO",title:"Comandante ou piloto",body:"Como comandante, você dá ordens e Jun executa guidance e separação. Toque em ASSUMIR CONTROLE somente quando quiser pilotar diretamente.",action:"MANTER COMANDO"},
   {target:".axis-pad",kicker:"PASSO 4 · PILOTAGEM OPCIONAL",title:"Pitch, yaw e roll",body:"No modo manual, pitch inclina o nariz, yaw muda a direção e roll gira a nave. No modo comandante estes controles ficam protegidos contra toque acidental.",action:"VER CONTROLES"},
-  {target:"[data-six-orbit]",kicker:"PASSO 5 · MISSÃO",title:"Da órbita ao destino",body:"Jun separa os estágios no corredor seguro e conduz a inserção. Depois assuma a navegação orbital, escolha obrigatoriamente um planeta no mapa GPS e confirme a rota.",action:"ENTRAR NA CABINE"}
+  {target:"[data-six-orbit]",kicker:"PASSO 5 · MARCOS",title:"Saiba quando cada fase acontece",body:"No perfil nominal: Max-Q perto de T+48 s / 6,6 km; separação do primeiro estágio em T+82 s / 20,6 km; linha de Kármán em 100 km; órbita estável perto de 185 km. Max-Q varia com a atmosfera.",action:"VER INSERÇÃO"},
+  {target:"[data-six-orbit]",kicker:"PASSO 6 · MISSÃO",title:"Da órbita ao destino",body:"Depois da inserção, assuma a navegação orbital, escolha obrigatoriamente um planeta no mapa GPS e confirme a rota. O tutorial fixo aparece somente na primeira missão, mas este guia pode ser reaberto.",action:"ENTRAR NA CABINE"}
 ];
 
 let closeActiveTutorial=null;

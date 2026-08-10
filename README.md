@@ -1,6 +1,11 @@
 # LAST HORIZON — Global Space Agency Simulator
 
-Versão 12.0.0: simulador espacial offline e gratuito inspirado na Bíblia Oficial do PROJECT HAVEN. Esta versão reconstrói a ascensão como uma missão comandável, elimina a tela preta pós-ignição e adiciona planejamento interplanetário real.
+Versão 12.1.0: simulador espacial offline e gratuito inspirado na Bíblia Oficial do PROJECT HAVEN. Esta versão torna a visão livre perceptível e conduz a primeira ascensão com um tutorial persistente ligado à telemetria real.
+
+- Tutorial fixo somente na primeira missão, com Jun Park, seis etapas, progresso salvo, opção de pular e guia reabrível.
+- Marcos explicados ao vivo: Max-Q nominal em T+48 s / 6,6 km, separação B1 em T+82 s / 20,6 km, linha de Kármán a 100 km e órbita perto de 185 km.
+- Visão livre com graus de yaw/pitch no HUD, nuvens panorâmicas, Sol, horizonte e torre reagindo ao toque ou mouse.
+- O fallback 2D agora reage ao mesmo gesto da câmera; WebGL indisponível não transforma o para-brisa em um fundo azul estático.
 
 - Modo Comandante: Jun Park pilota, executa guidance e separação automática enquanto o jogador toma decisões e mantém autoridade de abortagem.
 - Pilotagem direta opcional com pitch, yaw, roll, throttle, SAS, mouse, toque e câmeras de cabine, externa e trajetória.
@@ -34,11 +39,10 @@ Para adicionar vídeos do Grok ou vozes do BandLab, copie os arquivos para as pa
 - Dezoito falas gravadas, com legendas, ligadas a lançamento, voo, rendezvous, decisões, falhas, pouso e colônia.
 - Doze vídeos ativos: lançamento, Max-Q, separação, órbita, partida, docking, colisão, detritos, entrada, pouso, falha e primeiro contato.
 - `prologo.mp4` removido da lista de arquivos ignorados pelo Git e identificado claramente no menu como mídia local incluída.
-- Tutorial da cabine sempre acima do para-brisa, com botões por delegação segura, fechamento por `Esc` e proteção contra abertura duplicada.
-- Tutorial aguarda o celular ser girado para a horizontal antes de abrir.
+- Tutorial da primeira missão permanece dentro da cabine em qualquer orientação jogável, com botões por delegação segura e estado persistido no save.
 - Botão grande `IGNIÇÃO E DECOLAR` sempre visível, inclusive em celular na horizontal.
 - Câmera da cabine controlada por arraste/toque, comando `CENTRALIZAR` e controles de voo móveis restaurados.
-- Tutorial de cinco passos com Jun Park, opção de pular e botão `GUIA DE VOO` para rever quando quiser.
+- Tutorial de seis passos com Jun Park, opção de pular e botão `GUIA DE VOO` para rever quando quiser.
 - Todos os vídeos entregues integrados ao momento físico ou narrativo correspondente.
 - Simulador de rendezvous baseado nas equações de Hill/Clohessy–Wiltshire em uma órbita terrestre de 220 km.
 - Seis eixos de comando por teclado e toque, RCS com consumo, atitude, Coriolis, gravidade diferencial, corredor de aproximação e aceleração temporal.

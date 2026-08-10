@@ -24,10 +24,10 @@ test("flight viewport implements drag look and explicit centering",async()=>{
   assert.match(renderer,/rotateAround\(forward,cameraUp,yaw\)/);
 });
 
-test("guided flight tutorial contains five steps and can be skipped or reopened",async()=>{
-  const [tutorial,app,css]=await Promise.all([readFile(new URL("src/ui/flight-tutorial.js",root),"utf8"),readFile(new URL("src/app.js",root),"utf8"),readFile(new URL("styles/screens.css",root),"utf8")]);
+test("guided flight tutorial has a persistent first-mission rail and can be skipped or reopened",async()=>{
+  const [tutorial,training,app,css]=await Promise.all([readFile(new URL("src/ui/flight-tutorial.js",root),"utf8"),readFile(new URL("src/sim/flight-training.js",root),"utf8"),readFile(new URL("src/app.js",root),"utf8"),readFile(new URL("styles/screens.css",root),"utf8")]);
   assert.match(tutorial,/PASSO 1 · AUTORIZAÇÃO/);
-  assert.match(tutorial,/PASSO 5 · MISSÃO/);
+  assert.match(tutorial,/PASSO 6 · MISSÃO/);
   assert.match(tutorial,/PULAR TUTORIAL/);
   assert.match(tutorial,/event\.target\.closest\("button"\)/);
   assert.match(tutorial,/event\.key==="Escape"/);
@@ -36,8 +36,11 @@ test("guided flight tutorial contains five steps and can be skipped or reopened"
   assert.doesNotMatch(focusRule,/z-index/,"highlighted cockpit targets must never cover the tutorial controls");
   assert.match(css,/\.flight-tutorial-overlay\{[^}]*z-index:3000/);
   assert.match(app,/data-flight-tutorial/);
-  assert.match(app,/lh-flight-tutorial-seen-v2/);
-  assert.match(app,/orientation: portrait/);
+  assert.match(app,/data-flight-training-skip/);
+  assert.match(app,/flight-training-rail/);
+  assert.match(training,/firstMission:true/);
+  assert.match(training,/training\.status="skipped"/);
+  assert.doesNotMatch(app,/lh-flight-tutorial-seen-v2/);
 });
 
 test("landscape mobile override keeps critical and axis controls visible",async()=>{
@@ -48,6 +51,6 @@ test("landscape mobile override keeps critical and axis controls visible",async(
   assert.match(css,/touch-action:none/);
 });
 
-test("flight offers commander delegation, manual control and black-screen recovery",async()=>{const [app,css]=await Promise.all([readFile(new URL("src/app.js",root),"utf8"),readFile(new URL("styles/screens.css",root),"utf8")]);assert.match(app,/data-flight-role="command"/);assert.match(app,/data-flight-role="manual"/);assert.match(app,/data-flight-order="nominal"/);assert.match(app,/data-six-recover/);assert.match(app,/activateFlightFallback/);assert.match(app,/VISUAL 2D DE SEGURANÇA/);assert.match(app,/ignition-cinematic/);assert.match(css,/command-authority/);assert.match(css,/navigation-planner/)});
+test("flight offers commander delegation, manual control and black-screen recovery",async()=>{const [app,css]=await Promise.all([readFile(new URL("src/app.js",root),"utf8"),readFile(new URL("styles/screens.css",root),"utf8")]);assert.match(app,/data-flight-role="command"/);assert.match(app,/data-flight-role="manual"/);assert.match(app,/data-flight-order="nominal"/);assert.match(app,/data-six-recover/);assert.match(app,/activateFlightFallback/);assert.match(app,/VISUAL 2D DE SEGURANÇA/);assert.match(app,/ignition-cinematic/);assert.match(app,/worldShift=-lookYaw/);assert.match(css,/command-authority/);assert.match(css,/navigation-planner/)});
 
 test("a real planetary route is mandatory before departure",async()=>{const [app,map]=await Promise.all([readFile(new URL("src/app.js",root),"utf8"),readFile(new URL("src/ui/navigation-map.js",root),"utf8")]);assert.match(app,/data-nav-target/);assert.match(app,/data-nav-lock/);assert.match(app,/A rota é obrigatória/);assert.match(map,/GPS HELIOCÊNTRICO/);assert.match(map,/ARK-01/)});

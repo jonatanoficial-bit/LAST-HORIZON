@@ -1,5 +1,14 @@
 # Changelog
 
+## 12.1.0 — 2026-08-10
+
+- Adicionado tutorial persistente de seis etapas, visível durante toda a primeira ascensão e ausente nas missões seguintes após conclusão ou salto.
+- O tutorial agora valida o gesto de câmera e exibe instruções, limites físicos e telemetria ao vivo sem depender de orientação ou armazenamento global do navegador.
+- Documentados no cockpit os marcos do perfil nominal: Max-Q, separação B1, linha de Kármán e inserção orbital.
+- Adicionados yaw e pitch da visão livre no HUD, nuvens panorâmicas, Sol, horizonte reforçado e deslocamento da torre no WebGL.
+- A visão 2D de segurança passou a responder ao arraste, eliminando a impressão de fundo azul estático quando WebGL não está disponível.
+- Migração saveVersion 14 preserva campanhas e não reabre o tutorial para uma missão que já chegou à navegação orbital.
+
 ## 12.0.0 — 2026-08-10
 
 - Resolvida a falha crítica LH-FLIGHT-001: a ignição não depende mais do encerramento do vídeo para criar um estado de voo válido.
