@@ -1,5 +1,15 @@
 # Changelog
 
+## 14.1.0 — 2026-08-12
+
+- Adicionado acesso direto provisório no menu para contagem regressiva, cabine antes da ignição, órbita, mapa GPS e cruzeiro.
+- O modo de teste cria projeto certificado, seis tripulantes treinados, todos os ensaios e orçamento praticamente ilimitado.
+- O risco aleatório do lançamento é zero somente no modo de teste; física, controles, danos e decisões continuam ativos.
+- Autosave de teste usa slot isolado e nunca substitui o progresso da campanha normal.
+- Adicionado botão para trocar de ponto durante o teste e retomada do último teste no menu.
+- O mapa GPS ganhou centralização pela escala do destino e uma explicação explícita sobre órbitas lineares e marcadores planetários ampliados.
+- Cache offline atualizado para distribuir imediatamente a correção 14.1.0.
+
 ## 14.0.0 — 2026-08-10
 
 - Criada a Missão Comercial 01, com objetivo persistente e progressão visível do mandato ao epílogo.

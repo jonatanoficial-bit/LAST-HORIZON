@@ -1,6 +1,10 @@
 # LAST HORIZON — Global Space Agency Simulator
 
-Versão 14.0.0: fundação comercial offline e gratuita do simulador espacial inspirado na Bíblia Oficial do PROJECT HAVEN. A campanha agora mantém um objetivo contínuo, transforma o cruzeiro em uma missão longa por vigílias e conecta decisões de capitão, tripulação, recursos e desgaste técnico ao mesmo save.
+Versão 14.1.0: fundação comercial offline e gratuita do simulador espacial inspirado na Bíblia Oficial do PROJECT HAVEN. Esta revisão acrescenta um acesso direto e isolado para testar lançamento, órbita, mapa e cruzeiro sem refazer os atos administrativos.
+
+- No menu, `ACESSO DIRETO DE TESTE` oferece cinco pontos da missão com orçamento de teste, projeto certificado e tripulação pronta.
+- O teste usa `test-autosave`, separado do autosave da campanha, e pode ser retomado ou reposicionado a qualquer momento.
+- O mapa GPS pode ser recentralizado na escala física do destino e declara claramente que somente os marcadores dos planetas são ampliados.
 
 - Ponte cinematográfica original da ARK-01 com rota, chegada prevista, atraso de sinal, condição dos sistemas e histórico de decisões.
 - Vigílias de até 90 dias propagam tempo físico, progresso da transferência, alimento, combustível, saúde, moral, fadiga e degradação da nave.

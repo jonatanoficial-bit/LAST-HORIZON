@@ -140,8 +140,8 @@ export function completeTest(state, test) {
 
 export function simulateLaunch(state) {
   const fatigue=Object.values(state.crew.fatigue||{}),averageFatigue=fatigue.length?fatigue.reduce((a,b)=>a+b,0)/fatigue.length:0;
-  const risk = clamp(100-state.ship.reliability + (state.mission.checklists.tests?0:12) + (state.ship.designValid?0:30) + Math.max(0,70-(state.crew.cohesion||70))*.18 + averageFatigue*.08,2,80);
-  const failed = roll(state,0,100)<risk;
+  const testMode=state.meta?.testMode?.enabled===true,risk = testMode?0:clamp(100-state.ship.reliability + (state.mission.checklists.tests?0:12) + (state.ship.designValid?0:30) + Math.max(0,70-(state.crew.cohesion||70))*.18 + averageFatigue*.08,2,80);
+  const failed = testMode?false:roll(state,0,100)<risk;
   state.campaign.flags.launched = !failed;
   state.mission.phase = failed?"abortagem":"cruzeiro";
   state.systems.propulsion.fuelPct -= failed?4:18;

@@ -24,14 +24,15 @@ import { advanceCruiseWatch, ensureDeepSpaceState, resolveDeepSpaceIncident } fr
 import { executeSystemProcedure } from "./sim/ship-systems.js";
 import { deepSpaceCommandView, shipSystemsView } from "./ui/deep-space-command.js";
 import { commercialMissionRail, missionCodexView } from "./ui/commercial-director.js";
+import { createTestAccessState, testAccessPoints } from "./sim/test-access.js";
 
 const app=document.querySelector("#app"),toastRegion=document.querySelector("#toast-region");
 const json=async path=>{const response=await fetch(path);if(!response.ok)throw new Error(`Falha ao carregar ${path}`);return response.json()};
-const [data,locales,version,story,videoManifest,flightManifest,cinematicManifest,voiceManifest,musicManifest,engineeringData,crewOps,solarData]=await Promise.all([json("./data/game.json"),json("./data/locales.json?v=14.0.0"),json("./version.json?v=14.0.0"),json("./data/story.json?v=14.0.0"),json("./assets/video/video-manifest.json?v=14.0.0"),json("./assets/video/flight-manifest.json?v=14.0.0"),json("./assets/video/cinematic-manifest.json?v=14.0.0"),json("./assets/audio/voice-manifest.json?v=14.0.0"),json("./assets/audio/music-manifest.json?v=14.0.0"),json("./data/engineering.json?v=14.0.0"),json("./data/crew-operations.json?v=14.0.0"),json("./data/solar-system.json?v=14.0.0")]);
+const [data,locales,version,story,videoManifest,flightManifest,cinematicManifest,voiceManifest,musicManifest,engineeringData,crewOps,solarData]=await Promise.all([json("./data/game.json"),json("./data/locales.json?v=14.1.0"),json("./version.json?v=14.1.0"),json("./data/story.json?v=14.1.0"),json("./assets/video/video-manifest.json?v=14.1.0"),json("./assets/video/flight-manifest.json?v=14.1.0"),json("./assets/video/cinematic-manifest.json?v=14.1.0"),json("./assets/audio/voice-manifest.json?v=14.1.0"),json("./assets/audio/music-manifest.json?v=14.1.0"),json("./data/engineering.json?v=14.1.0"),json("./data/crew-operations.json?v=14.1.0"),json("./data/solar-system.json?v=14.1.0")]);
 let locale=localStorage.getItem("lh-locale")||"pt-BR",lastState=null,autosaveTimer=null;
 const t=key=>locales[locale]?.[key]||locales["pt-BR"][key]||key;
 const esc=value=>String(value??"").replace(/[&<>'"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;",'"':"&quot;"}[c]));
-const pct=n=>`${Math.round(clamp(n))}%`,money=n=>`${Math.round(n)} bi`;
+const pct=n=>`${Math.round(clamp(n))}%`,money=n=>n>=999000?"∞ TESTE":`${Math.round(n)} bi`;
 const initial=recalculate(createInitialState(),data,crewOps);
 const store=createStore(initial,s=>recalculate(s,data,crewOps));
 let savedAudioMix=null;try{savedAudioMix=JSON.parse(localStorage.getItem("lh-audio-mix-v1")||"null")}catch{localStorage.removeItem("lh-audio-mix-v1")}initMusicDirector(musicManifest,savedAudioMix||initial.profile.audioMix);
@@ -48,7 +49,7 @@ function audioCue(type="select"){
 function applyAccessibility(state){const a=state.profile.accessibility;document.body.classList.toggle("reduce-motion",a.reduceMotion);document.body.classList.toggle("high-contrast",a.highContrast);document.body.classList.toggle("large-text",a.largeText);document.body.classList.toggle("colorblind",a.colorblind)}
 function logTime(hours){const day=Math.floor(hours/24);return `D+${String(day).padStart(3,"0")}`}
 
-function menu(){setMusicScene("menu");const s=store.getState(),hasSave=!!localStorage.getItem("lh-has-save");app.innerHTML=`
+function menu(){setMusicScene("menu");const s=store.getState(),hasSave=!!localStorage.getItem("lh-has-save"),hasTestSave=!!localStorage.getItem("lh-has-test-save");app.innerHTML=`
   <main class="splash"><section class="splash-content">
     <div class="eyebrow">GSEA · PROJECT HAVEN</div><h1><span>GLOBAL SPACE AGENCY SIMULATOR</span>LAST<br>HORIZON</h1>
     <p class="lead">A Terra está ficando sem tempo. Projete a ARK-01, lidere sua tripulação e decida quais riscos a humanidade carregará até outro mundo.</p>
@@ -57,6 +58,8 @@ function menu(){setMusicScene("menu");const s=store.getState(),hasSave=!!localSt
       <button data-action="continue" ${hasSave?"":"disabled"}>${t("continue")}</button>
       <button data-action="expedition">${t("expedition")}</button>
       <button data-action="simulator">${t("simulator")}</button>
+      <button class="test-access-menu" data-action="test"><span>ACESSO DIRETO DE TESTE</span><small>lançamento · órbita · mapa · cruzeiro</small></button>
+      ${hasTestSave?'<button data-action="continue-test">RETOMAR ÚLTIMO TESTE</button>':""}
       <button data-action="atlas">OBSERVATÓRIO REAL</button>
       <button data-action="intro"><span>ASSISTIR PRÓLOGO EM VÍDEO</span><small>Into LAST HORIZON · 82,9 MB incluído</small></button>
       <button data-action="saves">${t("saves")}</button><button data-action="settings">${t("settings")}</button>
@@ -69,11 +72,19 @@ function bindMenu(){
   one("[data-action=new]","click",()=>profileModal("campaign"));
   one("[data-action=expedition]","click",()=>profileModal("expedition"));
   one("[data-action=simulator]","click",()=>{const s=createInitialState(`SIM-${Date.now()}`,"simulator");s.ui.route="simulator";store.replace(s);router.navigate("simulator")});
+  one("[data-action=test]","click",testAccessModal);
+  one("[data-action=continue-test]","click",async()=>{try{store.replace(await loadGame("test-autosave"));router.navigate(store.getState().ui.route||"countdown")}catch(e){toast(e.message,"error")}});
   one("[data-action=atlas]","click",()=>router.navigate("atlas"));
   one("[data-action=intro]","click",()=>{store.update(x=>{x.campaign.flags.videoSeen=false;x.campaign.prologueStep=0},"Introdução solicitada pelo menu");router.navigate("prologue")});
   one("[data-action=continue]","click",async()=>{try{store.replace(await loadGame("autosave"));locale=store.getState().profile.language||locale;router.navigate(store.getState().ui.route||"agency")}catch(e){toast(e.message,"error")}});
   one("[data-action=saves]","click",saveModal);one("[data-action=settings]","click",settingsModal);
 }
+
+function testAccessModal(){const current=store.getState();modal(`
+  <div class="eyebrow">ACESSO PROVISÓRIO · QA DA ARK-01</div><h2>Escolha onde começar o teste</h2>
+  <p class="muted">Este modo usa orçamento ilimitado, projeto certificado e lançamento sem falha aleatória. Ele salva em um slot separado e não substitui sua campanha normal.</p>
+  <div class="test-access-grid">${testAccessPoints.map((point,index)=>`<button data-test-point="${point.id}"><i>${String(index+1).padStart(2,"0")}</i><span><b>${point.label}</b><small>${point.detail}</small></span></button>`).join("")}</div>
+  <div class="test-access-warning"><b>MODO DE TESTE</b><span>Decisões, danos e consumo continuam funcionando para permitir diagnóstico. Somente orçamento, preparação e risco aleatório inicial foram neutralizados.</span></div>`,()=>document.querySelectorAll("[data-test-point]").forEach(button=>button.addEventListener("click",()=>{const point=testAccessPoints.find(item=>item.id===button.dataset.testPoint),next=createTestAccessState(current,point.id,{data,crewOps,solarData});closeModal();store.replace(next);router.navigate(point.route);audioCue("success");toast(`${point.label} preparado. A campanha principal permanece intacta.`)})))}
 
 function profileModal(mode){modal(`
   <div class="eyebrow">GSEA · CREDENCIAL DE DIREÇÃO</div><h2>${mode==="expedition"?"Configurar expedição":"Assumir o PROJECT HAVEN"}</h2>
@@ -135,7 +146,7 @@ function prologue(){
 function shell(route){setMusicScene(route);rendezvousController?.destroy?.();rendezvousController=null;const s=store.getState(),act=data.acts.find(a=>a.id===route)||data.acts[s.campaign.act]||data.acts[0],atlasBrief={avatar:"jun-park",speaker:"Jun Park",role:"PILOTO · NAVEGAÇÃO ASTRONÔMICA",message:"O atlas usa a mesma data da missão para posicionar os oito planetas. Selecione um corpo, altere a escala e propague o tempo.",objective:"Ler a geometria real do Sistema Solar",tip:"Comece pelo globo, escolha um centro de lançamento e depois compare as escalas linear e logarítmica."},rvBrief={avatar:"jun-park",speaker:"Jun Park",role:"PILOTO · RENDEZVOUS",message:"Leia distância, fechamento e desvio lateral. A física relativa continua atuando mesmo sem comando.",objective:"Acoplar sem exceder 0,14 m/s",tip:"Use a autoaproximação para aprender; desligue-a quando quiser assumir os seis eixos."},brief=route==="atlas"?atlasBrief:route==="rendezvous"?rvBrief:(story.briefings[route]||story.briefings.agency);s.ui.route=route;app.innerHTML=`
   <div class="shell scene-${route}"><header class="topbar"><div class="brand"><div class="brand-mark">◌</div><div><strong>LAST HORIZON</strong><small>GSEA · ARK-01</small></div></div>
   <div class="resource-strip">${resource(t("budget"),money(s.economy.available))}${resource(t("days"),`${s.time.earthDate} d`)}${resource(t("reliability"),pct(s.ship.reliability))}${resource(t("morale"),pct(s.crew.morale))}${resource(t("science"),s.science.points)}${resource(t("earth"),pct(100-s.time.earthDate/36.5))}</div>
-  <div class="top-actions"><span class="turn-badge">TURNO ${String(s.campaign.turn||1).padStart(3,"0")}</span><button data-save aria-label="${t("save")}">▣</button><button data-menu>${t("menu")}</button></div></header>
+  <div class="top-actions">${s.meta?.testMode?.enabled?'<span class="test-mode-badge">TESTE ISOLADO</span><button data-test-access>IR PARA OUTRO PONTO</button>':""}<span class="turn-badge">TURNO ${String(s.campaign.turn||1).padStart(3,"0")}</span><button data-save aria-label="${t("save")}">▣</button><button data-menu>${t("menu")}</button></div></header>
   <div class="workarea"><nav class="sidebar" aria-label="Atos da campanha"><ol class="nav-list">${data.acts.map((a,i)=>`<li><button data-route="${a.id}" class="${a.id===route?"active":""}" ${i>s.campaign.act+1?"disabled":""}><span class="nav-num">${a.n}</span><span>${a.title}</span></button></li>`).join("")}<li class="nav-utility"><button data-route="atlas" class="${route==="atlas"?"active":""}"><span class="nav-num">◎</span><span>Atlas Solar</span></button></li><li><button data-route="memorial"><span class="nav-num">∞</span><span>Memorial</span></button></li></ol></nav>
   <main class="mainview" id="mainview">${view(route,s,act)}</main>
   <aside class="intel"><section class="intel-section advisor-console"><div class="advisor-mini">${portrait(brief.avatar)}<div><div class="eyebrow">CANAL DA EQUIPE</div><strong>${esc(brief.speaker)}</strong><small>${esc(brief.role)}</small></div></div><p class="aura-message">${esc(s.ui.advisorMessage||brief.message)}</p><div class="objective-mini"><b>OBJETIVO</b><span>${esc(brief.objective)}</span></div></section><section class="intel-section"><div class="aura-head"><div class="aura-orb"></div><div><div class="eyebrow">${t("aura")}</div><small class="muted">confiança ${s.ui.auraConfidence}%</small></div></div><p class="aura-message">${esc(act?.aura||"Tenho acesso aos registros causais e às margens atuais. A decisão permanece humana.")}</p></section>
@@ -220,7 +231,7 @@ const gauge=(label,value,critical=false)=>`<div class="gauge ${critical?"critica
 
 function bindShell(route,s){
   document.querySelectorAll("[data-route]").forEach(b=>b.addEventListener("click",()=>router.navigate(b.dataset.route)));
-  one("[data-menu]","click",()=>router.navigate("menu"));one("[data-save]","click",async()=>{await saveGame("autosave",store.getState());localStorage.setItem("lh-has-save","1");toast("Autosave confirmado");audioCue("success")});
+  one("[data-menu]","click",()=>router.navigate("menu"));one("[data-test-access]","click",testAccessModal);one("[data-save]","click",async()=>{const current=store.getState(),test=current.meta?.testMode?.enabled===true;await saveGame(test?"test-autosave":"autosave",current);localStorage.setItem(test?"lh-has-test-save":"lh-has-save","1");toast(test?"Teste salvo no slot isolado.":"Autosave confirmado");audioCue("success")});
   one("[data-toggle-tutorial]","click",()=>store.update(x=>x.ui.tutorialEnabled=!x.ui.tutorialEnabled,"Modo de orientação alterado"));
   one("[data-throttle]","input",e=>{e.target.dataset.touched="1";e.target.nextElementSibling.textContent=`${e.target.value}%`});
   const go=(nextAct,nextRoute,title,detail)=>{store.update(x=>{x.campaign.act=Math.max(x.campaign.act,nextAct);x.campaign.decisions.push({title,detail})},title);outcomeModal(route,nextRoute)};
@@ -257,6 +268,7 @@ function bindShell(route,s){
   }
   document.querySelectorAll("[data-nav-target]").forEach(b=>b.addEventListener("click",()=>{let result;store.update(x=>result=selectNavigationTarget(x,solarData,b.dataset.navTarget),`Destino analisado: ${b.dataset.navTarget}`);result?.ok?toast(`${result.route.targetName}: rota calculada, aguardando sua confirmação.`):toast(result?.reason||"Destino indisponível.","error")}));
   document.querySelectorAll("[data-nav-view]").forEach(b=>b.addEventListener("click",()=>store.update(x=>ensureNavigationState(x).mapView=b.dataset.navView,`Escala do mapa alterada: ${b.dataset.navView}`)));
+  one("[data-nav-center]","click",()=>store.update(x=>{const nav=ensureNavigationState(x),id=nav.route?.targetId||nav.selectedBody,body=solarData.bodies.find(item=>item.id===id),a=body?.elements?.a?.[0]||1;nav.mapView=a<=2.2?"inner":a<=11?"giants":"system"},"Mapa GPS centralizado na escala do destino"));
   one("[data-nav-lock]","click",()=>{let result;store.update(x=>result=lockNavigationRoute(x),"Rota interplanetária confirmada pelo comandante");if(result?.ok){audioCue("success");toast(`Rota para ${result.route.targetName} gravada. Nó de partida liberado.`)}else toast(result?.reason||"Rota indisponível.","error")});
   document.querySelectorAll("[data-orbit-command-choice]").forEach(button=>button.addEventListener("click",()=>{let result;store.update(x=>result=resolveOrbitalCommandDecision(x,button.dataset.orbitCommandBrief,button.dataset.orbitCommandChoice),`Ordem do conselho: ${button.dataset.orbitCommandChoice}`);if(!result?.ok)return toast(result?.reason||"Decisão orbital indisponível.","error");audioCue("success");speak(result.brief.speaker.split("-")[0]==="amara"?"amara_command":result.brief.speaker.split("-")[0]==="samira"?"samira_conflict":"rafael_design",{once:true});toast(`${result.choice.label}: consequências registradas para as próximas missões.`)}));
   document.querySelectorAll("[data-plan-node]").forEach(b=>b.addEventListener("click",()=>{const current=store.getState();if(b.dataset.planNode==="departure"&&!ensureNavigationState(current).locked)return toast("Escolha e confirme um planeta no mapa antes de criar o nó de partida.","error");let result;store.update(x=>result=planManeuver(x,b.dataset.planNode),`Nó orbital calculado: ${b.dataset.planNode}`);if(result?.ok){audioCue("select");toast("Nó criado. Propague a órbita até a janela de queima.")}else toast(result?.reason||"Não foi possível calcular o nó.","error")}));
@@ -399,7 +411,7 @@ function drawTrajectory(){const canvas=document.querySelector("#trajectory-canva
 function drawSystem(){const canvas=document.querySelector("#system-canvas"),fit=fitCanvas(canvas);if(!fit)return;const {ctx,w,h}=fit,s=store.getState(),seed=s.meta.rngState||1,cx=w*.45,cy=h*.52;ctx.clearRect(0,0,w,h);for(let i=0;i<80;i++){const x=(i*71+seed%97)%w,y=(i*43+seed%61)%h;ctx.fillStyle=`rgba(180,230,255,${.15+(i%5)*.08})`;ctx.fillRect(x,y,1,1)}const glow=ctx.createRadialGradient(cx,cy,0,cx,cy,44);glow.addColorStop(0,"#fff7ca");glow.addColorStop(.18,"#ffd16a");glow.addColorStop(1,"rgba(255,170,40,0)");ctx.fillStyle=glow;ctx.beginPath();ctx.arc(cx,cy,44,0,Math.PI*2);ctx.fill();[.19,.31,.44].forEach((r,i)=>{ctx.strokeStyle="rgba(92,208,239,.3)";ctx.beginPath();ctx.ellipse(cx,cy,w*r,h*r*.55,0,0,Math.PI*2);ctx.stroke();const a=((seed%360)+i*117)*Math.PI/180,px=cx+Math.cos(a)*w*r,py=cy+Math.sin(a)*h*r*.55;ctx.fillStyle=["#6ed4c9","#66a9ef","#d57152"][i];ctx.beginPath();ctx.arc(px,py,6+i*2,0,Math.PI*2);ctx.fill()})}
 function drawSpace(){const c=document.querySelector("#space-canvas"),ctx=c.getContext("2d"),dpr=Math.min(devicePixelRatio,2);c.width=innerWidth*dpr;c.height=innerHeight*dpr;ctx.scale(dpr,dpr);ctx.clearRect(0,0,innerWidth,innerHeight);const rand=i=>((i*9301+49297)%233280)/233280;for(let i=0;i<160;i++){const x=rand(i)*innerWidth,y=rand(i+251)*innerHeight,r=rand(i+13)*1.2+.2;ctx.fillStyle=`rgba(160,225,255,${.18+rand(i+99)*.55})`;ctx.beginPath();ctx.arc(x,y,r,0,Math.PI*2);ctx.fill()}}
 addEventListener("resize",()=>{drawSpace();drawTrajectory();drawSystem()});drawSpace();
-store.subscribe(state=>{lastState=state;applyAccessibility(state);setAudioMix(state.profile.audio===false?{music:0,voices:0,effects:0}:state.profile.audioMix);const route=router.current();if(route==="prologue")prologue();else if(route!=="menu"&&route!=="ending")shell(route);clearTimeout(autosaveTimer);autosaveTimer=setTimeout(()=>{saveGame("autosave",state);localStorage.setItem("lh-has-save","1")},650)});
+store.subscribe(state=>{lastState=state;applyAccessibility(state);setAudioMix(state.profile.audio===false?{music:0,voices:0,effects:0}:state.profile.audioMix);const route=router.current();if(route==="prologue")prologue();else if(route!=="menu"&&route!=="ending")shell(route);clearTimeout(autosaveTimer);autosaveTimer=setTimeout(()=>{const test=state.meta?.testMode?.enabled===true;saveGame(test?"test-autosave":"autosave",state);localStorage.setItem(test?"lh-has-test-save":"lh-has-save","1")},650)});
 const router=createRouter(route=>{if(route==="menu")menu();else if(route==="prologue")prologue();else if(route==="ending")renderEnding(endingFor(store.getState()));else shell(route)});
 applyAccessibility(store.getState());router.start();
 if("serviceWorker" in navigator&&location.protocol.startsWith("http"))navigator.serviceWorker.register("./service-worker.js",{updateViaCache:"none"}).then(registration=>registration.update()).catch(()=>{});
